@@ -1,0 +1,43 @@
+{
+    "plugins": ["plugins/markdown"],
+    "recurseDepth": 10,
+    "source": {
+        "include": ["src"],
+        "includePattern": ".(m)?js$"
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc", "closure"]
+    },
+    "templates": {
+        "includeDate": false,
+        "dateFormat": "DD MMM YYYY",
+        "systemName": "js-observe",
+        "systemSummary": "Наблюдатель за изменениями в DOM-элементе.",
+        "systemLogo": "",
+        "systemColor": "#48036F",
+        "copyright": "Архитектор (rotcetihra), 2025",
+        "linenums": false,
+        "collapseSymbols": true,
+        "inverseNav": false,
+        "inlineNav": true,
+        "outputSourceFiles": true,
+        "outputSourcePath": true,
+        "disablePackagePath": true,
+        "methodHeadingReturns": true,
+        "showTableOfContents": true,
+        "showAccessFilter": true,
+        "sort": "linenum, longname, version, since",
+        "search": true,
+        "stylesheets": [],
+        "scripts": []
+    },
+    "opts": {
+        "recurse": true,
+        "destination": "docs",
+        "template": "node_modules/foodoc/template",
+        "package": "package.json",
+        "readme": "README.md"
+    }
+}
