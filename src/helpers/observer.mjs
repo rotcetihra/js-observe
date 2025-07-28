@@ -1,35 +1,30 @@
 import ObserverBuilder from '../ObserverBuilder.mjs';
 
 /**
- * 🧱 Фабричная функция `observer()` — точка входа для построения {@link Observer} с помощью fluent-интерфейса.
+ * 🛠️ Создаёт новый экземпляр {@link ObserverBuilder} — строитель для конфигурации {@link Observer}.
  *
- * Создаёт и возвращает новый экземпляр {@link ObserverBuilder}, позволяющий декларативно и удобно
- * настроить наблюдатель ({@link Observer}) с помощью цепочки методов:
- *
- * - задать целевой DOM-узел
- * - указать параметры наблюдения через {@link ObserverOptionsBuilder}
- * - задать callback
- * - собрать итоговый `Observer`
+ * Используется для декларативного и цепочного создания наблюдателя за изменениями DOM.
+ * Позволяет настроить `target`, `options`, `callback` и вызвать `.build()` для получения {@link Observer}.
  *
  * ---
  *
- * ### ✅ Пример:
+ * ### ✅ Пример использования
  *
  * ```js
  *
- * const obs = observer()
- *     .for(document.body)
- *     .options((o) => o.descendants().attributes().text().useOldValue())
- *     .call((mutations) => console.log(mutations))
- *     .build();
+ * const observer = observer()
+ *   .for(document.body)
+ *   .options((b) => b.children())
+ *   .call((mutations) => console.log(mutations))
+ *   .build();
  *
- * obs.observe();
+ * observer.observe();
  *
  * ```
  *
  * ---
  *
- * @returns {ObserverBuilder} Новый экземпляр билдера для конфигурирования {@link Observer}.
+ * @returns {ObserverBuilder} Новый экземпляр {@link ObserverBuilder} для создания наблюдателя.
  */
 export default function observer() {
     return new ObserverBuilder();

@@ -112,10 +112,10 @@ class Observer extends MutationObserver {
     #target;
 
     constructor(callback, options = null, target = null) {
+        super(callback);
+
         this.#options = options;
         this.#target = target;
-
-        super(callback);
     }
 
     /**
@@ -303,7 +303,7 @@ class Observer extends MutationObserver {
      * @returns {ObserverBuilder} Экземпляр билдера {@link ObserverBuilder}, из которого можно собрать {@link Observer}.
      */
     static new() {
-        return ObserverBuilder();
+        return new ObserverBuilder();
     }
 }
 
