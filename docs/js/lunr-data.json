@@ -671,7 +671,6 @@
           "document.queryselector('#tre",
           "dom",
           "function",
-          "lt",
           "new",
           "observ",
           "observer(callback",
@@ -1118,7 +1117,7 @@
                 },
                 "ObserverOptionsBuilder.html#descendants": {
                   "ref": "ObserverOptionsBuilder.html#descendants",
-                  "tf": 2.272727272727273
+                  "tf": 2.5
                 },
                 "ObserverOptionsBuilder.html#descendantAttributes": {
                   "ref": "ObserverOptionsBuilder.html#descendantAttributes",
@@ -1772,7 +1771,7 @@
                                                                 "docs": {
                                                                   "ObserverOptionsBuilder.html#descendants": {
                                                                     "ref": "ObserverOptionsBuilder.html#descendants",
-                                                                    "tf": 2.272727272727273
+                                                                    "tf": 2.5
                                                                   }
                                                                 }
                                                               }
@@ -2072,7 +2071,7 @@
                         },
                         "ObserverOptionsBuilder.html#descendants": {
                           "ref": "ObserverOptionsBuilder.html#descendants",
-                          "tf": 702.2727272727273
+                          "tf": 702.5
                         },
                         "Observer.html#.new": {
                           "ref": "Observer.html#.new",
@@ -2269,7 +2268,7 @@
                                                                                                     "docs": {
                                                                                                       "ObserverOptionsBuilder.html#descendants": {
                                                                                                         "ref": "ObserverOptionsBuilder.html#descendants",
-                                                                                                        "tf": 2.272727272727273
+                                                                                                        "tf": 2.5
                                                                                                       }
                                                                                                     }
                                                                                                   }
@@ -2819,7 +2818,7 @@
                       },
                       "ObserverOptionsBuilder.html#descendants": {
                         "ref": "ObserverOptionsBuilder.html#descendants",
-                        "tf": 2.272727272727273
+                        "tf": 2.5
                       },
                       "ObserverOptionsBuilder.html#attributes": {
                         "ref": "ObserverOptionsBuilder.html#attributes",
@@ -3210,7 +3209,7 @@
                                                                                                   "docs": {
                                                                                                     "ObserverOptionsBuilder.html#descendants": {
                                                                                                       "ref": "ObserverOptionsBuilder.html#descendants",
-                                                                                                      "tf": 2.272727272727273
+                                                                                                      "tf": 2.5
                                                                                                     }
                                                                                                   }
                                                                                                 }
@@ -3812,7 +3811,7 @@
                                 },
                                 "ObserverOptionsBuilder.html#descendants": {
                                   "ref": "ObserverOptionsBuilder.html#descendants",
-                                  "tf": 2.272727272727273
+                                  "tf": 2.5
                                 },
                                 "ObserverOptionsBuilder.html#build": {
                                   "ref": "ObserverOptionsBuilder.html#build",
@@ -4897,7 +4896,7 @@
                                             },
                                             "ObserverOptionsBuilder.html#descendants": {
                                               "ref": "ObserverOptionsBuilder.html#descendants",
-                                              "tf": 2.272727272727273
+                                              "tf": 2.5
                                             },
                                             "Observer.html": {
                                               "ref": "Observer.html",
@@ -5103,7 +5102,7 @@
                       },
                       "ObserverOptionsBuilder.html#descendants": {
                         "ref": "ObserverOptionsBuilder.html#descendants",
-                        "tf": 4.545454545454546
+                        "tf": 5
                       },
                       "ObserverOptionsBuilder.html#attributes": {
                         "ref": "ObserverOptionsBuilder.html#attributes",
@@ -6290,7 +6289,7 @@
                     },
                     "ObserverOptionsBuilder.html#descendants": {
                       "ref": "ObserverOptionsBuilder.html#descendants",
-                      "tf": 4.545454545454546
+                      "tf": 5
                     },
                     "ObserverOptionsBuilder.html#attributes": {
                       "ref": "ObserverOptionsBuilder.html#attributes",
@@ -6534,7 +6533,7 @@
                                           "docs": {
                                             "ObserverOptionsBuilder.html#descendants": {
                                               "ref": "ObserverOptionsBuilder.html#descendants",
-                                              "tf": 2.272727272727273
+                                              "tf": 2.5
                                             }
                                           }
                                         }
@@ -6595,7 +6594,7 @@
                             },
                             "ObserverOptionsBuilder.html#descendants": {
                               "ref": "ObserverOptionsBuilder.html#descendants",
-                              "tf": 2.272727272727273
+                              "tf": 2.5
                             },
                             "ObserverOptionsBuilder.html#subtree": {
                               "ref": "ObserverOptionsBuilder.html#subtree",
@@ -6905,12 +6904,7 @@
             }
           },
           "t": {
-            "docs": {
-              "ObserverOptionsBuilder.html#descendants": {
-                "ref": "ObserverOptionsBuilder.html#descendants",
-                "tf": 4.545454545454546
-              }
-            },
+            "docs": {},
             ";": {
               "docs": {},
               "/": {
@@ -7414,7 +7408,7 @@
                     },
                     "ObserverOptionsBuilder.html#descendants": {
                       "ref": "ObserverOptionsBuilder.html#descendants",
-                      "tf": 2.272727272727273
+                      "tf": 2.5
                     },
                     "ObserverOptionsBuilder.html#attributes": {
                       "ref": "ObserverOptionsBuilder.html#attributes",
@@ -8864,7 +8858,7 @@
                 },
                 "ObserverOptionsBuilder.html#descendants": {
                   "ref": "ObserverOptionsBuilder.html#descendants",
-                  "tf": 4.545454545454546
+                  "tf": 5
                 },
                 "ObserverOptionsBuilder.html#attributes": {
                   "ref": "ObserverOptionsBuilder.html#attributes",
@@ -9330,7 +9324,7 @@
                       },
                       "ObserverOptionsBuilder.html#descendants": {
                         "ref": "ObserverOptionsBuilder.html#descendants",
-                        "tf": 2.272727272727273
+                        "tf": 2.5
                       },
                       "ObserverOptionsBuilder.html#descendantAttributes": {
                         "ref": "ObserverOptionsBuilder.html#descendantAttributes",
@@ -10057,7 +10051,7 @@
                   },
                   "ObserverOptionsBuilder.html#descendants": {
                     "ref": "ObserverOptionsBuilder.html#descendants",
-                    "tf": 4.545454545454546
+                    "tf": 5
                   },
                   "ObserverOptionsBuilder.html#attributes": {
                     "ref": "ObserverOptionsBuilder.html#attributes",
@@ -10876,7 +10870,7 @@
           }
         }
       },
-      "length": 911
+      "length": 910
     },
     "corpusTokens": [
       "1",
@@ -10982,7 +10976,6 @@
       "line').textcont",
       "list",
       "list:class",
-      "lt",
       "lt;/div&gt",
       "lt;/section&gt",
       "lt;button",
@@ -11436,7 +11429,7 @@
       "name": "descendants",
       "tags": "ObserverOptionsBuilder#descendants descendants",
       "summary": "",
-      "description": "🌳 Включает отслеживание всех вложенных DOM-изменений — не только прямых, но и глубоких потомков. 📌 Что делает Комбинирует два режима: childList: true — отслеживает добавление и удаление узлов subtree: true — расширяет область наблюдения на всех потомков Эквивалентно: .children().subtree(), но читается декларативнее. 📎 Когда использовать При отслеживании динамически изменяемого контента Когда изменения могут происходить в глубине дерева ✅ Пример &lt;- (вот эти отступы нужны) const options = ObserverOptions .new() .descendants() .build(); const observer = new Observer(callback); observer.observe(document.getElementById('tree'), options); // Добавление вложенного узла: document.querySelector('#tree .deep').appendChild(document.createElement('div')); &lt;- (вот эти отступы нужны)"
+      "description": "🌳 Включает отслеживание всех вложенных DOM-изменений — не только прямых, но и глубоких потомков. 📌 Что делает Комбинирует два режима: childList: true — отслеживает добавление и удаление узлов subtree: true — расширяет область наблюдения на всех потомков Эквивалентно: .children().subtree(), но читается декларативнее. 📎 Когда использовать При отслеживании динамически изменяемого контента Когда изменения могут происходить в глубине дерева ✅ Пример const options = ObserverOptions .new() .descendants() .build(); const observer = new Observer(callback); observer.observe(document.getElementById('tree'), options); // Добавление вложенного узла: document.querySelector('#tree .deep').appendChild(document.createElement('div'));"
     },
     "ObserverOptionsBuilder.html#attributes": {
       "id": "ObserverOptionsBuilder.html#attributes",

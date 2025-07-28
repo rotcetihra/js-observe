@@ -132,7 +132,7 @@ class ObserverOptionsBuilder {
      * ### ✅ Пример
      *
      * ```js
-     *  <- (вот эти отступы нужны)
+     *
      * const options = ObserverOptions
      *     .new()
      *     .descendants()
@@ -143,7 +143,7 @@ class ObserverOptionsBuilder {
      *
      * // Добавление вложенного узла:
      * document.querySelector('#tree .deep').appendChild(document.createElement('div'));
-     *  <- (вот эти отступы нужны)
+     *
      * ```
      *
      * ---

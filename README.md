@@ -173,15 +173,6 @@ obs.disconnect(); // 🛑 Остановить наблюдение
 
 ---
 
-## 💡 Возможности для расширения
-
--   ⏳ Debounce/throttle для callback
--   🧹 Фильтрация `MutationRecord`
--   ⚛️ Интеграция с React/Vue
--   🧱 Бандлы для SSR или Web Components
-
----
-
 ## 📄 Лицензия
 
 [MIT](./LICENSE)
