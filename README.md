@@ -4,6 +4,8 @@
 [MutationObserver](https://developer.mozilla.org/ru/docs/Web/API/MutationObserver)
 для отслеживания изменений DOM с помощью fluent-интерфейса.
 
+[Документация](https://rotcetihra.github.io/js-observe/index.html)
+
 ---
 
 ## 🚀 Возможности
