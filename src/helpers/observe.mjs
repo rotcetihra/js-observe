@@ -39,6 +39,7 @@ import Observer from '../Observer.mjs';
  * @param {MutationCallback} callback - Функция, вызываемая при обнаружении изменений.
  *
  * @returns {void}
+ * @function observe
  */
 export default function observe(target, options, callback) {
     new Observer(callback, options, target).observe();

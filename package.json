@@ -1,4 +1,22 @@
 {
+    "name": "js-observe",
+    "version": "1.0.0",
+    "description": "Declarative wrapper over MutationObserver",
+    "main": "src/index.js",
+    "type": "module",
+    "keywords": [
+        "dom",
+        "mutationobserver",
+        "observe",
+        "builder",
+        "observer"
+    ],
+    "author": "Architector <rotcetihra@mail.ru>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rotcetihra/js-observe.git"
+    },
     "devDependencies": {
         "jest": "^30.0.5",
         "jest-environment-jsdom": "^30.0.5",

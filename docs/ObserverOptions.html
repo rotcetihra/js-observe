@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>ObserverOptions</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #48036F;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #48036F;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #48036F;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #48036F;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"DD MMM YYYY","systemName":"js-observe","systemSummary":"Наблюдатель за изменениями в DOM-элементе.","systemLogo":"","systemColor":"#48036F","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Архитектор (rotcetihra), 2025","linenums":false,"collapseSymbols":true,"inverseNav":false,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">
+					js-observe
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="global.html#observe">observe</a></li>
+											<li><a href="global.html#observer">observer</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="Observer.html">Observer</a></li>
+											<li><a href="ObserverBuilder.html">ObserverBuilder</a></li>
+											<li><a href="ObserverOptions.html">ObserverOptions</a></li>
+											<li><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">class</span>
+				<h1><span class="name">ObserverOptions</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="list_class.html">Classes</a></li>
+							<li class="active">ObserverOptions</li>
+						</ol>
+					<section>
+							<dl class="symbol primary">
+								<dt class="symbol-title class collapsible-symbol expanded">
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">ObserverOptions</span><span class="signature-params">()</span><span class="signature-type"></span></h2>
+</dt>
+<dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>🧩 <code>ObserverOptions</code> — набор параметров для конфигурации <a href="Observer.html">Observer</a>, определяющий, <strong>что именно отслеживать</strong> в DOM.</p>
+			<p>Используется для тонкой настройки реакции на мутации: добавление или удаление узлов, изменения атрибутов и текста.</p>
+			<hr>
+			<h3>🔧 Основные опции</h3>
+			<ul>
+			<li><code>childList</code> — отслеживает добавление/удаление <strong>прямых</strong> дочерних узлов.</li>
+			<li><code>attributes</code> — отслеживает изменения <strong>атрибутов</strong> элементов.</li>
+			<li><code>characterData</code> — отслеживает изменения <strong>текстового содержимого</strong> узлов (например, <code>Text</code>).</li>
+			<li><code>subtree</code> — расширяет область наблюдения на <strong>всех потомков</strong>.</li>
+			<li><code>attributeOldValue</code> — сохраняет <strong>старое значение атрибута</strong> при изменении.</li>
+			<li><code>characterDataOldValue</code> — сохраняет <strong>старое текстовое значение</strong>.</li>
+			<li><code>attributeFilter</code> — ограничивает список <strong>атрибутов</strong>, за которыми ведётся наблюдение.</li>
+			</ul>
+			<hr>
+			<h3>⚠️ Обязательные условия</h3>
+			<p>Вы <strong>должны указать хотя бы один</strong> из следующих параметров, иначе произойдёт ошибка:</p>
+			<ul>
+			<li><code>childList</code></li>
+			<li><code>attributes</code></li>
+			<li><code>characterData</code></li>
+			</ul>
+			<blockquote>
+			<p>В противном случае <code>MutationObserver</code> выбросит исключение:
+			<code>An invalid or illegal string was specified</code></p>
+			</blockquote>
+			<hr>
+			<h3>📘 Дополнительно</h3>
+			<p>Подробные описания каждой опции — см. в комментариях к соответствующим полям класса.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+							</dl>
+							<article class="secondary">
+									<h3>Members</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="childList" class="member public"><span class="name">childList</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🧩 <code>childList</code> — включает отслеживание добавления и удаления <strong>прямых</strong> дочерних узлов у целевого DOM-элемента.</p>
+			<hr>
+			<h3>📌 Особенности</h3>
+			<ul>
+			<li>Отслеживает <strong>только изменения на первом уровне</strong> (например, <code>&lt;div&gt; → &lt;span&gt;</code>).</li>
+			<li>Не фиксирует изменения <strong>внутри</strong> этих узлов (текст, атрибуты и т.п.).</li>
+			<li>Для наблюдения за потомками любого уровня — используйте <code>subtree: true</code>.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-html"><code>
+			&lt;div id=&quot;box&quot;>
+			    &lt;p>Привет&lt;/p>
+			&lt;/div>
+			
+			</code></pre>
+			<pre class="prettyprint source lang-js"><code>
+			const target = document.getElementById('box');
+			
+			const observer = new MutationObserver((mutations) => {
+			    for (const mutation of mutations) {
+			        console.log('Изменения:', mutation);
+			    }
+			});
+			
+			observer.observe(target, {
+			    childList: true
+			});
+			
+			// Пример мутации:
+			const span = document.createElement('span');
+			span.textContent = 'Новый элемент';
+			target.appendChild(span); // вызовет мутацию
+			
+			</code></pre>
+			<hr>
+			<h3>🌳 Наблюдение во вложенных узлах</h3>
+			<p>Чтобы отслеживать вставки/удаления в <strong>любых потомках</strong>, добавьте <code>subtree: true</code>:</p>
+			<pre class="prettyprint source lang-js"><code>
+			observer.observe(target, {
+			    childList: true,
+			    subtree: true
+			});
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="attributes" class="member public"><span class="name">attributes</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🏷️ <code>attributes</code> — включает отслеживание изменений атрибутов у указанного DOM-элемента.</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Следит за <strong>любым изменением атрибутов</strong> на наблюдаемом элементе.</li>
+			<li><strong>Не отслеживает</strong> атрибуты у потомков — если не указан <code>subtree: true</code>.</li>
+			<li>Используйте вместе с <code>attributeFilter</code> и <code>attributeOldValue</code> для точного контроля.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-html"><code>
+			&lt;div id=&quot;myDiv&quot; class=&quot;box&quot;>&lt;/div>
+			
+			</code></pre>
+			<pre class="prettyprint source lang-js"><code>
+			const target = document.getElementById('myDiv');
+			
+			const observer = new Observer((mutations) => {
+			    for (const mutation of mutations) {
+			        console.log('Атрибут изменён:', mutation.attributeName);
+			    }
+			});
+			
+			observer.observe(target, {
+			    attributes: true
+			});
+			
+			// Мутация:
+			target.setAttribute('class', 'box active');
+			
+			</code></pre>
+			<hr>
+			<h3>🛠️ Расширенные настройки</h3>
+			<pre class="prettyprint source lang-js"><code>
+			observer.observe(target, {
+			    attributes: true,
+			    attributeOldValue: true,
+			    attributeFilter: ['class', 'style']
+			});
+			
+			</code></pre>
+			<ul>
+			<li><code>attributeOldValue: true</code> — добавляет <code>mutation.oldValue</code>.</li>
+			<li><code>attributeFilter: [...]</code> — отслеживает только указанные атрибуты.</li>
+			</ul>
+			<hr>
+			<h3>🌳 Отслеживание в потомках</h3>
+			<p>По умолчанию изменения отслеживаются <strong>только на самом элементе</strong>.
+			Чтобы реагировать на изменения атрибутов у вложенных узлов, укажите <code>subtree: true</code>:</p>
+			<pre class="prettyprint source lang-js"><code>
+			observer.observe(parentElement, {
+			    attributes: true,
+			    subtree: true
+			});
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="characterData" class="member public"><span class="name">characterData</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🧬 <code>characterData</code> — включает отслеживание изменений текстового содержимого в узлах типа <a href="https://developer.mozilla.org/en-US/docs/Web/API/CharacterData">CharacterData</a>:
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/Text"><code>Text</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Comment"><code>Comment</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/CDATASection"><code>CDATASection</code></a>.</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Работает <strong>только</strong> с узлами <code>CharacterData</code>, а не с элементами (<code>Element</code>).</li>
+			<li>Позволяет реагировать на изменение <code>.data</code> внутри текстовых, комментариев и CDATA-узлов.</li>
+			<li>Полезно при необходимости отслеживать редактирование текста, включая изменения через JS или пользовательский ввод.</li>
+			</ul>
+			<hr>
+			<h3>🧪 Пример</h3>
+			<pre class="prettyprint source lang-html"><code>
+			&lt;div id=&quot;box&quot;>Привет&lt;/div>
+			
+			</code></pre>
+			<pre class="prettyprint source lang-js"><code>
+			const textNode = document.getElementById('box').firstChild;
+			
+			const observer = new Observer((mutations) => {
+			    for (const mutation of mutations) {
+			        console.log('Текст изменён!');
+			        console.log('Старое значение:', mutation.oldValue);
+			        console.log('Новое значение:', mutation.target.data);
+			    }
+			});
+			
+			observer.observe(textNode, {
+			    characterData: true,
+			    characterDataOldValue: true
+			});
+			
+			// Изменим текст:
+			textNode.data = 'Здравствуйте';
+			
+			</code></pre>
+			<hr>
+			<h3>🛠️ Дополнительные параметры</h3>
+			<ul>
+			<li><code>characterDataOldValue: true</code> — включает сохранение предыдущего значения текста в <code>mutation.oldValue</code>.</li>
+			<li><code>subtree: true</code> — позволяет отслеживать изменения текстовых узлов внутри вложенных элементов (но только если явно указывать <code>characterData: true</code>).</li>
+			</ul>
+			<hr>
+			<h3>⚠️ Важно</h3>
+			<ul>
+			<li>Изменения <strong>элементов</strong> не отслеживаются — нужно явно передавать текстовые узлы.</li>
+			</ul>
+			<p>❌ <strong>Не сработает</strong>:</p>
+			<pre class="prettyprint source lang-js"><code>
+			observer.observe(document.getElementById('box'), {
+			    characterData: true
+			});
+			
+			</code></pre>
+			<p>✅ <strong>Работает</strong>:</p>
+			<pre class="prettyprint source lang-js"><code>
+			observer.observe(document.getElementById('box').firstChild, {
+			    characterData: true
+			});
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="subtree" class="member public"><span class="name">subtree</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🌲 <code>subtree</code> — включает <strong>все вложенные узлы</strong> в область наблюдения, а не только сам целевой элемент.</p>
+			<hr>
+			<h3>📌 <strong>Важно</strong></h3>
+			<ul>
+			<li>Расширяет зону наблюдения на <strong>всё дерево потомков</strong> узла, к которому применяется <code>observe()</code>.</li>
+			<li>Работает <strong>в паре</strong> с другими опциями (<code>attributes</code>, <code>childList</code>, <code>characterData</code>), расширяя их действие на потомков.</li>
+			</ul>
+			<hr>
+			<h3>✅ <strong>Пример</strong>: отслеживание атрибутов во всех вложенных элементах</h3>
+			<pre class="prettyprint source lang-html"><code>
+			&lt;div id=&quot;root&quot;>
+			    &lt;section>
+			        &lt;button class=&quot;primary&quot;>Кнопка&lt;/button>
+			    &lt;/section>
+			&lt;/div>
+			
+			</code></pre>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer((mutations) => {
+			    for (const mutation of mutations) {
+			        console.log('Изменение в поддереве:', mutation);
+			    }
+			});
+			
+			observer.observe(document.getElementById('root'), {
+			    attributes: true,
+			    subtree: true
+			});
+			
+			// Изменим атрибут у вложенного элемента:
+			document.querySelector('button').setAttribute('class', 'secondary'); // сработает
+			
+			</code></pre>
+			<hr>
+			<h3>🔁 Использование с опциями</h3>
+			<ul>
+			<li><code>childList: true, subtree: true</code> — следит за добавлением/удалением <strong>во всех уровнях вложенности</strong></li>
+			<li><code>characterData: true, subtree: true</code> — следит за <strong>всеми</strong> текстовыми узлами в дереве</li>
+			<li><code>attributes: true, subtree: true</code> — следит за <strong>всеми</strong> атрибутами в дереве</li>
+			</ul></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="attributeOldValue" class="member public"><span class="name">attributeOldValue</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>♻️ <code>attributeOldValue</code> — включает <strong>предыдущее значение</strong> атрибута в объекте мутации (<code>MutationRecord</code>).</p>
+			<hr>
+			<h3>📌 <strong>Важно</strong></h3>
+			<ul>
+			<li>Работает <strong>только с <code>attributes: true</code></strong>.</li>
+			<li>Возвращает старое значение изменённого атрибута в поле <code>oldValue</code>.</li>
+			<li>По умолчанию <code>oldValue</code> — <code>null</code>, даже если атрибут изменился.</li>
+			</ul>
+			<hr>
+			<h3>✅ <strong>Пример</strong></h3>
+			<pre class="prettyprint source lang-html"><code>
+			&lt;div id=&quot;box&quot; class=&quot;a&quot;>&lt;/div>
+			
+			</code></pre>
+			<pre class="prettyprint source lang-js"><code>
+			const target = document.getElementById('box');
+			
+			const observer = new MutationObserver((mutations) => {
+			    for (const mutation of mutations) {
+			        console.log('Атрибут:', mutation.attributeName);
+			        console.log('Было:', mutation.oldValue);
+			        console.log('Стало:', target.getAttribute(mutation.attributeName));
+			    }
+			});
+			
+			observer.observe(target, {
+			    attributes: true,
+			    attributeOldValue: true
+			});
+			
+			// Изменим атрибут:
+			target.setAttribute('class', 'b');
+			
+			</code></pre></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="characterDataOldValue" class="member public"><span class="name">characterDataOldValue</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>♻️ <code>characterDataOldValue</code> — включает <strong>предыдущее значение текстового содержимого</strong> при отслеживании изменений в текстовых узлах.</p>
+			<hr>
+			<h3>📌 <strong>Важно</strong></h3>
+			<ul>
+			<li>Работает <strong>только с <code>characterData: true</code></strong>.</li>
+			<li>Возвращает старое значение текстового узла в поле <code>oldValue</code>.</li>
+			<li>Без этой опции <code>oldValue</code> всегда будет <code>null</code>.</li>
+			</ul>
+			<hr>
+			<h3>✅ <strong>Пример</strong></h3>
+			<pre class="prettyprint source lang-html"><code>
+			&lt;div id=&quot;box&quot;>Привет&lt;/div>
+			
+			</code></pre>
+			<pre class="prettyprint source lang-js"><code>
+			const textNode = document.getElementById('box').firstChild;
+			
+			const observer = new MutationObserver((mutations) => {
+			    for (const mutation of mutations) {
+			        console.log('Старое значение:', mutation.oldValue);
+			        console.log('Новое значение:', mutation.target.data);
+			    }
+			});
+			
+			observer.observe(textNode, {
+			    characterData: true,
+			    characterDataOldValue: true
+			});
+			
+			// Изменение:
+			textNode.data = 'Здравствуйте';
+			
+			</code></pre></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="attributeFilter" class="member public"><span class="name">attributeFilter</span><span class="signature-type"> :Array.&lt;string></span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🎯 <code>attributeFilter</code> — список атрибутов, изменения которых должен отслеживать <code>Observer</code>.</p>
+			<hr>
+			<h3>📌 Что делает</h3>
+			<ul>
+			<li>Ограничивает отслеживание <strong>только указанными атрибутами</strong>.</li>
+			<li>Позволяет избежать лишних срабатываний и повысить производительность.</li>
+			<li>Работает <strong>только с <code>attributes: true</code></strong>.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-html"><code>
+			&lt;div id=&quot;box&quot; class=&quot;red&quot; data-state=&quot;open&quot; title=&quot;подсказка&quot;>&lt;/div>
+			
+			</code></pre>
+			<pre class="prettyprint source lang-js"><code>
+			const target = document.getElementById(&quot;box&quot;);
+			
+			const observer = new MutationObserver((mutations) => {
+			    for (const m of mutations) {
+			        console.log(&quot;Изменён атрибут:&quot;, m.attributeName);
+			        console.log(&quot;Было:&quot;, m.oldValue);
+			    }
+			});
+			
+			observer.observe(target, {
+			    attributes: true,
+			    attributeOldValue: true,
+			    attributeFilter: [&quot;class&quot;, &quot;data-state&quot;] // Только эти два
+			});
+			
+			// Сработает:
+			target.setAttribute(&quot;class&quot;, &quot;green&quot;);
+			
+			// Не сработает:
+			target.setAttribute(&quot;title&quot;, &quot;новая подсказка&quot;);
+			
+			</code></pre>
+			<hr>
+			<h3>💡 Зачем использовать</h3>
+			<ul>
+			<li>📉 Снижает нагрузку, особенно при большом числе атрибутов</li>
+			<li>🎯 Позволяет следить только за значимыми изменениями (<code>class</code>, <code>style</code>, <code>data-*</code>)</li>
+			</ul>
+			<hr>
+			<p>⚠️ Без <code>attributeFilter</code> будут отслеживаться <strong>все атрибуты</strong>.</p>
+			<hr></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Array.&lt;string></span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".new" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">new</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🏗️ <code>new()</code> — создаёт экземпляр билдера опций <a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a> для удобной конфигурации <a href="Observer.html">Observer</a>.</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Позволяет <strong>пошагово настраивать</strong> параметры наблюдателя через fluent-интерфейс.</li>
+			<li>Альтернатива ручному созданию <code>ObserverOptions</code> — делает код <strong>чище и читаемее</strong>.</li>
+			<li>Возвращает билдер, содержащий методы:
+			<code>.children()</code>, <code>.attributes()</code>, <code>.text()</code>, <code>.subtree()</code>, <code>.useOldValue()</code>, и др.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const options = ObserverOptions
+			    .new()
+			    .children()
+			    .subtree()
+			    .build();
+			
+			const observer = new Observer(callback);
+			observer.observe(target, options);
+			
+			</code></pre>
+			<hr>
+			<h3>💡 Преимущества</h3>
+			<ul>
+			<li>🧱 Явная и наглядная конфигурация</li>
+			<li>🌱 Удобно для настройки по умолчанию и расширения</li>
+			<li>🚫 Минимизирует ошибки, связанные с ручным созданием объекта конфигурации</li>
+			</ul>
+			<hr></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Экземпляр билдера опций</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".children" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">children</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptions.html">ObserverOptions</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>👶 <code>children()</code> — создаёт <a href="ObserverOptions.html">ObserverOptions</a> с включённым флагом <code>childList: true</code>.</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Быстрый способ создать конфигурацию для отслеживания <strong>изменений в прямых дочерних элементах</strong> (добавление/удаление узлов).</li>
+			<li>Используется, если нужно реагировать на изменения структуры DOM-дерева на первом уровне вложенности.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer(callback);
+			observer.observe(target, ObserverOptions.children());
+			
+			</code></pre>
+			<hr>
+			<p>Равнозначно:</p>
+			<pre class="prettyprint source lang-js"><code>
+			{
+			    childList: true
+			}
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Конфигурация с <code>childList: true</code></p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".descendants" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">descendants</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptions.html">ObserverOptions</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🌿 <code>descendants()</code> — возвращает преднастроенные <a href="ObserverOptions.html">ObserverOptions</a>
+			для наблюдения за <strong>всеми потомками</strong> узла.</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Комбинация <code>childList: true</code> и <code>subtree: true</code>.</li>
+			<li>Удобно, если нужно отслеживать изменения в DOM не только на верхнем уровне,
+			но и глубже (вложенные элементы).</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer(callback);
+			observer.observe(target, ObserverOptions.descendants());
+			
+			</code></pre>
+			<hr>
+			<h3>🧠 Эквивалентно</h3>
+			<pre class="prettyprint source lang-js"><code>
+			{
+			    childList: true,
+			    subtree: true
+			}
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Готовый объект опций</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".attributes" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">attributes</span><span class="signature-params">( [&nbsp;<span class="signature-param">filter</span> [,&nbsp;<span class="signature-param">useOldValue</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptions.html">ObserverOptions</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🧬 <code>attributes()</code> — возвращает преднастроенные <a href="ObserverOptions.html">ObserverOptions</a> для отслеживания <strong>изменений атрибутов</strong>.</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Включает флаг <code>attributes: true</code> для наблюдения за изменениями атрибутов DOM-элемента.</li>
+			<li>Поддерживает фильтрацию по атрибутам и отслеживание старых значений.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer(callback);
+			observer.observe(target, ObserverOptions.attributes(['class', 'style'], true));
+			
+			</code></pre>
+			<hr>
+			<h3>🧠 Эквивалентно</h3>
+			<pre class="prettyprint source lang-js"><code>
+			{
+			    attributes: true,
+			    attributeFilter: ['class', 'style'],
+			    attributeOldValue: true
+			}
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>filter</code></td>
+							<td><span class="param-type">Array.&lt;string></span> | <span class="param-type">null</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td></td>
+							<td class="last">
+									<p>— Массив атрибутов, которые нужно отслеживать (например, <code>['class', 'data-id']</code>).
+			Оставьте <code>null</code>, чтобы следить за <strong>всеми</strong> атрибутами.</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>useOldValue</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>false</td>
+							<td class="last">
+									<p>— Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет возвращаться предыдущее значение атрибута.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Готовый объект опций для <code>.observe()</code></p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".descendantAttributes" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">descendantAttributes</span><span class="signature-params">( [&nbsp;<span class="signature-param">filter</span> [,&nbsp;<span class="signature-param">useOldValue</span>&nbsp;]&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptions.html">ObserverOptions</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🧬 <code>descendantAttributes()</code> — возвращает <a href="ObserverOptions.html">ObserverOptions</a> для отслеживания <strong>атрибутов всех потомков</strong> DOM-элемента.</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Включает флаги <code>attributes: true</code> и <code>subtree: true</code> для наблюдения за <strong>изменениями атрибутов во всём дереве</strong>.</li>
+			<li>Позволяет фильтровать по атрибутам и получать старые значения.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer(callback);
+			observer.observe(target, ObserverOptions.descendantAttributes(['data-state'], true));
+			
+			</code></pre>
+			<hr>
+			<h3>🧠 Эквивалентно</h3>
+			<pre class="prettyprint source lang-js"><code>
+			{
+			    attributes: true,
+			    subtree: true,
+			    attributeFilter: ['data-state'],
+			    attributeOldValue: true
+			}
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>filter</code></td>
+							<td><span class="param-type">Array.&lt;string></span> | <span class="param-type">null</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td></td>
+							<td class="last">
+									<p>— Список атрибутов, за которыми нужно следить
+			(например, <code>['class', 'data-visible']</code>).
+			Укажите <code>null</code>, чтобы отслеживать <strong>все</strong> атрибуты.</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>useOldValue</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>false</td>
+							<td class="last">
+									<p>— Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет возвращено предыдущее значение атрибута.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Готовый набор опций для <code>observe()</code></p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".text" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">text</span><span class="signature-params">( [&nbsp;<span class="signature-param">useOldValue</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptions.html">ObserverOptions</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>✏️ <code>text()</code> — возвращает <a href="ObserverOptions.html">ObserverOptions</a> для отслеживания изменений текстовых узлов (<code>characterData</code>).</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Отслеживает изменения текстового содержимого в узлах типа <code>Text</code>, <code>Comment</code>, <code>CDATASection</code>.</li>
+			<li>Наблюдает только за <strong>конкретным текстовым узлом</strong>, не за элементами (<code>Element</code>).</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer(callback);
+			
+			const textNode = document.getElementById(&quot;box&quot;).firstChild;
+			
+			observer.observe(textNode, ObserverOptions.text(true));
+			
+			</code></pre>
+			<hr>
+			<h3>🧠 Эквивалентно</h3>
+			<pre class="prettyprint source lang-js"><code>
+			{
+			    characterData: true,
+			    characterDataOldValue: true
+			}
+			
+			</code></pre>
+			<hr>
+			<p>⚠️ Наблюдение работает только при указании <strong>текстового узла</strong> как цели.
+			Наблюдение за элементами с <code>characterData: true</code> эффекта не даст.</p>
+			<hr></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>useOldValue</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>false</td>
+							<td class="last">
+									<p>— Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет сохранено старое значение текста.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Готовый набор опций для <code>observe()</code></p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".descendantText" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">descendantText</span><span class="signature-params">( [&nbsp;<span class="signature-param">useOldValue</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptions.html">ObserverOptions</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>✏️ <code>descendantText()</code> — возвращает <a href="ObserverOptions.html">ObserverOptions</a> для отслеживания изменений текстовых узлов (<code>characterData</code>) во всём поддереве.</p>
+			<hr>
+			<h3>📌 Назначение</h3>
+			<ul>
+			<li>Следит за изменениями <strong>всех текстовых узлов</strong>, находящихся внутри заданного элемента и его потомков.</li>
+			<li>Учитывает <code>subtree: true</code>, чтобы охватить вложенные текстовые узлы.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer(callback);
+			
+			const root = document.getElementById(&quot;container&quot;);
+			
+			observer.observe(root, ObserverOptions.descendantText(true));
+			
+			</code></pre>
+			<hr>
+			<h3>🧠 Эквивалентно</h3>
+			<pre class="prettyprint source lang-js"><code>
+			{
+			    characterData: true,
+			    characterDataOldValue: true,
+			    subtree: true
+			}
+			
+			</code></pre>
+			<hr>
+			<p>⚠️ Важно: наблюдение работает <strong>только</strong> при изменении текстовых узлов.
+			Элементы (например, <code>div</code>, <code>span</code>) не отслеживаются с <code>characterData</code>.</p>
+			<hr></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>useOldValue</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>false</td>
+							<td class="last">
+									<p>— если <code>true</code>, в <code>MutationRecord.oldValue</code> будет сохранено предыдущее значение текста.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Готовый набор опций для <code>observe()</code> с учётом вложенных текстовых узлов</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".content" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">content</span><span class="signature-params">( [&nbsp;<span class="signature-param">useOldValue</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptions.html">ObserverOptions</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>📦 Создаёт конфигурацию для <strong>наблюдения за содержимым</strong> DOM-узла.</p>
+			<p>Удобное сокращение, которое включает наблюдение за:</p>
+			<ul>
+			<li>👶 дочерними элементами (<code>childList</code>)</li>
+			<li>✏️ текстовыми узлами (<code>characterData</code>)</li>
+			<li>🌳 вложенными элементами (<code>subtree</code>)</li>
+			</ul>
+			<hr>
+			<h3>🔍 Что делает:</h3>
+			<p>Вызов <code>ObserverOptions.content()</code> возвращает преднастроенные опции, эквивалентные:</p>
+			<pre class="prettyprint source lang-js"><code>
+			new ObserverOptionsBuilder()
+			    .content()
+			    .build()
+			
+			// То же самое, что:
+			// .children().text().subtree()
+			
+			</code></pre>
+			<hr>
+			<h3>✅ Пример:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const options = ObserverOptions.content(true); // с сохранением старых значений текста
+			
+			const observer = new Observer(callback);
+			observer.observe(document.querySelector('#editor'), options);
+			
+			</code></pre>
+			<hr>
+			<h3>🧠 Подходит для:</h3>
+			<ul>
+			<li><code>contenteditable</code>-областей</li>
+			<li>Редакторов и текстовых блоков</li>
+			<li>Интерфейсов, где содержимое может меняться динамически</li>
+			</ul>
+			<hr></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>useOldValue</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>false</td>
+							<td class="last">
+									<p>— если <code>true</code>, включает сохранение старых значений текста (<code>characterDataOldValue: true</code>).</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Готовый объект настроек для <code>MutationObserver</code>.</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".all" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">all</span><span class="signature-params">( [&nbsp;<span class="signature-param">useOldValue</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptions.html">ObserverOptions</a>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🧿 Создаёт конфигурацию для <strong>полного наблюдения</strong> за изменениями в DOM.</p>
+			<p>Включает <strong>все основные флаги</strong>, чтобы отслеживать:</p>
+			<ul>
+			<li>👶 Добавление и удаление элементов (<code>childList</code>)</li>
+			<li>🏷️ Изменения атрибутов (<code>attributes</code>)</li>
+			<li>✏️ Изменения текстовых узлов (<code>characterData</code>)</li>
+			<li>🌳 Изменения на всех уровнях вложенности (<code>subtree</code>)</li>
+			</ul>
+			<hr>
+			<h3>⏪ useOldValue (по умолчанию <code>false</code>)</h3>
+			<p>Если указано <code>true</code>, включает сохранение старых значений:</p>
+			<ul>
+			<li><code>attributeOldValue: true</code> — для атрибутов</li>
+			<li><code>characterDataOldValue: true</code> — для текстовых узлов</li>
+			</ul>
+			<hr>
+			<h3>🔧 Эквивалент:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			ObserverOptions.new().all()
+			    .useOldValue() // если передан true
+			    .build();
+			
+			</code></pre>
+			<hr>
+			<h3>✅ Пример:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const options = ObserverOptions.all(true); // со старыми значениями
+			const observer = new Observer(console.log);
+			
+			observer.observe(document.body, options);
+			
+			</code></pre>
+			<hr>
+			<h3>🧠 Полезно для:</h3>
+			<ul>
+			<li>Инструментов отладки</li>
+			<li>Полной реактивности</li>
+			<li>Отслеживания любых DOM-изменений</li>
+			</ul>
+			<hr>
+			<p>⚠️ Может повлиять на производительность — используйте при необходимости &quot;всё включено&quot;.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>useOldValue</code></td>
+							<td><span class="param-type">boolean</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>false</td>
+							<td class="last">
+									<p>Включить ли сохранение старых значений атрибутов и текста.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Готовый набор параметров для <code>MutationObserver</code>.</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptions.mjs.html">ObserverOptions.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+							</article>
+					</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">Архитектор (rotcetihra), 2025</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>

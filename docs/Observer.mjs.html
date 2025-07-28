@@ -1,0 +1,452 @@
+<!-- start:source.tmpl.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>Observer.mjs</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #48036F;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #48036F;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #48036F;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #48036F;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"DD MMM YYYY","systemName":"js-observe","systemSummary":"Наблюдатель за изменениями в DOM-элементе.","systemLogo":"","systemColor":"#48036F","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Архитектор (rotcetihra), 2025","linenums":false,"collapseSymbols":true,"inverseNav":false,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">
+					js-observe
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="global.html#observe">observe</a></li>
+											<li><a href="global.html#observer">observer</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="Observer.html">Observer</a></li>
+											<li><a href="ObserverBuilder.html">ObserverBuilder</a></li>
+											<li><a href="ObserverOptions.html">ObserverOptions</a></li>
+											<li><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">source</span>
+				<h1><span class="name">Observer.mjs</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript"><code class="language-javascript">import ObserverBuilder from './ObserverBuilder.mjs';
+
+/**
+ * 🧭 `Observer` — удобная обёртка над стандартным `MutationObserver` с предустановленными параметрами и (опционально) целевым DOM-узлом.
+ *
+ * Класс инкапсулирует логику повторного использования конфигурации и узла, позволяя отслеживать изменения
+ * в разных элементах без повторного указания одних и тех же опций.
+ *
+ * ---
+ *
+ * ### ⚙️ Назначение:
+ *
+ * - Повторно использовать один и тот же набор опций для нескольких элементов.
+ * - Упростить вызов `.observe()` без необходимости передавать конфигурацию и узел каждый раз.
+ * - Опционально задать целевой узел наблюдения в конструкторе.
+ *
+ * ---
+ *
+ * ### 📐 Сигнатура конструктора:
+ *
+ * ```ts
+ *
+ * new Observer(callback, options?, target?)
+ *
+ * ```
+ *
+ * - `callback` `{MutationCallback}` — вызывается при каждом изменении.
+ * - `options` `{MutationObserverInit}` — конфигурация (например, `{ childList: true, subtree: true }`).
+ * - `target` `{Node}` — DOM-узел, за которым нужно следить по умолчанию.
+ *
+ * ---
+ *
+ * ### ✅ Пример использования:
+ *
+ * ```js
+ *
+ * const observer = new Observer((mutations) => {
+ *     for (const m of mutations) {
+ *         console.log(m);
+ *     }
+ * }, {
+ *     childList: true,
+ *     subtree: true
+ * }, document.body);
+ *
+ * observer.observe(); // будет использовать document.body и указанные опции
+ * observer.observe(document.querySelector('#header')); // target переопределён
+ *
+ * ```
+ *
+ * ---
+ *
+ * ### ⚠️ Важно:
+ *
+ * По спецификации `MutationObserver` необходимо указать хотя бы один из следующих параметров:
+ *
+ * - `childList`
+ * - `attributes`
+ * - `characterData`
+ *
+ * В противном случае вызов `.observe()` приведёт к исключению: `An invalid or illegal string was specified`
+ *
+ * @class
+ * @extends MutationObserver
+ */
+class Observer extends MutationObserver {
+    /**
+     * ⚙️ Конфигурация для {@link Observer}.
+     *
+     * Содержит параметры, указывающие, какие типы изменений в DOM необходимо отслеживать:
+     *
+     * - `childList`: отслеживание добавления/удаления узлов.
+     * - `attributes`: отслеживание изменений атрибутов.
+     * - `characterData`: отслеживание изменений текста.
+     * - `subtree`, `attributeOldValue`, `characterDataOldValue`, `attributeFilter` и др.
+     *
+     * Значение передаётся в метод `.observe()` при вызове.
+     *
+     * @type {ObserverOptions}
+     * @private
+     */
+    #options;
+
+    /**
+     * 🎯 Целевой DOM-узел для наблюдения по умолчанию.
+     *
+     * Используется в методе `observe()`, если не был явно передан `target`.
+     * Позволяет задать основной элемент для отслеживания прямо при создании экземпляра {@link Observer},
+     * избавляя от необходимости указывать его каждый раз.
+     *
+     * ---
+     *
+     * ### Применение:
+     *
+     * Если `observe()` вызывается без аргументов, будет использован `#target`.
+     *
+     * ---
+     *
+     * ### Пример:
+     *
+     * ```js
+     *
+     * const observer = new Observer(callback, options, document.body);
+     *
+     * observer.observe(); // будет использован document.body
+     *
+     * ```
+     *
+     * @type {Node|null}
+     * @private
+     */
+    #target;
+
+    constructor(callback, options = null, target = null) {
+        super(callback);
+
+        this.#options = options;
+        this.#target = target;
+    }
+
+    /**
+     * 🛰️ Запускает отслеживание изменений в DOM-узле.
+     *
+     * Обёртка над `MutationObserver.observe()`, использующая параметры и целевой узел,
+     * заданные в конструкторе, либо переопределяемые вручную при вызове.
+     *
+     * ────────────────
+     *
+     * 📝 **Что можно отслеживать:**
+     *
+     * - ➕➖ добавление/удаление дочерних элементов (`childList`)
+     * - 🏷️ изменения атрибутов (`attributes`)
+     * - 📝✏️ изменения текстового содержимого (`characterData`)
+     * - 🌳 изменения во вложенных узлах (`subtree`)
+     *
+     * ────────────────
+     *
+     * ⚠️ **Важно:**
+     *
+     * По спецификации `MutationObserver`, обязательно должна быть указана хотя бы одна из опций:
+     *
+     * - `childList`
+     * - `attributes`
+     * - `characterData`
+     *
+     * Иначе будет выброшено исключение: `"An invalid or illegal string was specified"`
+     *
+     * ────────────────
+     *
+     * ### ✅ Пример
+     *
+     * ```js
+     *
+     * const observer = new Observer((mutations) => {
+     *     for (const mutation of mutations) {
+     *         console.log(mutation);
+     *     }
+     * }, {
+     *     attributes: true,
+     *     attributeOldValue: true,
+     *     subtree: true
+     * },
+     * document.getElementById('app'));
+     *
+     * observer.observe();
+     *
+     * // или переопределить target и options вручную:
+     * observer.observe(document.querySelector('#header'), { childList: true });
+     *
+     * ```
+     *
+     * @param {Node} [target] - DOM-узел, за которым будет вестись наблюдение.
+     * @param {ObserverOptions} [options] - Объект параметров наблюдения.
+     * @throws {TypeError} Если `target` не является допустимым DOM-узлом.
+     * @throws {SyntaxError} Если не указана ни одна из обязательных опций (`childList`, `attributes`, `characterData`).
+     */
+    observe(target = null, options = null) {
+        super.observe(target ?? this.#target, options ?? this.#options);
+    }
+
+    /**
+     * 🔌 Отключает наблюдение за всеми ранее отслеживаемыми DOM-узлами.
+     *
+     * Обёртка над стандартным методом `MutationObserver.disconnect()`.
+     *
+     * Прекращает получение уведомлений обо всех изменениях, за которыми следил данный {@link Observer}.
+     *
+     * ---
+     *
+     * ### 🧹 Когда использовать:
+     *
+     * - Когда наблюдение больше не требуется.
+     * - Чтобы освободить ресурсы и предотвратить утечки памяти.
+     *
+     * ---
+     *
+     * ### ✅ Пример:
+     *
+     * ```js
+     *
+     * const observer = new Observer(callback, { childList: true }, document.body);
+     * observer.observe();
+     *
+     * // Через некоторое время...
+     * observer.disconnect(); // Отключение отслеживания
+     *
+     * ```
+     *
+     * ---
+     *
+     * @returns {void}
+     */
+    disconnect() {
+        super.disconnect();
+    }
+
+    /**
+     * 📦 Получает все накопленные, но ещё не обработанные записи об изменениях.
+     *
+     * Метод возвращает массив объектов `MutationRecord`, которые были зафиксированы,
+     * но ещё не переданы в `callback` наблюдателя (например, если изменения произошли,
+     * но `callback` ещё не был вызван из-за задержки обработки очереди событий).
+     *
+     * ---
+     *
+     * ### 🧠 Когда использовать:
+     *
+     * - Когда нужно немедленно получить список изменений без ожидания вызова колбэка.
+     * - В ситуациях с ручным управлением или синхронной обработкой изменений.
+     *
+     * ---
+     *
+     * ### 📝 Примечание:
+     *
+     * Метод **не очищает очередь изменений** в `MutationObserver`. Он **забирает** накопленные записи и очищает её.
+     * Повторный вызов вернёт пустой массив, если не произошло новых изменений.
+     *
+     * ---
+     *
+     * ### ✅ Пример:
+     *
+     * ```js
+     *
+     * const observer = new Observer(() => {}, { childList: true }, document.body);
+     * observer.observe();
+     *
+     * // Изменение DOM
+     * document.body.appendChild(document.createElement('div'));
+     *
+     * const records = observer.takeRecords();
+     * console.log(records); // Выведет массив с MutationRecord
+     *
+     * ```
+     *
+     * ---
+     *
+     * @returns {MutationRecord[]} Массив записей об изменениях, накопленных с момента последнего вызова `takeRecords` или выполнения `callback`.
+     */
+    takeRecords() {
+        return super.takeRecords();
+    }
+
+    /**
+     * 🆕 `Observer.new()` — удобный способ создания {@link Observer} с помощью билдера {@link ObserverBuilder}.
+     *
+     * ---
+     *
+     * ### 📖 Назначение:
+     *
+     * Предоставляет fluent-интерфейс для создания {@link Observer} с пошаговой конфигурацией:
+     *
+     * - целевого DOM-узла (`for(...)`)
+     * - параметров наблюдения (`with(...)` или `options(builder => ...)`)
+     * - колбэка (`call(...)`)
+     *
+     * ---
+     *
+     * ### ✅ Пример:
+     *
+     * ```js
+     *
+     * const observer = Observer
+     *     .new()
+     *     .for(document.body)
+     *     .options((builder) =>
+     *         builder
+     *             .descendants()
+     *             .attributes(['data-id'])
+     *             .text()
+     *             .useOldValue()
+     *     )
+     *     .call((mutations) => {
+     *         console.log('Mutations:', mutations);
+     *     })
+     *     .build();
+     *
+     * observer.observe();
+     *
+     * ```
+     *
+     * ---
+     *
+     * @returns {ObserverBuilder} Экземпляр билдера {@link ObserverBuilder}, из которого можно собрать {@link Observer}.
+     */
+    static new() {
+        return new ObserverBuilder();
+    }
+}
+
+export default Observer;
+</code></pre>
+		</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">Архитектор (rotcetihra), 2025</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
+<!-- end:source.tmpl.hbs -->

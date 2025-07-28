@@ -1,44 +1,45 @@
 # 🔭 js-observe
 
-**js-observe** — умная, декларативная и лаконичная обёртка над
+**js-observe** — современная, декларативная и безопасная обёртка над
 [MutationObserver](https://developer.mozilla.org/ru/docs/Web/API/MutationObserver)
-для отслеживания изменений DOM в современном стиле.
+для отслеживания изменений DOM с помощью fluent-интерфейса.
+
+---
 
 ## 🚀 Возможности
 
--   ✅ Fluent Builder API для конфигурации наблюдения
--   ✅ Безопасная настройка без ручных ошибок
--   ✅ Повторное использование наблюдателей и опций
--   ✅ Поддержка старых значений (`oldValue`)
--   ✅ Фильтрация по атрибутам (`attributeFilter`)
--   ✅ Вложенное наблюдение (`subtree`)
--   ✅ Простая точка входа: `observer()` и `observe()`
--   ✅ Поддержка отключения и получения записей (`disconnect`, `takeRecords`)
--   ✅ Подробные JSDoc и примеры
+-   🧩 Fluent Builder API — лаконичная цепочка методов
+-   🛡️ Безопасная конфигурация — исключает ошибки при настройке
+-   🔁 Повторное использование — один билдер, много наблюдателей
+-   🏷️ Фильтрация атрибутов и поддержка `oldValue`
+-   🌳 Наблюдение за потомками (`subtree`)
+-   ⚡ Быстрый запуск: `observer()` и `observe()`
+-   🛑 Контроль: `disconnect()`, `takeRecords()`
+-   📚 Подробный JSDoc и реальные примеры
+
+---
 
 ## 📦 Установка
 
 ```bash
+
 npm install js-observe
+
 ```
 
-## 🧁 Быстрый пример
+---
+
+## 🍰 Быстрый старт
 
 ```js
-import { observer } from 'js-observe';
+import { observer, ObserverOptions } from 'js-observe';
 
 const obs = observer()
     .for(document.body)
-    .options((o) =>
-        o
-            .descendants()
-            .attributes(['data-state', 'class'])
-            .text()
-            .useOldValue(),
-    )
+    .with(ObserverOptions.all())
     .call((mutations) => {
         for (const m of mutations) {
-            console.log(`[${m.type}]`, m);
+            console.log(`🔔 [${m.type}]`, m);
         }
     })
     .build();
@@ -46,108 +47,109 @@ const obs = observer()
 obs.observe();
 ```
 
-## 📐 Примеры
+---
 
-### 🔧 Минимальный запуск через observe()
+## 🧩 Примеры
+
+### 🛠️ Минимальный запуск (без билдера)
 
 ```js
-import observe from 'js-observe/observe';
+import { observe, ObserverOptions } from 'js-observe';
 
-observe(document.querySelector('#root'), { childList: true }, (mutations) => {
-    console.log('Изменения:', mutations);
-});
+observe(
+    document.querySelector('#root'),
+    ObserverOptions.children(),
+    (mutations) => {
+        console.log('📝 Изменения:', mutations);
+    },
+);
 ```
 
-### 🧱 Конфигурация через билдера
+### 🏗️ Конфигурация через билдер
 
 ```js
-import observer from 'js-observe/observer';
+import { observer } from 'js-observe';
 
 const obs = observer()
     .for(document.querySelector('#container'))
     .options((o) => o.children().text().attributes().useOldValue())
     .call((mutations) => {
-        console.log('Обнаружены изменения в DOM:', mutations);
+        console.log('🧬 Изменения в DOM:', mutations);
     })
     .build();
 
 obs.observe();
 ```
 
-### 🧠 Использование Observer напрямую
+### 🧠 Использование напрямую
 
 ```js
-import Observer from 'js-observe/Observer';
+import { Observer, ObserverOptions } from 'js-observe';
 
 const obs = new Observer(
-    (mutations) => console.log(mutations),
-    {
-        attributes: true,
-        characterData: true,
-        subtree: true,
-        attributeOldValue: true,
-        characterDataOldValue: true,
-    },
+    (mutations) => console.log('🔎', mutations),
+    ObserverOptions.all(),
     document.body,
 );
 
 obs.observe();
 ```
 
-### 🧪 Получение отложенных изменений
+### 📦 Получение накопленных изменений
 
 ```js
-const observer = new Observer(() => {}, { childList: true }, document.body);
-observer.observe();
+const obs = new Observer(() => {}, ObserverOptions.children(), document.body);
+obs.observe();
 
-// ...изменения в DOM...
 document.body.appendChild(document.createElement('div'));
 
-// Получаем записи напрямую
-const changes = observer.takeRecords();
-console.log(changes);
+const changes = obs.takeRecords();
+console.log('📦', changes);
 ```
 
 ---
 
 ## 🛠️ API
 
-### ObserverBuilder
+### 🧩 `ObserverBuilder`
 
--   `.for(node: Node)` — указать целевой узел
--   `.with(options: ObserverOptions)` — задать опции напрямую
--   `.options((builder: ObserverOptionsBuilder) => void)` — сконфигурировать
-    через билдер
--   `.call(callback: MutationCallback)` — задать callback
--   `.build()` — получить экземпляр Observer
-
-### ObserverOptionsBuilder
-
-| Метод           | Что делает                                       |
-| --------------- | ------------------------------------------------ |
-| children()      | Отслеживает только прямых потомков (`childList`) |
-| descendants()   | Прямые + вложенные (`childList` + `subtree`)     |
-| attributes([…]) | Отслеживает атрибуты, можно указать фильтр       |
-| text()          | Отслеживает изменения текста (`characterData`)   |
-| subtree()       | Включает вложенные узлы                          |
-| useOldValue()   | Возвращает старые значения атрибутов/текста      |
-| all()           | Включает всё сразу                               |
-| build()         | Возвращает готовую конфигурацию                  |
+| Метод             | Назначение                     |
+| ----------------- | ------------------------------ |
+| `.for(node)`      | 🎯 Целевой DOM-узел            |
+| `.with(options)`  | ⚙️ Прямые опции (без билдера)  |
+| `.options(fn)`    | 🏗️ Билдер-режим для опций      |
+| `.call(callback)` | 📞 Обработчик изменений        |
+| `.build()`        | 🏁 Получить готовый `Observer` |
 
 ---
 
-## ⚠️ Обязательные опции
+### 🏗️ `ObserverOptionsBuilder`
 
-По спецификации MutationObserver, необходимо указать хотя бы одну из:
+| Метод                   | Что делает                               |
+| ----------------------- | ---------------------------------------- |
+| `.children()`           | 👶 Прямые потомки (`childList`)          |
+| `.descendants()`        | 🌳 Все потомки (`childList` + `subtree`) |
+| `.attributes([filter])` | 🏷️ Атрибуты с фильтром (или без)         |
+| `.text()`               | ✏️ Текстовые узлы (`characterData`)      |
+| `.subtree()`            | 🌲 Вложенные узлы (`subtree`)            |
+| `.useOldValue()`        | ⏪ Возврат старых значений (`oldValue`)  |
+| `.all()`                | 🧿 Включить всё сразу                    |
+| `.build()`              | 📦 Готовый объект опций                  |
 
--   `childList`
--   `attributes`
--   `characterData`
+---
 
-Иначе произойдёт ошибка:
+## ⚠️ Обязательные параметры
+
+MutationObserver требует хотя бы **один** из параметров:
+
+-   👶 `childList`
+-   🏷️ `attributes`
+-   ✏️ `characterData`
+
+Иначе будет ошибка:
 
 ```
-"An invalid or illegal string was specified"
+🚫 The options object must set at least one of 'attributes', 'characterData', or 'childList' to true.
 ```
 
 ---
@@ -163,16 +165,18 @@ const obs = observer()
 
 obs.observe();
 
-// позже
-obs.disconnect(); // Отключить
+// Позже
+obs.disconnect(); // 🛑 Остановить наблюдение
 ```
 
-## 💡 Идеи для расширения
+---
 
--   Поддержка таймеров/батчей для обновлений
--   Возможность указания debounce/throttle
--   Поддержка MutationRecord фильтрации
--   Интеграция с React/Vue
+## 💡 Возможности для расширения
+
+-   ⏳ Debounce/throttle для callback
+-   🧹 Фильтрация `MutationRecord`
+-   ⚛️ Интеграция с React/Vue
+-   🧱 Бандлы для SSR или Web Components
 
 ---
 
@@ -184,6 +188,5 @@ obs.disconnect(); // Отключить
 
 ## 👤 Автор
 
-Архитектор — <rotcetihra@mail.ru>
-
-Создано с любовью к чистому и предсказуемому DOM-наблюдению.
+Разработано с вниманием к деталям и чистоте DOM 📧
+[rotcetihra@mail.ru](mailto:rotcetihra@mail.ru)

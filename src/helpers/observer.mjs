@@ -25,6 +25,7 @@ import ObserverBuilder from '../ObserverBuilder.mjs';
  * ---
  *
  * @returns {ObserverBuilder} Новый экземпляр {@link ObserverBuilder} для создания наблюдателя.
+ * @function observer
  */
 export default function observer() {
     return new ObserverBuilder();
