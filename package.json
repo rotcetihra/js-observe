@@ -20,13 +20,11 @@
     "devDependencies": {
         "jest": "^30.0.5",
         "jest-environment-jsdom": "^30.0.5",
-        "jsdoc": "^3.5.5"
+        "jsdoc": "^3.5.5",
+        "foodoc": "^0.0.9"
     },
     "scripts": {
         "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
         "docs": "./node_modules/.bin/jsdoc -c jsdoc.config.json"
-    },
-    "dependencies": {
-        "foodoc": "^0.0.9"
     }
 }
