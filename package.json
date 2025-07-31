@@ -1,5 +1,5 @@
 {
-    "name": "js-observe",
+    "name": "@rotcetihra/js-observe",
     "version": "1.0.0",
     "description": "Declarative wrapper over MutationObserver",
     "main": "src/index.js",
