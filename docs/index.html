@@ -124,12 +124,12 @@
 <hr>
 <h2>📦 Установка</h2>
 <pre class="prettyprint source lang-bash"><code>
-npm install js-observe
+npm install @rotcetihra/js-observe
 
 </code></pre>
 <hr>
 <h2>🍰 Быстрый старт</h2>
-<pre class="prettyprint source lang-js"><code>import { observer, ObserverOptions } from 'js-observe';
+<pre class="prettyprint source lang-js"><code>import { observer, ObserverOptions } from '@rotcetihra/js-observe';
 
 const obs = observer()
     .for(document.body)
@@ -146,7 +146,7 @@ obs.observe();
 <hr>
 <h2>🧩 Примеры</h2>
 <h3>🛠️ Минимальный запуск (без билдера)</h3>
-<pre class="prettyprint source lang-js"><code>import { observe, ObserverOptions } from 'js-observe';
+<pre class="prettyprint source lang-js"><code>import { observe, ObserverOptions } from '@rotcetihra/js-observe';
 
 observe(
     document.querySelector('#root'),
@@ -157,7 +157,7 @@ observe(
 );
 </code></pre>
 <h3>🏗️ Конфигурация через билдер</h3>
-<pre class="prettyprint source lang-js"><code>import { observer } from 'js-observe';
+<pre class="prettyprint source lang-js"><code>import { observer } from '@rotcetihra/js-observe';
 
 const obs = observer()
     .for(document.querySelector('#container'))
@@ -170,7 +170,7 @@ const obs = observer()
 obs.observe();
 </code></pre>
 <h3>🧠 Использование напрямую</h3>
-<pre class="prettyprint source lang-js"><code>import { Observer, ObserverOptions } from 'js-observe';
+<pre class="prettyprint source lang-js"><code>import { Observer, ObserverOptions } from '@rotcetihra/js-observe';
 
 const obs = new Observer(
     (mutations) => console.log('🔎', mutations),
@@ -290,6 +290,9 @@ obs.observe();
 // Позже
 obs.disconnect(); // 🛑 Остановить наблюдение
 </code></pre>
+<hr>
+<h2>Изменения</h2>
+<p><a href="./CHANGELOG.md">CHANGELOG</a></p>
 <hr>
 <h2>📄 Лицензия</h2>
 <p><a href="./LICENSE">MIT</a></p>

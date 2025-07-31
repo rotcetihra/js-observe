@@ -25,7 +25,7 @@
 
 ```bash
 
-npm install js-observe
+npm install @rotcetihra/js-observe
 
 ```
 
@@ -34,7 +34,7 @@ npm install js-observe
 ## 🍰 Быстрый старт
 
 ```js
-import { observer, ObserverOptions } from 'js-observe';
+import { observer, ObserverOptions } from '@rotcetihra/js-observe';
 
 const obs = observer()
     .for(document.body)
@@ -56,7 +56,7 @@ obs.observe();
 ### 🛠️ Минимальный запуск (без билдера)
 
 ```js
-import { observe, ObserverOptions } from 'js-observe';
+import { observe, ObserverOptions } from '@rotcetihra/js-observe';
 
 observe(
     document.querySelector('#root'),
@@ -70,7 +70,7 @@ observe(
 ### 🏗️ Конфигурация через билдер
 
 ```js
-import { observer } from 'js-observe';
+import { observer } from '@rotcetihra/js-observe';
 
 const obs = observer()
     .for(document.querySelector('#container'))
@@ -86,7 +86,7 @@ obs.observe();
 ### 🧠 Использование напрямую
 
 ```js
-import { Observer, ObserverOptions } from 'js-observe';
+import { Observer, ObserverOptions } from '@rotcetihra/js-observe';
 
 const obs = new Observer(
     (mutations) => console.log('🔎', mutations),
@@ -170,6 +170,12 @@ obs.observe();
 // Позже
 obs.disconnect(); // 🛑 Остановить наблюдение
 ```
+
+---
+
+## Изменения
+
+[CHANGELOG](./CHANGELOG.md)
 
 ---
 
