@@ -4,6 +4,9 @@
     "description": "Declarative wrapper over MutationObserver",
     "main": "src/index.mjs",
     "type": "module",
+    "exports": {
+        ".": "./index.mjs"
+    },
     "keywords": [
         "dom",
         "mutationobserver",
