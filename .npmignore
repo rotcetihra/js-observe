@@ -1,0 +1,5 @@
+docs/
+CHANGELOG.md
+tests/
+jsdoc.config.json
+jest.config.mjs
