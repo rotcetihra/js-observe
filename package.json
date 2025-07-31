@@ -2,7 +2,7 @@
     "name": "@rotcetihra/js-observe",
     "version": "1.0.2",
     "description": "Declarative wrapper over MutationObserver",
-    "main": "src/index.js",
+    "main": "src/index.mjs",
     "type": "module",
     "keywords": [
         "dom",
