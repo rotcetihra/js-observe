@@ -5,9 +5,10 @@
     "main": "src/index.mjs",
     "type": "module",
     "exports": {
-        ".": "./index.mjs"
+        "import": "./index.mjs",
+        "types": "./types/index.d.ts"
     },
-    "types": "types/index.d.ts",
+    "types": "./types/index.d.ts",
     "keywords": [
         "dom",
         "mutationobserver",
