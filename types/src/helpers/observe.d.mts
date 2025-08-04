@@ -1,6 +1,3 @@
-import Observer from '../Observer.mjs';
-import ObserverOptions from '../ObserverOptions.mjs';
-
 /**
  * 🚀 Упрощённая функция-обёртка `observe()` для быстрого запуска наблюдения за DOM-изменениями.
  *
@@ -42,6 +39,5 @@ import ObserverOptions from '../ObserverOptions.mjs';
  * @returns {void}
  * @function observe
  */
-export default function observe(target, options, callback) {
-    new Observer(callback, options, target).observe();
-}
+export default function observe(target: Node, options: ObserverOptions | MutationObserverInit, callback: MutationCallback): void;
+import ObserverOptions from '../ObserverOptions.mjs';

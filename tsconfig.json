@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "types",
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "node",
+        "strict": true,
+        "checkJs": true,
+        "skipLibCheck": true
+    },
+    "include": ["src", "index.mjs"]
+}

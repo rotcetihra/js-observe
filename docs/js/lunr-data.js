@@ -392,7 +392,7 @@ window.lunrData = {
           "true"
         ],
         "ObserverOptions.html#attributeFilter": [
-          "array.&lt;string&gt",
+          "array.&lt;string&gt;|undefin",
           "attribut",
           "attributefilt",
           "attributeoldvalu",
@@ -10571,10 +10571,37 @@ window.lunrData = {
                                           "g": {
                                             "docs": {},
                                             "t": {
-                                              "docs": {
-                                                "ObserverOptions.html#attributeFilter": {
-                                                  "ref": "ObserverOptions.html#attributeFilter",
-                                                  "tf": 50
+                                              "docs": {},
+                                              ";": {
+                                                "docs": {},
+                                                "|": {
+                                                  "docs": {},
+                                                  "u": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "d": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "f": {
+                                                            "docs": {},
+                                                            "i": {
+                                                              "docs": {},
+                                                              "n": {
+                                                                "docs": {
+                                                                  "ObserverOptions.html#attributeFilter": {
+                                                                    "ref": "ObserverOptions.html#attributeFilter",
+                                                                    "tf": 50
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
                                                 }
                                               }
                                             }
@@ -10878,7 +10905,7 @@ window.lunrData = {
       "app",
       "appendchild",
       "array.&lt;mutationrecord&gt",
-      "array.&lt;string&gt",
+      "array.&lt;string&gt;|undefin",
       "attribut",
       "attributefilt",
       "attributeoldvalu",
@@ -11303,7 +11330,7 @@ window.lunrData = {
     "ObserverOptions.html#attributeFilter": {
       "id": "ObserverOptions.html#attributeFilter",
       "kind": "member",
-      "title": "attributeFilter :Array.&lt;string&gt;",
+      "title": "attributeFilter :Array.&lt;string&gt;|undefined",
       "longname": "ObserverOptions#attributeFilter",
       "name": "attributeFilter",
       "tags": "ObserverOptions#attributeFilter attributeFilter",

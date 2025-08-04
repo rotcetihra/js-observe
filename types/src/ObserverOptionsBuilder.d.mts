@@ -1,112 +1,4 @@
-<!-- start:source.tmpl.hbs -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-		<title>ObserverOptionsBuilder.mjs</title>
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
-		<link type="text/css" rel="stylesheet" href="css/template.min.css">
-			<style>
-				.page-header,
-				pre.code-toolbar > .toolbar:hover {
-					background-color: #48036F;
-				}
-				.callout-primary,
-				.toc .nav > li > a:hover,
-				.toc .nav > li > a:focus,
-				.toc .nav > li.active > a,
-				.toc .nav > li.active > a:hover,
-				.toc .nav > li.active > a:focus,
-				pre.code-toolbar > .toolbar:hover {
-					border-left-color: #48036F;
-				}
-				pre.code-toolbar > .toolbar:hover {
-					border-bottom-color: #48036F;
-				}
-				.callout-primary h5,
-				.symbol-title.collapsible-symbol .toggle-icon,
-				.breadcrumb li a,
-				.toc .nav > li > a:hover,
-				.toc .nav > li > a:focus,
-				.toc .nav > li.active > a,
-				.toc .nav > li.active > a:hover,
-				.toc .nav > li.active > a:focus {
-					color: #48036F;
-				}
-			</style>
-		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"DD MMM YYYY","systemName":"js-observe","systemSummary":"Наблюдатель за изменениями в DOM-элементе.","systemLogo":"","systemColor":"#48036F","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Архитектор (rotcetihra), 2025","linenums":false,"collapseSymbols":true,"inverseNav":false,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = false;
-			window.DOCLET_AFILTER_ENABLED = false;
-		</script>
-</head>
-<body>
-	<!-- start:navbar.hbs -->
-	<header class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html">
-					js-observe
-				</a>
-				<!-- displayed on small devices -->
-				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="navbar-collapse collapse" id="topNavigation">
-				<ul class="nav navbar-nav">
-								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#observe">observe</a></li>
-											<li><a href="global.html#observer">observer</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="Observer.html">Observer</a></li>
-											<li><a href="ObserverBuilder.html">ObserverBuilder</a></li>
-											<li><a href="ObserverOptions.html">ObserverOptions</a></li>
-											<li><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></li>
-									</ul>
-								</li>
-				</ul>
-					<!-- start:lunr-search-navbar.hbs -->
-					<form class="navbar-form navbar-right" role="search">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
-							<div class="input-group-btn">
-								<button class="btn btn-default" id="lunr-search-submit">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</div>
-						</div>
-					</form>
-					<!-- start:lunr-search-navbar.hbs -->		</div>
-		</div>
-	</header>
-	<!-- end:navbar.hbs -->		<div class="page-header">
-			<div class="container">
-				<span class="kind">source</span>
-				<h1><span class="name">ObserverOptionsBuilder.mjs</span></h1>
-			</div>
-		</div>
-	<div class="container content">
-		<div class="row">
-			<div class="col-md-12 main-content">
-		<section class="source-section">
-			<article></article>
-			<pre class="prettyprint source language-javascript"><code class="language-javascript">import ObserverOptions from './ObserverOptions.mjs';
-
+export default ObserverOptionsBuilder;
 /**
  * 🛠️✨ `ObserverOptionsBuilder` — удобный и безопасный builder для создания конфигурации наблюдателя за DOM.
  *
@@ -150,20 +42,7 @@
  *
  * ```
  */
-class ObserverOptionsBuilder {
-    /**
-     * ⚙️ Внутренний объект опций {@link ObserverOptions}, который постепенно конфигурируется методами билдера.
-     *
-     * - Хранит текущую конфигурацию во время цепочки вызовов (`.children()`, `.attributes()` и т.д.).
-     * - Используется как итоговая конфигурация при вызове `.build()`.
-     * - Недоступен извне — инкапсулирует состояние построения.
-     */
-    #options;
-
-    constructor() {
-        this.#options = new ObserverOptions();
-    }
-
+declare class ObserverOptionsBuilder {
     /**
      * 👶 Включает отслеживание **дочерних узлов** указанного элемента.
      *
@@ -205,12 +84,7 @@ class ObserverOptionsBuilder {
      *
      * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки.
      */
-    children() {
-        this.#options.childList = true;
-
-        return this;
-    }
-
+    children(): ObserverOptionsBuilder;
     /**
      * 🌳 Включает отслеживание **всех вложенных** DOM-изменений — не только прямых, но и глубоких потомков.
      *
@@ -255,13 +129,7 @@ class ObserverOptionsBuilder {
      *
      * @returns {ObserverOptionsBuilder} `this` — для цепочки вызовов.
      */
-    descendants() {
-        this.children();
-        this.subtree();
-
-        return this;
-    }
-
+    descendants(): ObserverOptionsBuilder;
     /**
      * 🏷️ Включает отслеживание **изменений атрибутов** у целевого элемента.
      *
@@ -308,16 +176,7 @@ class ObserverOptionsBuilder {
      * @param {string[]|null} [filter=null] - Список атрибутов для отслеживания (необязательный).
      * @returns {ObserverOptionsBuilder} this — для продолжения цепочки вызовов.
      */
-    attributes(filter = null) {
-        this.#options.attributes = true;
-
-        if (filter) {
-            this.#options.attributeFilter = filter;
-        }
-
-        return this;
-    }
-
+    attributes(filter?: string[] | null): ObserverOptionsBuilder;
     /**
      * 🏷️🌳 Включает отслеживание **изменений атрибутов во всех потомках** целевого элемента.
      *
@@ -372,13 +231,7 @@ class ObserverOptionsBuilder {
      * @param {string[]|null} [filter=null] - Список атрибутов, за которыми нужно следить. Если не указан — отслеживаются все.
      * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
      */
-    descendantAttributes(filter = null) {
-        this.attributes(filter);
-        this.subtree();
-
-        return this;
-    }
-
+    descendantAttributes(filter?: string[] | null): ObserverOptionsBuilder;
     /**
      * ✏️ Включает отслеживание **изменений текстовых узлов** (`characterData`).
      *
@@ -392,7 +245,7 @@ class ObserverOptionsBuilder {
      * - Изменения текста внутри узлов типа `Text`, включая:
      *
      *   - обычные текстовые узлы
-     *   - текст внутри `&lt;span>`, `&lt;div>` и других контейнеров
+     *   - текст внутри `<span>`, `<div>` и других контейнеров
      *   - любые динамические обновления (например, через `.textContent`)
      *
      * ---
@@ -438,12 +291,7 @@ class ObserverOptionsBuilder {
      *
      * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
      */
-    text() {
-        this.#options.characterData = true;
-
-        return this;
-    }
-
+    text(): ObserverOptionsBuilder;
     /**
      * ✏️🌲 Включает отслеживание **изменений текста во всех вложенных узлах**.
      *
@@ -502,13 +350,7 @@ class ObserverOptionsBuilder {
      *
      * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
      */
-    descendantText() {
-        this.text();
-        this.subtree();
-
-        return this;
-    }
-
+    descendantText(): ObserverOptionsBuilder;
     /**
      * 🌳 Включает наблюдение за **вложенными (дочерними) элементами** внутри целевого узла.
      *
@@ -567,12 +409,7 @@ class ObserverOptionsBuilder {
      *
      * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
      */
-    subtree() {
-        this.#options.subtree = true;
-
-        return this;
-    }
-
+    subtree(): ObserverOptionsBuilder;
     /**
      * ⏪ Включает сохранение **старых значений** для атрибутов и/или текстовых узлов.
      *
@@ -637,24 +474,7 @@ class ObserverOptionsBuilder {
      * @throws {Error} Если не были активированы ни `attributes`, ни `characterData`
      * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов
      */
-    useOldValue() {
-        if (!this.#options.attributes &amp;&amp; !this.#options.characterData) {
-            throw new Error(
-                'ObserverOptionsBuilder.useOldValue() требует предварительного вызова attributes() и/или text()',
-            );
-        }
-
-        if (this.#options.attributes) {
-            this.#options.attributeOldValue = true;
-        }
-
-        if (this.#options.characterData) {
-            this.#options.characterDataOldValue = true;
-        }
-
-        return this;
-    }
-
+    useOldValue(): ObserverOptionsBuilder;
     /**
      * 🧾 Включает отслеживание **изменений содержимого (контента)** внутри целевого элемента и его потомков.
      *
@@ -702,12 +522,7 @@ class ObserverOptionsBuilder {
      *
      * @returns {ObserverOptionsBuilder} this — для продолжения цепочки вызовов.
      */
-    content() {
-        this.children().text().subtree();
-
-        return this;
-    }
-
+    content(): ObserverOptionsBuilder;
     /**
      * 🧿 Включает **все основные типы наблюдаемых изменений** в DOM-дереве.
      *
@@ -754,12 +569,7 @@ class ObserverOptionsBuilder {
      *
      * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
      */
-    all() {
-        this.children().attributes().text().subtree();
-
-        return this;
-    }
-
+    all(): ObserverOptionsBuilder;
     /**
      * 🏗️ Завершает построение конфигурации и возвращает итоговый объект опций.
      *
@@ -807,55 +617,7 @@ class ObserverOptionsBuilder {
      * @throws {Error} Если не указан ни один тип наблюдаемых изменений.
      * @returns {ObserverOptions} Готовая конфигурация для MutationObserver.
      */
-
-    build() {
-        if (
-            !this.#options.childList &amp;&amp;
-            !this.#options.attributes &amp;&amp;
-            !this.#options.characterData
-        ) {
-            throw new Error(
-                'ObserverOptionsBuilder.build() требует включить хотя бы один тип наблюдения: childList(), attributes() или text()',
-            );
-        }
-
-        return this.#options;
-    }
+    build(): ObserverOptions;
+    #private;
 }
-
-export default ObserverOptionsBuilder;
-</code></pre>
-		</section>
-			</div>
-		</div>
-	</div>
-	<footer>
-				<div class="copyright">Архитектор (rotcetihra), 2025</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
-	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/clipboard.min.js"></script>
-	<script src="js/prism.min.js"></script>
-	<script src="js/template.min.js"></script>
-		<!-- start:lunr-search-modal.hbs -->
-		<div class="modal fade" id="lunr-search-modal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Search results</h4>
-					</div>
-					<div class="modal-body" id="lunr-search-body">
-					</div>
-					<div class="modal-footer" id="lunr-search-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div>
-		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
-	
-</body>
-</html>
-<!-- end:source.tmpl.hbs -->
+import ObserverOptions from './ObserverOptions.mjs';

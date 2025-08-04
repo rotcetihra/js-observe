@@ -7,6 +7,7 @@
     "exports": {
         ".": "./index.mjs"
     },
+    "types": "types/index.d.ts",
     "keywords": [
         "dom",
         "mutationobserver",
@@ -25,13 +26,15 @@
     },
     "homepage": "https://rotcetihra.github.io/js-observe/index.html",
     "devDependencies": {
+        "foodoc": "^0.0.9",
         "jest": "^30.0.5",
         "jest-environment-jsdom": "^30.0.5",
         "jsdoc": "^3.5.5",
-        "foodoc": "^0.0.9"
+        "typescript": "^5.9.2"
     },
     "scripts": {
         "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-        "docs": "./node_modules/.bin/jsdoc -c jsdoc.config.json"
+        "docs": "./node_modules/.bin/jsdoc -c jsdoc.config.json",
+        "types": "npx tsc"
     }
 }

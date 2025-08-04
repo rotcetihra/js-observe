@@ -470,7 +470,7 @@ class ObserverOptions {
      *
      * ---
      *
-     * @type {string[]}
+     * @type {string[]|undefined}
      */
     attributeFilter;
 
@@ -641,9 +641,9 @@ class ObserverOptions {
      *
      * ---
      *
-     * @param {string[] | null} [filter=null] — Массив атрибутов, которые нужно отслеживать (например, `['class', 'data-id']`).
+     * @param {string[]|null} [filter=null] Массив атрибутов, которые нужно отслеживать (например, `['class', 'data-id']`).
      * Оставьте `null`, чтобы следить за **всеми** атрибутами.
-     * @param {boolean} [useOldValue=false] — Если `true`, в `MutationRecord.oldValue` будет возвращаться предыдущее значение атрибута.
+     * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет возвращаться предыдущее значение атрибута.
      * @returns {ObserverOptions} Готовый объект опций для `.observe()`
      */
     static attributes(filter = null, useOldValue = false) {
@@ -694,10 +694,10 @@ class ObserverOptions {
      *
      * ---
      *
-     * @param {string[] | null} [filter=null] — Список атрибутов, за которыми нужно следить
+     * @param {string[]|null} [filter=null] Список атрибутов, за которыми нужно следить
      * (например, `['class', 'data-visible']`).
      * Укажите `null`, чтобы отслеживать **все** атрибуты.
-     * @param {boolean} [useOldValue=false] — Если `true`, в `MutationRecord.oldValue` будет возвращено предыдущее значение атрибута.
+     * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет возвращено предыдущее значение атрибута.
      * @returns {ObserverOptions} Готовый набор опций для `observe()`
      */
     static descendantAttributes(filter = null, useOldValue = false) {
@@ -754,7 +754,7 @@ class ObserverOptions {
      *
      * ---
      *
-     * @param {boolean} [useOldValue=false] — Если `true`, в `MutationRecord.oldValue` будет сохранено старое значение текста.
+     * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет сохранено старое значение текста.
      * @returns {ObserverOptions} Готовый набор опций для `observe()`
      */
     static text(useOldValue = false) {
@@ -812,7 +812,7 @@ class ObserverOptions {
      *
      * ---
      *
-     * @param {boolean} [useOldValue=false] — если `true`, в `MutationRecord.oldValue` будет сохранено предыдущее значение текста.
+     * @param {boolean} [useOldValue=false] если `true`, в `MutationRecord.oldValue` будет сохранено предыдущее значение текста.
      * @returns {ObserverOptions} Готовый набор опций для `observe()` с учётом вложенных текстовых узлов
      */
     static descendantText(useOldValue = false) {
@@ -874,7 +874,7 @@ class ObserverOptions {
      *
      * ---
      *
-     * @param {boolean} [useOldValue=false] — если `true`, включает сохранение старых значений текста (`characterDataOldValue: true`).
+     * @param {boolean} [useOldValue=false] если `true`, включает сохранение старых значений текста (`characterDataOldValue: true`).
      * @returns {ObserverOptions} Готовый объект настроек для `MutationObserver`.
      */
     static content(useOldValue = false) {

@@ -1,4 +1,5 @@
 import Observer from './Observer.mjs';
+import ObserverOptions from './ObserverOptions.mjs';
 import ObserverOptionsBuilder from './ObserverOptionsBuilder.mjs';
 
 /**
@@ -91,10 +92,9 @@ class ObserverBuilder {
      *
      * ---
      *
-     * @type {MutationCallback}
-     * @private
+     * @type {MutationCallback|null}
      */
-    #callback;
+    #callback = null;
 
     /**
      * ⚙️ Конфигурация параметров наблюдения ({@link ObserverOptions}), применяемая при вызове `observe()`.
@@ -129,10 +129,9 @@ class ObserverBuilder {
      *
      * ---
      *
-     * @type {MutationObserverInit | undefined}
-     * @private
+     * @type {ObserverOptions|MutationObserverInit|null}
      */
-    #options;
+    #options = null;
 
     /**
      * 🎯 Целевой DOM-элемент, за изменениями которого будет вестись наблюдение.
@@ -164,10 +163,9 @@ class ObserverBuilder {
      *
      * ---
      *
-     * @type {Node | undefined}
-     * @private
+     * @type {Node|null}
      */
-    #target;
+    #target = null;
 
     /**
      * 🎯 Устанавливает **целевой DOM-узел** для наблюдения.

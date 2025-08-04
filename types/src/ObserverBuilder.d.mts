@@ -1,114 +1,4 @@
-<!-- start:source.tmpl.hbs -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-		<title>ObserverBuilder.mjs</title>
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
-		<link type="text/css" rel="stylesheet" href="css/template.min.css">
-			<style>
-				.page-header,
-				pre.code-toolbar > .toolbar:hover {
-					background-color: #48036F;
-				}
-				.callout-primary,
-				.toc .nav > li > a:hover,
-				.toc .nav > li > a:focus,
-				.toc .nav > li.active > a,
-				.toc .nav > li.active > a:hover,
-				.toc .nav > li.active > a:focus,
-				pre.code-toolbar > .toolbar:hover {
-					border-left-color: #48036F;
-				}
-				pre.code-toolbar > .toolbar:hover {
-					border-bottom-color: #48036F;
-				}
-				.callout-primary h5,
-				.symbol-title.collapsible-symbol .toggle-icon,
-				.breadcrumb li a,
-				.toc .nav > li > a:hover,
-				.toc .nav > li > a:focus,
-				.toc .nav > li.active > a,
-				.toc .nav > li.active > a:hover,
-				.toc .nav > li.active > a:focus {
-					color: #48036F;
-				}
-			</style>
-		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"DD MMM YYYY","systemName":"js-observe","systemSummary":"Наблюдатель за изменениями в DOM-элементе.","systemLogo":"","systemColor":"#48036F","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Архитектор (rotcetihra), 2025","linenums":false,"collapseSymbols":true,"inverseNav":false,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = false;
-			window.DOCLET_AFILTER_ENABLED = false;
-		</script>
-</head>
-<body>
-	<!-- start:navbar.hbs -->
-	<header class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html">
-					js-observe
-				</a>
-				<!-- displayed on small devices -->
-				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="navbar-collapse collapse" id="topNavigation">
-				<ul class="nav navbar-nav">
-								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#observe">observe</a></li>
-											<li><a href="global.html#observer">observer</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="Observer.html">Observer</a></li>
-											<li><a href="ObserverBuilder.html">ObserverBuilder</a></li>
-											<li><a href="ObserverOptions.html">ObserverOptions</a></li>
-											<li><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></li>
-									</ul>
-								</li>
-				</ul>
-					<!-- start:lunr-search-navbar.hbs -->
-					<form class="navbar-form navbar-right" role="search">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
-							<div class="input-group-btn">
-								<button class="btn btn-default" id="lunr-search-submit">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</div>
-						</div>
-					</form>
-					<!-- start:lunr-search-navbar.hbs -->		</div>
-		</div>
-	</header>
-	<!-- end:navbar.hbs -->		<div class="page-header">
-			<div class="container">
-				<span class="kind">source</span>
-				<h1><span class="name">ObserverBuilder.mjs</span></h1>
-			</div>
-		</div>
-	<div class="container content">
-		<div class="row">
-			<div class="col-md-12 main-content">
-		<section class="source-section">
-			<article></article>
-			<pre class="prettyprint source language-javascript"><code class="language-javascript">import Observer from './Observer.mjs';
-import ObserverOptions from './ObserverOptions.mjs';
-import ObserverOptionsBuilder from './ObserverOptionsBuilder.mjs';
-
+export default ObserverBuilder;
 /**
  * 🧱 `ObserverBuilder` — строитель (builder) для удобного создания экземпляров {@link Observer}.
  *
@@ -168,112 +58,7 @@ import ObserverOptionsBuilder from './ObserverOptionsBuilder.mjs';
  *
  * @class ObserverBuilder
  */
-class ObserverBuilder {
-    /**
-     * 🧩 Callback-функция, вызываемая при срабатывании {@link Observer}.
-     *
-     * Представляет собой обязательную часть конфигурации наблюдателя.
-     * Задаётся с помощью метода `.call(callback)` и передаётся в конструктор `Observer` при вызове `.build()`.
-     *
-     * ---
-     *
-     * ### 📐 Сигнатура:
-     *
-     * ```ts
-     *
-     * (mutations: MutationRecord[], observer: MutationObserver) => void
-     *
-     * ```
-     *
-     * ---
-     *
-     * ### ✅ Пример:
-     *
-     * ```js
-     *
-     * builder.call((mutations, observer) => {
-     *     mutations.forEach(m => console.log(m));
-     * });
-     *
-     * ```
-     *
-     * ---
-     *
-     * @type {MutationCallback|null}
-     */
-    #callback = null;
-
-    /**
-     * ⚙️ Конфигурация параметров наблюдения ({@link ObserverOptions}), применяемая при вызове `observe()`.
-     *
-     * Устанавливается двумя способами:
-     *
-     * - с помощью метода `.with(options)`, где `options` — это вручную собранный объект
-     * - или через метод `.options(builderCallback)`, используя {@link ObserverOptionsBuilder} для декларативной сборки
-     *
-     * ---
-     *
-     * ### 🔍 Пример использования с `.with()`:
-     *
-     * ```js
-     *
-     * builder.with({ childList: true, subtree: true });
-     *
-     * ```
-     *
-     * ### 🔍 Пример с `.options()` и builder-ом:
-     *
-     * ```js
-     *
-     * builder.options((b) => b.descendants().attributes(['class']).useOldValue());
-     *
-     * ```
-     *
-     * ---
-     *
-     * Если параметр не установлен, при сборке через `.build()` будет передан `undefined`,
-     * что может привести к созданию наблюдателя без настроек (необходимо будет передать опции непосредственно в метод `observe`).
-     *
-     * ---
-     *
-     * @type {ObserverOptions|MutationObserverInit|null}
-     */
-    #options = null;
-
-    /**
-     * 🎯 Целевой DOM-элемент, за изменениями которого будет вестись наблюдение.
-     *
-     * Устанавливается через метод `.for(target)`, где `target` — это любой `Node`,
-     * поддерживаемый {@link MutationObserver}, например: `Element`, `Document`, `DocumentFragment`.
-     *
-     * ---
-     *
-     * ### ✅ Пример использования:
-     *
-     * ```js
-     *
-     * builder.for(document.querySelector('#app'));
-     *
-     * ```
-     *
-     * ---
-     *
-     * Если целевой узел не задан, его можно передать напрямую при вызове `observer.observe(target)`.
-     * Однако для полного построения наблюдателя через `.build()`, рекомендуется явно указать target.
-     *
-     * ---
-     *
-     * ### 💡 Особенности:
-     * - Можно вызывать в любой момент до `.build()`.
-     * - Позволяет удобно переиспользовать одну и ту же конфигурацию для разных узлов (создавая несколько Observer-ов).
-     * - Если вызвать несколько раз — будет использоваться последний переданный target.
-     *
-     * ---
-     *
-     * @type {Node|null}
-     */
-    #target = null;
-
+declare class ObserverBuilder {
     /**
      * 🎯 Устанавливает **целевой DOM-узел** для наблюдения.
      *
@@ -309,12 +94,7 @@ class ObserverBuilder {
      * @param {Node} target - DOM-узел (например, HTMLElement, Document, DocumentFragment), за которым нужно наблюдать.
      * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
      */
-    for(target) {
-        this.#target = target;
-
-        return this;
-    }
-
+    for(target: Node): ObserverBuilder;
     /**
      * ⚙️ Устанавливает **объект параметров** ({@link ObserverOptions}) для наблюдения.
      *
@@ -353,12 +133,7 @@ class ObserverBuilder {
      * @param {MutationObserverInit} options - Объект конфигурации наблюдателя (например, из ObserverOptionsBuilder или вручную).
      * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
      */
-    with(options) {
-        this.#options = options;
-
-        return this;
-    }
-
+    with(options: MutationObserverInit): ObserverBuilder;
     /**
      * 🧱 Упрощённый способ **создания конфигурации наблюдателя** через билдер {@link ObserverOptionsBuilder}.
      *
@@ -402,16 +177,7 @@ class ObserverBuilder {
      * @param {function(ObserverOptionsBuilder): void} callback — функция, принимающая билдер опций для пошаговой настройки.
      * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
      */
-    options(callback) {
-        const builder = new ObserverOptionsBuilder();
-
-        callback(builder);
-
-        this.#options = builder.build();
-
-        return this;
-    }
-
+    options(callback: (arg0: ObserverOptionsBuilder) => void): ObserverBuilder;
     /**
      * 📞 Устанавливает **callback-функцию** для {@link Observer}, которая будет вызываться
      * при срабатывании наблюдателя (при изменениях в DOM).
@@ -452,12 +218,7 @@ class ObserverBuilder {
      * @param {MutationCallback} callback - Функция, вызываемая при изменениях в DOM. Принимает массив `MutationRecord[]` и объект `MutationObserver`.
      * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
      */
-    call(callback) {
-        this.#callback = callback;
-
-        return this;
-    }
-
+    call(callback: MutationCallback): ObserverBuilder;
     /**
      * 🏗️ Завершает построение наблюдателя и возвращает готовый экземпляр {@link Observer}.
      *
@@ -501,50 +262,8 @@ class ObserverBuilder {
      * @throws {Error} Если не был вызван `.call()`.
      * @returns {Observer} Экземпляр класса {@link Observer}, готовый к вызову `.observe()`.
      */
-    build() {
-        if (!this.#callback) {
-            throw new Error(
-                'Пропущен вызов обязательного метода ObserverBuilder.call().',
-            );
-        }
-
-        return new Observer(this.#callback, this.#options, this.#target);
-    }
+    build(): Observer;
+    #private;
 }
-
-export default ObserverBuilder;
-</code></pre>
-		</section>
-			</div>
-		</div>
-	</div>
-	<footer>
-				<div class="copyright">Архитектор (rotcetihra), 2025</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
-	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/clipboard.min.js"></script>
-	<script src="js/prism.min.js"></script>
-	<script src="js/template.min.js"></script>
-		<!-- start:lunr-search-modal.hbs -->
-		<div class="modal fade" id="lunr-search-modal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Search results</h4>
-					</div>
-					<div class="modal-body" id="lunr-search-body">
-					</div>
-					<div class="modal-footer" id="lunr-search-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div>
-		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
-	
-</body>
-</html>
-<!-- end:source.tmpl.hbs -->
+import ObserverOptionsBuilder from './ObserverOptionsBuilder.mjs';
+import Observer from './Observer.mjs';

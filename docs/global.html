@@ -112,109 +112,6 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="observe" class="function public"><span class="name">observe</span><span class="signature-params">( <span class="signature-param">target</span>, <span class="signature-param">options</span>, <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{void}</span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🚀 Упрощённая функция-обёртка <code>observe()</code> для быстрого запуска наблюдения за DOM-изменениями.</p>
-			<p>Создаёт новый экземпляр <a href="Observer.html">Observer</a>, сразу запускает его и не сохраняет ссылку на наблюдатель.
-			Подходит для одноразовых или &quot;fire-and-forget&quot; сценариев, когда не нужно отключать наблюдение вручную.</p>
-			<hr>
-			<h3>📌 Назначение:</h3>
-			<ul>
-			<li>Быстро начать отслеживание изменений без ручного создания <a href="Observer.html">Observer</a>.</li>
-			<li>Идеально для коротких наблюдений, отладочных задач или разовых эффектов.</li>
-			</ul>
-			<hr>
-			<h3>✅ Пример:</h3>
-			<pre class="prettyprint source lang-js"><code>
-			observe(document.body, { childList: true, subtree: true }, (mutations) => {
-			    console.log('Изменения в DOM:', mutations);
-			});
-			
-			</code></pre>
-			<hr>
-			<h3>⚠️ Важно:</h3>
-			<ul>
-			<li>Невозможно отключить наблюдение, т.к. объект <a href="Observer.html">Observer</a> не сохраняется.</li>
-			<li>Обязательно указать хотя бы один из параметров: <code>childList</code>, <code>attributes</code> или <code>characterData</code>.</li>
-			</ul>
-			<hr></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>target</code></td>
-							<td><span class="param-type">Node</span></td>
-							<td class="last">
-									<p>DOM-узел, за которым нужно наблюдать.</p>
-							</td>
-						</tr>
-						<tr>
-								<td><code>options</code></td>
-							<td><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></td>
-							<td class="last">
-									<p>Параметры наблюдения (<code>childList</code>, <code>attributes</code>, <code>characterData</code>, и др.).</p>
-							</td>
-						</tr>
-						<tr>
-								<td><code>callback</code></td>
-							<td><span class="param-type">MutationCallback</span></td>
-							<td class="last">
-									<p>Функция, вызываемая при обнаружении изменений.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">void</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="helpers_observe.mjs.html">helpers/observe.mjs</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
 			<h4 id="observer" class="function public"><span class="name">observer</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverBuilder.html">ObserverBuilder</a>}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
@@ -264,6 +161,109 @@
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
 									<p class="form-control-static"><a href="helpers_observer.mjs.html">helpers/observer.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="observe" class="function public"><span class="name">observe</span><span class="signature-params">( <span class="signature-param">target</span>, <span class="signature-param">options</span>, <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{void}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🚀 Упрощённая функция-обёртка <code>observe()</code> для быстрого запуска наблюдения за DOM-изменениями.</p>
+			<p>Создаёт новый экземпляр <a href="Observer.html">Observer</a>, сразу запускает его и не сохраняет ссылку на наблюдатель.
+			Подходит для одноразовых или &quot;fire-and-forget&quot; сценариев, когда не нужно отключать наблюдение вручную.</p>
+			<hr>
+			<h3>📌 Назначение:</h3>
+			<ul>
+			<li>Быстро начать отслеживание изменений без ручного создания <a href="Observer.html">Observer</a>.</li>
+			<li>Идеально для коротких наблюдений, отладочных задач или разовых эффектов.</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			observe(document.body, { childList: true, subtree: true }, (mutations) => {
+			    console.log('Изменения в DOM:', mutations);
+			});
+			
+			</code></pre>
+			<hr>
+			<h3>⚠️ Важно:</h3>
+			<ul>
+			<li>Невозможно отключить наблюдение, т.к. объект <a href="Observer.html">Observer</a> не сохраняется.</li>
+			<li>Обязательно указать хотя бы один из параметров: <code>childList</code>, <code>attributes</code> или <code>characterData</code>.</li>
+			</ul>
+			<hr></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>target</code></td>
+							<td><span class="param-type">Node</span></td>
+							<td class="last">
+									<p>DOM-узел, за которым нужно наблюдать.</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>options</code></td>
+							<td><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span> | <span class="param-type">MutationObserverInit</span></td>
+							<td class="last">
+									<p>Параметры наблюдения (<code>childList</code>, <code>attributes</code>, <code>characterData</code>, и др.).</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">MutationCallback</span></td>
+							<td class="last">
+									<p>Функция, вызываемая при обнаружении изменений.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">void</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="helpers_observe.mjs.html">helpers/observe.mjs</a></p>
 								</div>
 							</div>
 			

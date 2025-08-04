@@ -707,7 +707,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="attributeFilter" class="member public"><span class="name">attributeFilter</span><span class="signature-type"> :Array.&lt;string></span></h4>
+			<h4 id="attributeFilter" class="member public"><span class="name">attributeFilter</span><span class="signature-type"> :Array.&lt;string>|undefined</span></h4>
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -763,7 +763,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Type</label>
 								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">Array.&lt;string></span></div>
+									<div class="form-control-static type-names"><span class="param-type">Array.&lt;string></span> | <span class="param-type">undefined</span></div>
 								</div>
 							</div>
 			
@@ -1058,7 +1058,7 @@
 								<td class="attributes">&lt;optional&gt;<br/></td>
 								<td></td>
 							<td class="last">
-									<p>— Массив атрибутов, которые нужно отслеживать (например, <code>['class', 'data-id']</code>).
+									<p>Массив атрибутов, которые нужно отслеживать (например, <code>['class', 'data-id']</code>).
 			Оставьте <code>null</code>, чтобы следить за <strong>всеми</strong> атрибутами.</p>
 							</td>
 						</tr>
@@ -1068,7 +1068,7 @@
 								<td class="attributes">&lt;optional&gt;<br/></td>
 								<td>false</td>
 							<td class="last">
-									<p>— Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет возвращаться предыдущее значение атрибута.</p>
+									<p>Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет возвращаться предыдущее значение атрибута.</p>
 							</td>
 						</tr>
 					</tbody>
@@ -1163,7 +1163,7 @@
 								<td class="attributes">&lt;optional&gt;<br/></td>
 								<td></td>
 							<td class="last">
-									<p>— Список атрибутов, за которыми нужно следить
+									<p>Список атрибутов, за которыми нужно следить
 			(например, <code>['class', 'data-visible']</code>).
 			Укажите <code>null</code>, чтобы отслеживать <strong>все</strong> атрибуты.</p>
 							</td>
@@ -1174,7 +1174,7 @@
 								<td class="attributes">&lt;optional&gt;<br/></td>
 								<td>false</td>
 							<td class="last">
-									<p>— Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет возвращено предыдущее значение атрибута.</p>
+									<p>Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет возвращено предыдущее значение атрибута.</p>
 							</td>
 						</tr>
 					</tbody>
@@ -1273,7 +1273,7 @@
 								<td class="attributes">&lt;optional&gt;<br/></td>
 								<td>false</td>
 							<td class="last">
-									<p>— Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет сохранено старое значение текста.</p>
+									<p>Если <code>true</code>, в <code>MutationRecord.oldValue</code> будет сохранено старое значение текста.</p>
 							</td>
 						</tr>
 					</tbody>
@@ -1373,7 +1373,7 @@
 								<td class="attributes">&lt;optional&gt;<br/></td>
 								<td>false</td>
 							<td class="last">
-									<p>— если <code>true</code>, в <code>MutationRecord.oldValue</code> будет сохранено предыдущее значение текста.</p>
+									<p>если <code>true</code>, в <code>MutationRecord.oldValue</code> будет сохранено предыдущее значение текста.</p>
 							</td>
 						</tr>
 					</tbody>
@@ -1478,7 +1478,7 @@
 								<td class="attributes">&lt;optional&gt;<br/></td>
 								<td>false</td>
 							<td class="last">
-									<p>— если <code>true</code>, включает сохранение старых значений текста (<code>characterDataOldValue: true</code>).</p>
+									<p>если <code>true</code>, включает сохранение старых значений текста (<code>characterDataOldValue: true</code>).</p>
 							</td>
 						</tr>
 					</tbody>

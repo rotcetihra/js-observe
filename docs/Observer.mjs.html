@@ -106,6 +106,7 @@
 		<section class="source-section">
 			<article></article>
 			<pre class="prettyprint source language-javascript"><code class="language-javascript">import ObserverBuilder from './ObserverBuilder.mjs';
+import ObserverOptions from './ObserverOptions.mjs';
 
 /**
  * 🧭 `Observer` — удобная обёртка над стандартным `MutationObserver` с предустановленными параметрами и (опционально) целевым DOM-узлом.
@@ -183,8 +184,7 @@ class Observer extends MutationObserver {
      *
      * Значение передаётся в метод `.observe()` при вызове.
      *
-     * @type {ObserverOptions}
-     * @private
+     * @type {ObserverOptions|MutationObserverInit|null}
      */
     #options;
 
@@ -214,10 +214,15 @@ class Observer extends MutationObserver {
      * ```
      *
      * @type {Node|null}
-     * @private
      */
     #target;
 
+    /**
+     *
+     * @param {MutationCallback} callback
+     * @param {ObserverOptions|MutationObserverInit|null} options
+     * @param {Node|null} target
+     */
     constructor(callback, options = null, target = null) {
         super(callback);
 
@@ -276,13 +281,29 @@ class Observer extends MutationObserver {
      *
      * ```
      *
-     * @param {Node} [target] - DOM-узел, за которым будет вестись наблюдение.
-     * @param {ObserverOptions} [options] - Объект параметров наблюдения.
+     * @param {Node|null} [target] - DOM-узел, за которым будет вестись наблюдение.
+     * @param {ObserverOptions|MutationObserverInit|null} [options] - Объект параметров наблюдения.
      * @throws {TypeError} Если `target` не является допустимым DOM-узлом.
      * @throws {SyntaxError} Если не указана ни одна из обязательных опций (`childList`, `attributes`, `characterData`).
      */
     observe(target = null, options = null) {
-        super.observe(target ?? this.#target, options ?? this.#options);
+        if (!target) {
+            target = this.#target;
+        }
+
+        if (!target) {
+            throw new TypeError('Не указан DOM-узел для запуска наблюдения.');
+        }
+
+        if (!options) {
+            options = this.#options;
+        }
+
+        if (!options) {
+            throw new TypeError('Не заданы параметры наблюдения.');
+        }
+
+        super.observe(target ?? this.#target, options);
     }
 
     /**
