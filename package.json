@@ -1,6 +1,6 @@
 {
     "name": "@rotcetihra/js-observe",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "description": "Declarative wrapper over MutationObserver",
     "main": "./dist/index.mjs",
     "type": "module",
