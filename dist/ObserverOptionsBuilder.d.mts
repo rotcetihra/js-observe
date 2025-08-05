@@ -1,5 +1,4 @@
 import ObserverOptions from './ObserverOptions.mjs';
-
 /**
  * 🛠️✨ `ObserverOptionsBuilder` — удобный и безопасный builder для создания конфигурации наблюдателя за DOM.
  *
@@ -43,20 +42,16 @@ import ObserverOptions from './ObserverOptions.mjs';
  *
  * ```
  */
-class ObserverOptionsBuilder {
+declare class ObserverOptionsBuilder {
     /**
      * ⚙️ Внутренний объект опций {@link ObserverOptions}, который постепенно конфигурируется методами билдера.
      *
-     * - Хранит текущую конфигурацию во время цепочки вызовов (`.children()`, `.attributes()` и т.д.).
-     * - Используется как итоговая конфигурация при вызове `.build()`.
-     * - Недоступен извне — инкапсулирует состояние построения.
+     * @readonly
+     * @type {ObserverOptions}
+     * @protected
      */
-    #options;
-
-    constructor() {
-        this.#options = new ObserverOptions();
-    }
-
+    protected readonly _options: ObserverOptions;
+    constructor();
     /**
      * 👶 Включает отслеживание **дочерних узлов** указанного элемента.
      *
@@ -96,14 +91,9 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки.
+     * @returns {this}
      */
-    children() {
-        this.#options.childList = true;
-
-        return this;
-    }
-
+    children(): this;
     /**
      * 🌳 Включает отслеживание **всех вложенных** DOM-изменений — не только прямых, но и глубоких потомков.
      *
@@ -114,7 +104,7 @@ class ObserverOptionsBuilder {
      * Комбинирует два режима:
      *
      * - `childList: true` — отслеживает добавление и удаление узлов
-     * - `subtree: true` — расширяет область наблюдения на **всех потомков**
+     * - `subtree: true` — расширяет область наблюдения на **всех потомках**
      *
      * Эквивалентно: `.children().subtree()`, но читается декларативнее.
      *
@@ -146,15 +136,9 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @returns {ObserverOptionsBuilder} `this` — для цепочки вызовов.
+     * @returns {this}
      */
-    descendants() {
-        this.children();
-        this.subtree();
-
-        return this;
-    }
-
+    descendants(): this;
     /**
      * 🏷️ Включает отслеживание **изменений атрибутов** у целевого элемента.
      *
@@ -198,19 +182,10 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @param {string[]|null} [filter=null] - Список атрибутов для отслеживания (необязательный).
-     * @returns {ObserverOptionsBuilder} this — для продолжения цепочки вызовов.
+     * @param {string[]|undefined} [filter=undefined] - Список атрибутов для отслеживания (необязательный).
+     * @returns {this}
      */
-    attributes(filter = null) {
-        this.#options.attributes = true;
-
-        if (filter) {
-            this.#options.attributeFilter = filter;
-        }
-
-        return this;
-    }
-
+    attributes(filter?: string[]): this;
     /**
      * 🏷️🌳 Включает отслеживание **изменений атрибутов во всех потомках** целевого элемента.
      *
@@ -227,7 +202,7 @@ class ObserverOptionsBuilder {
      * ### 🔍 Что делает:
      *
      * - Включает `attributes: true` — отслеживает изменения атрибутов
-     * - Включает `subtree: true` — расширяет наблюдение на **всех потомков**
+     * - Включает `subtree: true` — расширяет наблюдение на **всех потомках**
      * - Если указан параметр `filter`, устанавливает `attributeFilter` — ограничивает отслеживание указанными атрибутами
      *
      * ---
@@ -262,16 +237,10 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @param {string[]|null} [filter=null] - Список атрибутов, за которыми нужно следить. Если не указан — отслеживаются все.
-     * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
+     * @param {string[]|undefined} [filter=undefined] - Список атрибутов, за которыми нужно следить. Если не указан — отслеживаются все.
+     * @returns {this}
      */
-    descendantAttributes(filter = null) {
-        this.attributes(filter);
-        this.subtree();
-
-        return this;
-    }
-
+    descendantAttributes(filter?: string[]): this;
     /**
      * ✏️ Включает отслеживание **изменений текстовых узлов** (`characterData`).
      *
@@ -329,14 +298,9 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    text() {
-        this.#options.characterData = true;
-
-        return this;
-    }
-
+    text(): this;
     /**
      * ✏️🌲 Включает отслеживание **изменений текста во всех вложенных узлах**.
      *
@@ -353,7 +317,7 @@ class ObserverOptionsBuilder {
      * ### 🔍 Что делает:
      *
      * - Устанавливает `characterData: true` — отслеживает изменения в текстовых узлах
-     * - Устанавливает `subtree: true` — расширяет наблюдение на **всех потомков**
+     * - Устанавливает `subtree: true` — расширяет наблюдение на **всех потомках**
      *
      * ---
      *
@@ -393,15 +357,9 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    descendantText() {
-        this.text();
-        this.subtree();
-
-        return this;
-    }
-
+    descendantText(): this;
     /**
      * 🌳 Включает наблюдение за **вложенными (дочерними) элементами** внутри целевого узла.
      *
@@ -458,14 +416,9 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    subtree() {
-        this.#options.subtree = true;
-
-        return this;
-    }
-
+    subtree(): this;
     /**
      * ⏪ Включает сохранение **старых значений** для атрибутов и/или текстовых узлов.
      *
@@ -528,26 +481,9 @@ class ObserverOptionsBuilder {
      * ---
      *
      * @throws {Error} Если не были активированы ни `attributes`, ни `characterData`
-     * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов
+     * @returns {this}
      */
-    useOldValue() {
-        if (!this.#options.attributes && !this.#options.characterData) {
-            throw new Error(
-                'ObserverOptionsBuilder.useOldValue() требует предварительного вызова attributes() и/или text()',
-            );
-        }
-
-        if (this.#options.attributes) {
-            this.#options.attributeOldValue = true;
-        }
-
-        if (this.#options.characterData) {
-            this.#options.characterDataOldValue = true;
-        }
-
-        return this;
-    }
-
+    useOldValue(): this;
     /**
      * 🧾 Включает отслеживание **изменений содержимого (контента)** внутри целевого элемента и его потомков.
      *
@@ -593,14 +529,9 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @returns {ObserverOptionsBuilder} this — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    content() {
-        this.children().text().subtree();
-
-        return this;
-    }
-
+    content(): this;
     /**
      * 🧿 Включает **все основные типы наблюдаемых изменений** в DOM-дереве.
      *
@@ -645,14 +576,9 @@ class ObserverOptionsBuilder {
      *
      * ---
      *
-     * @returns {ObserverOptionsBuilder} `this` — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    all() {
-        this.children().attributes().text().subtree();
-
-        return this;
-    }
-
+    all(): this;
     /**
      * 🏗️ Завершает построение конфигурации и возвращает итоговый объект опций.
      *
@@ -698,22 +624,8 @@ class ObserverOptionsBuilder {
      * ---
      *
      * @throws {Error} Если не указан ни один тип наблюдаемых изменений.
-     * @returns {ObserverOptions} Готовая конфигурация для MutationObserver.
+     * @returns {ObserverOptions}
      */
-
-    build() {
-        if (
-            !this.#options.childList &&
-            !this.#options.attributes &&
-            !this.#options.characterData
-        ) {
-            throw new Error(
-                'ObserverOptionsBuilder.build() требует включить хотя бы один тип наблюдения: childList(), attributes() или text()',
-            );
-        }
-
-        return this.#options;
-    }
+    build(): ObserverOptions;
 }
-
 export default ObserverOptionsBuilder;

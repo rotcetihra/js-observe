@@ -1,5 +1,4 @@
 import ObserverOptionsBuilder from './ObserverOptionsBuilder.mjs';
-
 /**
  * 🧩 `ObserverOptions` — набор параметров для конфигурации {@link Observer}, определяющий, **что именно отслеживать** в DOM.
  *
@@ -101,7 +100,6 @@ class ObserverOptions {
      * @type {boolean}
      */
     childList = false;
-
     /**
      * 🏷️ `attributes` — включает отслеживание изменений атрибутов у указанного DOM-элемента.
      *
@@ -180,7 +178,6 @@ class ObserverOptions {
      * @type {boolean}
      */
     attributes = false;
-
     /**
      * 🧬 `characterData` — включает отслеживание изменений текстового содержимого в узлах типа [CharacterData](https://developer.mozilla.org/en-US/docs/Web/API/CharacterData):
      * [`Text`](https://developer.mozilla.org/en-US/docs/Web/API/Text), [`Comment`](https://developer.mozilla.org/en-US/docs/Web/API/Comment), [`CDATASection`](https://developer.mozilla.org/en-US/docs/Web/API/CDATASection).
@@ -263,7 +260,6 @@ class ObserverOptions {
      * @type {boolean}
      */
     characterData = false;
-
     /**
      * 🌲 `subtree` — включает **все вложенные узлы** в область наблюдения, а не только сам целевой элемент.
      *
@@ -317,7 +313,6 @@ class ObserverOptions {
      * @type {boolean}
      */
     subtree = false;
-
     /**
      * ♻️ `attributeOldValue` — включает **предыдущее значение** атрибута в объекте мутации (`MutationRecord`).
      *
@@ -364,7 +359,6 @@ class ObserverOptions {
      * @type {boolean}
      */
     attributeOldValue = false;
-
     /**
      * ♻️ `characterDataOldValue` — включает **предыдущее значение текстового содержимого** при отслеживании изменений в текстовых узлах.
      *
@@ -410,7 +404,6 @@ class ObserverOptions {
      * @type {boolean}
      */
     characterDataOldValue = false;
-
     /**
      * 🎯 `attributeFilter` — список атрибутов, изменения которых должен отслеживать `Observer`.
      *
@@ -470,10 +463,9 @@ class ObserverOptions {
      *
      * ---
      *
-     * @type {string[]|undefined}
+     * @type {string[] | undefined}
      */
     attributeFilter;
-
     /**
      * 🏗️ `new()` — создаёт экземпляр билдера опций {@link ObserverOptionsBuilder} для удобной конфигурации {@link Observer}.
      *
@@ -513,12 +505,11 @@ class ObserverOptions {
      *
      * ---
      *
-     * @returns {ObserverOptionsBuilder} Экземпляр билдера опций
+     * @returns {ObserverOptionsBuilder}
      */
     static new() {
         return new ObserverOptionsBuilder();
     }
-
     /**
      * 👶 `children()` — создаёт {@link ObserverOptions} с включённым флагом `childList: true`.
      *
@@ -554,12 +545,11 @@ class ObserverOptions {
      *
      * ---
      *
-     * @returns {ObserverOptions} Конфигурация с `childList: true`
+     * @returns {ObserverOptions}
      */
     static children() {
         return ObserverOptions.new().children().build();
     }
-
     /**
      * 🌿 `descendants()` — возвращает преднастроенные {@link ObserverOptions}
      * для наблюдения за **всеми потомками** узла.
@@ -598,12 +588,11 @@ class ObserverOptions {
      *
      * ---
      *
-     * @returns {ObserverOptions} Готовый объект опций
+     * @returns {ObserverOptions}
      */
     static descendants() {
         return ObserverOptions.new().descendants().build();
     }
-
     /**
      * 🧬 `attributes()` — возвращает преднастроенные {@link ObserverOptions} для отслеживания **изменений атрибутов**.
      *
@@ -641,21 +630,18 @@ class ObserverOptions {
      *
      * ---
      *
-     * @param {string[]|null} [filter=null] Массив атрибутов, которые нужно отслеживать (например, `['class', 'data-id']`).
-     * Оставьте `null`, чтобы следить за **всеми** атрибутами.
+     * @param {string[]|undefined} [filter=undefined] Массив атрибутов, которые нужно отслеживать (например, `['class', 'data-id']`).
+     * Оставьте `undefined`, чтобы следить за **всеми** атрибутами.
      * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет возвращаться предыдущее значение атрибута.
-     * @returns {ObserverOptions} Готовый объект опций для `.observe()`
+     * @returns {ObserverOptions}
      */
-    static attributes(filter = null, useOldValue = false) {
+    static attributes(filter, useOldValue = false) {
         const builder = ObserverOptions.new().attributes(filter);
-
         if (useOldValue) {
             builder.useOldValue();
         }
-
         return builder.build();
     }
-
     /**
      * 🧬 `descendantAttributes()` — возвращает {@link ObserverOptions} для отслеживания **атрибутов всех потомков** DOM-элемента.
      *
@@ -694,22 +680,19 @@ class ObserverOptions {
      *
      * ---
      *
-     * @param {string[]|null} [filter=null] Список атрибутов, за которыми нужно следить
+     * @param {string[]|undefined} [filter=undefined] Список атрибутов, за которыми нужно следить
      * (например, `['class', 'data-visible']`).
-     * Укажите `null`, чтобы отслеживать **все** атрибуты.
+     * Укажите `undefined`, чтобы отслеживать **все** атрибуты.
      * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет возвращено предыдущее значение атрибута.
-     * @returns {ObserverOptions} Готовый набор опций для `observe()`
+     * @returns {ObserverOptions}
      */
-    static descendantAttributes(filter = null, useOldValue = false) {
+    static descendantAttributes(filter, useOldValue = false) {
         const builder = ObserverOptions.new().descendantAttributes(filter);
-
         if (useOldValue) {
             builder.useOldValue();
         }
-
         return builder.build();
     }
-
     /**
      * ✏️ `text()` — возвращает {@link ObserverOptions} для отслеживания изменений текстовых узлов (`characterData`).
      *
@@ -755,18 +738,15 @@ class ObserverOptions {
      * ---
      *
      * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет сохранено старое значение текста.
-     * @returns {ObserverOptions} Готовый набор опций для `observe()`
+     * @returns {ObserverOptions}
      */
     static text(useOldValue = false) {
         const builder = ObserverOptions.new().text();
-
         if (useOldValue) {
             builder.useOldValue();
         }
-
         return builder.build();
     }
-
     /**
      * ✏️ `descendantText()` — возвращает {@link ObserverOptions} для отслеживания изменений текстовых узлов (`characterData`) во всём поддереве.
      *
@@ -813,18 +793,15 @@ class ObserverOptions {
      * ---
      *
      * @param {boolean} [useOldValue=false] если `true`, в `MutationRecord.oldValue` будет сохранено предыдущее значение текста.
-     * @returns {ObserverOptions} Готовый набор опций для `observe()` с учётом вложенных текстовых узлов
+     * @returns {ObserverOptions}
      */
     static descendantText(useOldValue = false) {
         const builder = ObserverOptions.new().descendantText();
-
         if (useOldValue) {
             builder.useOldValue();
         }
-
         return builder.build();
     }
-
     /**
      * 📦 Создаёт конфигурацию для **наблюдения за содержимым** DOM-узла.
      *
@@ -875,18 +852,15 @@ class ObserverOptions {
      * ---
      *
      * @param {boolean} [useOldValue=false] если `true`, включает сохранение старых значений текста (`characterDataOldValue: true`).
-     * @returns {ObserverOptions} Готовый объект настроек для `MutationObserver`.
+     * @returns {ObserverOptions}
      */
     static content(useOldValue = false) {
         const builder = ObserverOptions.new().content();
-
         if (useOldValue) {
             builder.useOldValue();
         }
-
         return builder.build();
     }
-
     /**
      * 🧿 Создаёт конфигурацию для **полного наблюдения** за изменениями в DOM.
      *
@@ -944,17 +918,15 @@ class ObserverOptions {
      * ⚠️ Может повлиять на производительность — используйте при необходимости "всё включено".
      *
      * @param {boolean} [useOldValue=false] Включить ли сохранение старых значений атрибутов и текста.
-     * @returns {ObserverOptions} Готовый набор параметров для `MutationObserver`.
+     * @returns {ObserverOptions}
      */
     static all(useOldValue = false) {
         const builder = ObserverOptions.new().all();
-
         if (useOldValue) {
             builder.useOldValue();
         }
-
         return builder.build();
     }
 }
-
 export default ObserverOptions;
+//# sourceMappingURL=ObserverOptions.mjs.map

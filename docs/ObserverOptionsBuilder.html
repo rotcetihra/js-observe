@@ -42,7 +42,7 @@
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"DD MMM YYYY","systemName":"js-observe","systemSummary":"Наблюдатель за изменениями в DOM-элементе.","systemLogo":"","systemColor":"#48036F","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Архитектор (rotcetihra), 2025","linenums":false,"collapseSymbols":true,"inverseNav":false,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = true;
-			window.DOCLET_AFILTER_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = true;
 		</script>
 </head>
 <body>
@@ -107,6 +107,16 @@
 							<li><a href="list_class.html">Classes</a></li>
 							<li class="active">ObserverOptionsBuilder</li>
 						</ol>
+						<div class="access-filter">
+								<label class="checkbox-inline">
+									<input class="toggle-public" type="checkbox" value="" checked>
+									Public
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-protected" type="checkbox" value="" checked>
+									Protected
+								</label>
+						</div>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
@@ -181,11 +191,58 @@
 </dd>
 							</dl>
 							<article class="secondary">
+									<h3>Members</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id="_options" class="member protected"><span class="signature-attribs">&lt;protected, readonly> </span><span class="name">_options</span><span class="signature-type"> :<a href="ObserverOptions.html">ObserverOptions</a></span></h4>
+		</dt>
+<dd class="symbol-details member protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>⚙️ Внутренний объект опций <a href="ObserverOptions.html">ObserverOptions</a>, который постепенно конфигурируется методами билдера.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverOptionsBuilder.mjs.html">ObserverOptionsBuilder.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="children" class="function public"><span class="name">children</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="children" class="function public"><span class="name">children</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -220,9 +277,9 @@
 			<hr></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p><code>this</code> — для продолжения цепочки.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -258,7 +315,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="descendants" class="function public"><span class="name">descendants</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="descendants" class="function public"><span class="name">descendants</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -268,7 +325,7 @@
 			<p>Комбинирует два режима:</p>
 			<ul>
 			<li><code>childList: true</code> — отслеживает добавление и удаление узлов</li>
-			<li><code>subtree: true</code> — расширяет область наблюдения на <strong>всех потомков</strong></li>
+			<li><code>subtree: true</code> — расширяет область наблюдения на <strong>всех потомках</strong></li>
 			</ul>
 			<p>Эквивалентно: <code>.children().subtree()</code>, но читается декларативнее.</p>
 			<hr>
@@ -295,9 +352,9 @@
 			<hr></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p><code>this</code> — для цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -333,7 +390,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="attributes" class="function public"><span class="name">attributes</span><span class="signature-params">( [&nbsp;<span class="signature-param">filter</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="attributes" class="function public"><span class="name">attributes</span><span class="signature-params">( [&nbsp;<span class="signature-param">filter</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -376,16 +433,14 @@
 							<th>Name</th>
 						<th>Type</th>
 							<th>Attributes</th>
-							<th>Default</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
 					<tbody>
 						<tr>
 								<td><code>filter</code></td>
-							<td><span class="param-type">Array.&lt;string></span> | <span class="param-type">null</span></td>
+							<td><span class="param-type">Array.&lt;string></span> | <span class="param-type">undefined</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td></td>
 							<td class="last">
 									<p>Список атрибутов для отслеживания (необязательный).</p>
 							</td>
@@ -395,9 +450,9 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>this — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -433,7 +488,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="descendantAttributes" class="function public"><span class="name">descendantAttributes</span><span class="signature-params">( [&nbsp;<span class="signature-param">filter</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="descendantAttributes" class="function public"><span class="name">descendantAttributes</span><span class="signature-params">( [&nbsp;<span class="signature-param">filter</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -447,7 +502,7 @@
 			<h3>🔍 Что делает:</h3>
 			<ul>
 			<li>Включает <code>attributes: true</code> — отслеживает изменения атрибутов</li>
-			<li>Включает <code>subtree: true</code> — расширяет наблюдение на <strong>всех потомков</strong></li>
+			<li>Включает <code>subtree: true</code> — расширяет наблюдение на <strong>всех потомках</strong></li>
 			<li>Если указан параметр <code>filter</code>, устанавливает <code>attributeFilter</code> — ограничивает отслеживание указанными атрибутами</li>
 			</ul>
 			<hr>
@@ -484,16 +539,14 @@
 							<th>Name</th>
 						<th>Type</th>
 							<th>Attributes</th>
-							<th>Default</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
 					<tbody>
 						<tr>
 								<td><code>filter</code></td>
-							<td><span class="param-type">Array.&lt;string></span> | <span class="param-type">null</span></td>
+							<td><span class="param-type">Array.&lt;string></span> | <span class="param-type">undefined</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td></td>
 							<td class="last">
 									<p>Список атрибутов, за которыми нужно следить. Если не указан — отслеживаются все.</p>
 							</td>
@@ -503,9 +556,9 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p><code>this</code> — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -541,7 +594,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="text" class="function public"><span class="name">text</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="text" class="function public"><span class="name">text</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -594,9 +647,9 @@
 			<hr></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p><code>this</code> — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -632,7 +685,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="descendantText" class="function public"><span class="name">descendantText</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="descendantText" class="function public"><span class="name">descendantText</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -646,7 +699,7 @@
 			<h3>🔍 Что делает:</h3>
 			<ul>
 			<li>Устанавливает <code>characterData: true</code> — отслеживает изменения в текстовых узлах</li>
-			<li>Устанавливает <code>subtree: true</code> — расширяет наблюдение на <strong>всех потомков</strong></li>
+			<li>Устанавливает <code>subtree: true</code> — расширяет наблюдение на <strong>всех потомках</strong></li>
 			</ul>
 			<hr>
 			<p>⚠️ Чтобы получить <strong>предыдущее значение текста</strong>, вызовите <code>.useOldValue()</code> после <code>.descendantText()</code>.</p>
@@ -680,9 +733,9 @@
 			<hr></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p><code>this</code> — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -718,7 +771,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="subtree" class="function public"><span class="name">subtree</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="subtree" class="function public"><span class="name">subtree</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -766,9 +819,9 @@
 			<hr></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p><code>this</code> — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -804,7 +857,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="useOldValue" class="function public"><span class="name">useOldValue</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="useOldValue" class="function public"><span class="name">useOldValue</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -855,9 +908,9 @@
 			<hr></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p><code>this</code> — для продолжения цепочки вызовов</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -901,7 +954,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="content" class="function public"><span class="name">content</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="content" class="function public"><span class="name">content</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -940,9 +993,9 @@
 			<hr></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>this — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -978,7 +1031,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="all" class="function public"><span class="name">all</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>}</span></h4>
+			<h4 id="all" class="function public"><span class="name">all</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -1017,9 +1070,9 @@
 			<hr></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p><code>this</code> — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -1091,7 +1144,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Готовая конфигурация для MutationObserver.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>

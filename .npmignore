@@ -1,5 +1,6 @@
 docs/
 CHANGELOG.md
 tests/
+src/
 jsdoc.config.json
 jest.config.mjs

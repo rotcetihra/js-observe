@@ -1,4 +1,5 @@
-export default ObserverBuilder;
+import Observer from './Observer.mjs';
+import ObserverOptions from './ObserverOptions.mjs';
 /**
  * 🧱 `ObserverBuilder` — строитель (builder) для удобного создания экземпляров {@link Observer}.
  *
@@ -60,6 +61,111 @@ export default ObserverBuilder;
  */
 declare class ObserverBuilder {
     /**
+     * 🧩 Callback-функция, вызываемая при срабатывании {@link Observer}.
+     *
+     * Представляет собой обязательную часть конфигурации наблюдателя.
+     * Задаётся с помощью метода `.call(callback)` и передаётся в конструктор `Observer` при вызове `.build()`.
+     *
+     * ---
+     *
+     * ### 📐 Сигнатура:
+     *
+     * ```ts
+     *
+     * (mutations: MutationRecord[], observer: MutationObserver) => void
+     *
+     * ```
+     *
+     * ---
+     *
+     * ### ✅ Пример:
+     *
+     * ```js
+     *
+     * builder.call((mutations, observer) => {
+     *     mutations.forEach(m => console.log(m));
+     * });
+     *
+     * ```
+     *
+     * ---
+     *
+     * @type {MutationCallback | undefined}
+     * @protected
+     */
+    protected _callback?: MutationCallback;
+    /**
+     * ⚙️ Конфигурация параметров наблюдения ({@link ObserverOptions}), применяемая при вызове `observe()`.
+     *
+     * Устанавливается двумя способами:
+     *
+     * - с помощью метода `.with(options)`, где `options` — это вручную собранный объект
+     * - или через метод `.options(builderCallback)`, используя {@link ObserverOptionsBuilder} для декларативной сборки
+     *
+     * ---
+     *
+     * ### 🔍 Пример использования с `.with()`:
+     *
+     * ```js
+     *
+     * builder.with({ childList: true, subtree: true });
+     *
+     * ```
+     *
+     * ### 🔍 Пример с `.options()` и builder-ом:
+     *
+     * ```js
+     *
+     * builder.options((b) => b.descendants().attributes(['class']).useOldValue());
+     *
+     * ```
+     *
+     * ---
+     *
+     * Если параметр не установлен, при сборке через `.build()` будет передан `undefined`,
+     * что может привести к созданию наблюдателя без настроек (необходимо будет передать опции непосредственно в метод `observe`).
+     *
+     * ---
+     *
+     * @type {ObserverOptions | MutationObserverInit | undefined}
+     * @protected
+     */
+    protected _options?: ObserverOptions | MutationObserverInit;
+    /**
+     * 🎯 Целевой DOM-элемент, за изменениями которого будет вестись наблюдение.
+     *
+     * Устанавливается через метод `.for(target)`, где `target` — это любой `Node`,
+     * поддерживаемый {@link MutationObserver}, например: `Element`, `Document`, `DocumentFragment`.
+     *
+     * ---
+     *
+     * ### ✅ Пример использования:
+     *
+     * ```js
+     *
+     * builder.for(document.querySelector('#app'));
+     *
+     * ```
+     *
+     * ---
+     *
+     * Если целевой узел не задан, его можно передать напрямую при вызове `observer.observe(target)`.
+     * Однако для полного построения наблюдателя через `.build()`, рекомендуется явно указать target.
+     *
+     * ---
+     *
+     * ### 💡 Особенности:
+     * - Можно вызывать в любой момент до `.build()`.
+     * - Позволяет удобно переиспользовать одну и ту же конфигурацию для разных узлов (создавая несколько Observer-ов).
+     * - Если вызвать несколько раз — будет использоваться последний переданный target.
+     *
+     * ---
+     *
+     * @type {Node|undefined}
+     * @protected
+     */
+    protected _target?: Node;
+    /**
      * 🎯 Устанавливает **целевой DOM-узел** для наблюдения.
      *
      * Этот метод задаёт `target` — узел, за изменениями которого будет следить {@link Observer}.
@@ -92,9 +198,9 @@ declare class ObserverBuilder {
      * ---
      *
      * @param {Node} target - DOM-узел (например, HTMLElement, Document, DocumentFragment), за которым нужно наблюдать.
-     * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    for(target: Node): ObserverBuilder;
+    for(target: Node): this;
     /**
      * ⚙️ Устанавливает **объект параметров** ({@link ObserverOptions}) для наблюдения.
      *
@@ -130,10 +236,10 @@ declare class ObserverBuilder {
      *
      * ---
      *
-     * @param {MutationObserverInit} options - Объект конфигурации наблюдателя (например, из ObserverOptionsBuilder или вручную).
-     * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
+     * @param {ObserverOptions | MutationObserverInit} options - Объект конфигурации наблюдателя (например, из ObserverOptionsBuilder или вручную).
+     * @returns {this}
      */
-    with(options: MutationObserverInit): ObserverBuilder;
+    with(options: ObserverOptions | MutationObserverInit): this;
     /**
      * 🧱 Упрощённый способ **создания конфигурации наблюдателя** через билдер {@link ObserverOptionsBuilder}.
      *
@@ -175,9 +281,9 @@ declare class ObserverBuilder {
      * ---
      *
      * @param {function(ObserverOptionsBuilder): void} callback — функция, принимающая билдер опций для пошаговой настройки.
-     * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    options(callback: (arg0: ObserverOptionsBuilder) => void): ObserverBuilder;
+    options(callback: Function): this;
     /**
      * 📞 Устанавливает **callback-функцию** для {@link Observer}, которая будет вызываться
      * при срабатывании наблюдателя (при изменениях в DOM).
@@ -216,9 +322,9 @@ declare class ObserverBuilder {
      * ---
      *
      * @param {MutationCallback} callback - Функция, вызываемая при изменениях в DOM. Принимает массив `MutationRecord[]` и объект `MutationObserver`.
-     * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    call(callback: MutationCallback): ObserverBuilder;
+    call(callback: MutationCallback): this;
     /**
      * 🏗️ Завершает построение наблюдателя и возвращает готовый экземпляр {@link Observer}.
      *
@@ -260,10 +366,8 @@ declare class ObserverBuilder {
      * ---
      *
      * @throws {Error} Если не был вызван `.call()`.
-     * @returns {Observer} Экземпляр класса {@link Observer}, готовый к вызову `.observe()`.
+     * @returns {Observer}
      */
     build(): Observer;
-    #private;
 }
-import ObserverOptionsBuilder from './ObserverOptionsBuilder.mjs';
-import Observer from './Observer.mjs';
+export default ObserverBuilder;

@@ -1,5 +1,5 @@
-import ObserverBuilder from '../src/ObserverBuilder.mjs';
-import Observer from '../src/Observer.mjs';
+import ObserverBuilder from '../dist/ObserverBuilder.mjs';
+import Observer from '../dist/Observer.mjs';
 import { describe, test, expect, jest } from '@jest/globals';
 
 describe('ObserverBuilder', () => {

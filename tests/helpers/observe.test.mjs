@@ -1,5 +1,5 @@
 import { describe, test, expect, jest } from '@jest/globals';
-import observe from '../../src/helpers/observe.mjs';
+import observe from '../../dist/helpers/observe.mjs';
 
 describe('observe()', () => {
     test('запускает наблюдение и вызывает callback при мутации', async () => {

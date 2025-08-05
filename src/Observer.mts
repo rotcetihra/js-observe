@@ -77,9 +77,11 @@ class Observer extends MutationObserver {
      *
      * Значение передаётся в метод `.observe()` при вызове.
      *
-     * @type {ObserverOptions|MutationObserverInit|null}
+     * @readonly
+     * @type {ObserverOptions | MutationObserverInit | undefined}
+     * @protected
      */
-    #options;
+    protected readonly _options?: ObserverOptions | MutationObserverInit;
 
     /**
      * 🎯 Целевой DOM-узел для наблюдения по умолчанию.
@@ -106,21 +108,51 @@ class Observer extends MutationObserver {
      *
      * ```
      *
-     * @type {Node|null}
+     * @readonly
+     * @type {Node | undefined}
+     * @protected
      */
-    #target;
+    protected readonly _target?: Node;
+
+    /**
+     * 📞 Callback-функция, вызываемая при каждом изменении DOM.
+     *
+     * Передаётся в конструктор и используется как основной обработчик мутаций.
+     * Сигнатура: `(mutations: MutationRecord[], observer: MutationObserver) => void`
+     *
+     * ---
+     *
+     * ### Пример:
+     * ```js
+     * const observer = new Observer((mutations) => {
+     *     mutations.forEach(m => console.log(m));
+     * });
+     * ```
+     *
+     * ---
+     *
+     * @readonly
+     * @type {MutationCallback}
+     * @protected
+     */
+    protected readonly _callback: MutationCallback;
 
     /**
      *
      * @param {MutationCallback} callback
-     * @param {ObserverOptions|MutationObserverInit|null} options
-     * @param {Node|null} target
+     * @param {ObserverOptions | MutationObserverInit | undefined} options
+     * @param {Node | undefined} target
      */
-    constructor(callback, options = null, target = null) {
+    constructor(
+        callback: MutationCallback,
+        options?: ObserverOptions | MutationObserverInit,
+        target?: Node,
+    ) {
         super(callback);
 
-        this.#options = options;
-        this.#target = target;
+        this._callback = callback;
+        this._options = options;
+        this._target = target;
     }
 
     /**
@@ -174,14 +206,18 @@ class Observer extends MutationObserver {
      *
      * ```
      *
-     * @param {Node|null} [target] - DOM-узел, за которым будет вестись наблюдение.
-     * @param {ObserverOptions|MutationObserverInit|null} [options] - Объект параметров наблюдения.
+     * @param {Node|undefined} [target] - DOM-узел, за которым будет вестись наблюдение.
+     * @param {ObserverOptions|MutationObserverInit|undefined} [options] - Объект параметров наблюдения.
      * @throws {TypeError} Если `target` не является допустимым DOM-узлом.
      * @throws {SyntaxError} Если не указана ни одна из обязательных опций (`childList`, `attributes`, `characterData`).
+     * @returns {void}
      */
-    observe(target = null, options = null) {
+    observe(
+        target?: Node,
+        options?: ObserverOptions | MutationObserverInit,
+    ): void {
         if (!target) {
-            target = this.#target;
+            target = this._target;
         }
 
         if (!target) {
@@ -189,14 +225,14 @@ class Observer extends MutationObserver {
         }
 
         if (!options) {
-            options = this.#options;
+            options = this._options;
         }
 
         if (!options) {
             throw new TypeError('Не заданы параметры наблюдения.');
         }
 
-        super.observe(target ?? this.#target, options);
+        super.observe(target, options);
     }
 
     /**
@@ -231,7 +267,7 @@ class Observer extends MutationObserver {
      *
      * @returns {void}
      */
-    disconnect() {
+    disconnect(): void {
         super.disconnect();
     }
 
@@ -275,9 +311,9 @@ class Observer extends MutationObserver {
      *
      * ---
      *
-     * @returns {MutationRecord[]} Массив записей об изменениях, накопленных с момента последнего вызова `takeRecords` или выполнения `callback`.
+     * @returns {MutationRecord[]}
      */
-    takeRecords() {
+    takeRecords(): MutationRecord[] {
         return super.takeRecords();
     }
 
@@ -321,9 +357,9 @@ class Observer extends MutationObserver {
      *
      * ---
      *
-     * @returns {ObserverBuilder} Экземпляр билдера {@link ObserverBuilder}, из которого можно собрать {@link Observer}.
+     * @returns {ObserverBuilder}
      */
-    static new() {
+    static new(): ObserverBuilder {
         return new ObserverBuilder();
     }
 }

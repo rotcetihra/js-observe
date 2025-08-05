@@ -1,15 +1,16 @@
 {
     "compilerOptions": {
         "allowJs": true,
+        "checkJs": true,
         "declaration": true,
-        "emitDeclarationOnly": true,
-        "outDir": "types",
+        "sourceMap": true,
+        "outDir": "./dist",
         "module": "ESNext",
         "target": "ESNext",
         "moduleResolution": "node",
         "strict": true,
-        "checkJs": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "rootDir": "./src"
     },
-    "include": ["src", "index.mjs"]
+    "include": ["src"]
 }

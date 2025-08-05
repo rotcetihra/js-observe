@@ -1,3 +1,4 @@
+import Observer from '../Observer.mjs';
 /**
  * 🚀 Упрощённая функция-обёртка `observe()` для быстрого запуска наблюдения за DOM-изменениями.
  *
@@ -35,9 +36,10 @@
  * @param {Node} target - DOM-узел, за которым нужно наблюдать.
  * @param {ObserverOptions|MutationObserverInit} options - Параметры наблюдения (`childList`, `attributes`, `characterData`, и др.).
  * @param {MutationCallback} callback - Функция, вызываемая при обнаружении изменений.
- *
  * @returns {void}
  * @function observe
  */
-export default function observe(target: Node, options: ObserverOptions | MutationObserverInit, callback: MutationCallback): void;
-import ObserverOptions from '../ObserverOptions.mjs';
+export default function observe(target, options, callback) {
+    new Observer(callback, options, target).observe();
+}
+//# sourceMappingURL=observe.mjs.map

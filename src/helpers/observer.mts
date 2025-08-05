@@ -1,3 +1,5 @@
+import ObserverBuilder from '../ObserverBuilder.mjs';
+
 /**
  * 🛠️ Создаёт новый экземпляр {@link ObserverBuilder} — строитель для конфигурации {@link Observer}.
  *
@@ -22,8 +24,9 @@
  *
  * ---
  *
- * @returns {ObserverBuilder} Новый экземпляр {@link ObserverBuilder} для создания наблюдателя.
+ * @returns {ObserverBuilder}
  * @function observer
  */
-export default function observer(): ObserverBuilder;
-import ObserverBuilder from '../ObserverBuilder.mjs';
+export default function observer(): ObserverBuilder {
+    return new ObserverBuilder();
+}

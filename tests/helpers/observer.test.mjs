@@ -1,7 +1,7 @@
 import { describe, test, expect, jest } from '@jest/globals';
-import observer from '../../src/helpers/observer.mjs';
-import ObserverBuilder from '../../src/ObserverBuilder.mjs';
-import Observer from '../../src/Observer.mjs';
+import observer from '../../dist/helpers/observer.mjs';
+import ObserverBuilder from '../../dist/ObserverBuilder.mjs';
+import Observer from '../../dist/Observer.mjs';
 
 describe('observer()', () => {
     test('возвращает экземпляр ObserverBuilder', () => {

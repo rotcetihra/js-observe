@@ -1,111 +1,5 @@
-<!-- start:source.tmpl.hbs -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-		<title>ObserverOptions.mjs</title>
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
-		<link type="text/css" rel="stylesheet" href="css/template.min.css">
-			<style>
-				.page-header,
-				pre.code-toolbar > .toolbar:hover {
-					background-color: #48036F;
-				}
-				.callout-primary,
-				.toc .nav > li > a:hover,
-				.toc .nav > li > a:focus,
-				.toc .nav > li.active > a,
-				.toc .nav > li.active > a:hover,
-				.toc .nav > li.active > a:focus,
-				pre.code-toolbar > .toolbar:hover {
-					border-left-color: #48036F;
-				}
-				pre.code-toolbar > .toolbar:hover {
-					border-bottom-color: #48036F;
-				}
-				.callout-primary h5,
-				.symbol-title.collapsible-symbol .toggle-icon,
-				.breadcrumb li a,
-				.toc .nav > li > a:hover,
-				.toc .nav > li > a:focus,
-				.toc .nav > li.active > a,
-				.toc .nav > li.active > a:hover,
-				.toc .nav > li.active > a:focus {
-					color: #48036F;
-				}
-			</style>
-		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"DD MMM YYYY","systemName":"js-observe","systemSummary":"Наблюдатель за изменениями в DOM-элементе.","systemLogo":"","systemColor":"#48036F","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Архитектор (rotcetihra), 2025","linenums":false,"collapseSymbols":true,"inverseNav":false,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = false;
-			window.DOCLET_AFILTER_ENABLED = false;
-		</script>
-</head>
-<body>
-	<!-- start:navbar.hbs -->
-	<header class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html">
-					js-observe
-				</a>
-				<!-- displayed on small devices -->
-				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="navbar-collapse collapse" id="topNavigation">
-				<ul class="nav navbar-nav">
-								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#observe">observe</a></li>
-											<li><a href="global.html#observer">observer</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="Observer.html">Observer</a></li>
-											<li><a href="ObserverBuilder.html">ObserverBuilder</a></li>
-											<li><a href="ObserverOptions.html">ObserverOptions</a></li>
-											<li><a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a></li>
-									</ul>
-								</li>
-				</ul>
-					<!-- start:lunr-search-navbar.hbs -->
-					<form class="navbar-form navbar-right" role="search">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
-							<div class="input-group-btn">
-								<button class="btn btn-default" id="lunr-search-submit">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</div>
-						</div>
-					</form>
-					<!-- start:lunr-search-navbar.hbs -->		</div>
-		</div>
-	</header>
-	<!-- end:navbar.hbs -->		<div class="page-header">
-			<div class="container">
-				<span class="kind">source</span>
-				<h1><span class="name">ObserverOptions.mjs</span></h1>
-			</div>
-		</div>
-	<div class="container content">
-		<div class="row">
-			<div class="col-md-12 main-content">
-		<section class="source-section">
-			<article></article>
-			<pre class="prettyprint source language-javascript"><code class="language-javascript">import ObserverOptionsBuilder from './ObserverOptionsBuilder.mjs';
+import ObserverOptionsBuilder from './ObserverOptionsBuilder.mjs';
+
 /**
  * 🧩 `ObserverOptions` — набор параметров для конфигурации {@link Observer}, определяющий, **что именно отслеживать** в DOM.
  *
@@ -150,7 +44,7 @@ class ObserverOptions {
      *
      * ### 📌 Особенности
      *
-     * - Отслеживает **только изменения на первом уровне** (например, `&lt;div> → &lt;span>`).
+     * - Отслеживает **только изменения на первом уровне** (например, `<div> → <span>`).
      * - Не фиксирует изменения **внутри** этих узлов (текст, атрибуты и т.п.).
      * - Для наблюдения за потомками любого уровня — используйте `subtree: true`.
      *
@@ -160,9 +54,9 @@ class ObserverOptions {
      *
      * ```html
      *
-     * &lt;div id="box">
-     *     &lt;p>Привет&lt;/p>
-     * &lt;/div>
+     * <div id="box">
+     *     <p>Привет</p>
+     * </div>
      *
      * ```
      *
@@ -206,7 +100,8 @@ class ObserverOptions {
      *
      * @type {boolean}
      */
-    childList = false;
+    childList: boolean = false;
+
     /**
      * 🏷️ `attributes` — включает отслеживание изменений атрибутов у указанного DOM-элемента.
      *
@@ -224,7 +119,7 @@ class ObserverOptions {
      *
      * ```html
      *
-     * &lt;div id="myDiv" class="box">&lt;/div>
+     * <div id="myDiv" class="box"></div>
      *
      * ```
      *
@@ -284,7 +179,8 @@ class ObserverOptions {
      *
      * @type {boolean}
      */
-    attributes = false;
+    attributes: boolean = false;
+
     /**
      * 🧬 `characterData` — включает отслеживание изменений текстового содержимого в узлах типа [CharacterData](https://developer.mozilla.org/en-US/docs/Web/API/CharacterData):
      * [`Text`](https://developer.mozilla.org/en-US/docs/Web/API/Text), [`Comment`](https://developer.mozilla.org/en-US/docs/Web/API/Comment), [`CDATASection`](https://developer.mozilla.org/en-US/docs/Web/API/CDATASection).
@@ -303,7 +199,7 @@ class ObserverOptions {
      *
      * ```html
      *
-     * &lt;div id="box">Привет&lt;/div>
+     * <div id="box">Привет</div>
      *
      * ```
      *
@@ -366,7 +262,8 @@ class ObserverOptions {
      *
      * @type {boolean}
      */
-    characterData = false;
+    characterData: boolean = false;
+
     /**
      * 🌲 `subtree` — включает **все вложенные узлы** в область наблюдения, а не только сам целевой элемент.
      *
@@ -383,11 +280,11 @@ class ObserverOptions {
      *
      * ```html
      *
-     * &lt;div id="root">
-     *     &lt;section>
-     *         &lt;button class="primary">Кнопка&lt;/button>
-     *     &lt;/section>
-     * &lt;/div>
+     * <div id="root">
+     *     <section>
+     *         <button class="primary">Кнопка</button>
+     *     </section>
+     * </div>
      *
      * ```
      *
@@ -419,7 +316,8 @@ class ObserverOptions {
      *
      * @type {boolean}
      */
-    subtree = false;
+    subtree: boolean = false;
+
     /**
      * ♻️ `attributeOldValue` — включает **предыдущее значение** атрибута в объекте мутации (`MutationRecord`).
      *
@@ -437,7 +335,7 @@ class ObserverOptions {
      *
      * ```html
      *
-     * &lt;div id="box" class="a">&lt;/div>
+     * <div id="box" class="a"></div>
      *
      * ```
      *
@@ -465,7 +363,8 @@ class ObserverOptions {
      *
      * @type {boolean}
      */
-    attributeOldValue = false;
+    attributeOldValue: boolean = false;
+
     /**
      * ♻️ `characterDataOldValue` — включает **предыдущее значение текстового содержимого** при отслеживании изменений в текстовых узлах.
      *
@@ -483,7 +382,7 @@ class ObserverOptions {
      *
      * ```html
      *
-     * &lt;div id="box">Привет&lt;/div>
+     * <div id="box">Привет</div>
      *
      * ```
      *
@@ -510,7 +409,8 @@ class ObserverOptions {
      *
      * @type {boolean}
      */
-    characterDataOldValue = false;
+    characterDataOldValue: boolean = false;
+
     /**
      * 🎯 `attributeFilter` — список атрибутов, изменения которых должен отслеживать `Observer`.
      *
@@ -528,7 +428,7 @@ class ObserverOptions {
      *
      * ```html
      *
-     * &lt;div id="box" class="red" data-state="open" title="подсказка">&lt;/div>
+     * <div id="box" class="red" data-state="open" title="подсказка"></div>
      *
      * ```
      *
@@ -572,7 +472,8 @@ class ObserverOptions {
      *
      * @type {string[] | undefined}
      */
-    attributeFilter;
+    attributeFilter?: string[];
+
     /**
      * 🏗️ `new()` — создаёт экземпляр билдера опций {@link ObserverOptionsBuilder} для удобной конфигурации {@link Observer}.
      *
@@ -614,9 +515,10 @@ class ObserverOptions {
      *
      * @returns {ObserverOptionsBuilder}
      */
-    static new() {
+    static new(): ObserverOptionsBuilder {
         return new ObserverOptionsBuilder();
     }
+
     /**
      * 👶 `children()` — создаёт {@link ObserverOptions} с включённым флагом `childList: true`.
      *
@@ -654,9 +556,10 @@ class ObserverOptions {
      *
      * @returns {ObserverOptions}
      */
-    static children() {
+    static children(): ObserverOptions {
         return ObserverOptions.new().children().build();
     }
+
     /**
      * 🌿 `descendants()` — возвращает преднастроенные {@link ObserverOptions}
      * для наблюдения за **всеми потомками** узла.
@@ -697,9 +600,10 @@ class ObserverOptions {
      *
      * @returns {ObserverOptions}
      */
-    static descendants() {
+    static descendants(): ObserverOptions {
         return ObserverOptions.new().descendants().build();
     }
+
     /**
      * 🧬 `attributes()` — возвращает преднастроенные {@link ObserverOptions} для отслеживания **изменений атрибутов**.
      *
@@ -742,13 +646,19 @@ class ObserverOptions {
      * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет возвращаться предыдущее значение атрибута.
      * @returns {ObserverOptions}
      */
-    static attributes(filter, useOldValue = false) {
+    static attributes(
+        filter?: string[],
+        useOldValue: boolean = false,
+    ): ObserverOptions {
         const builder = ObserverOptions.new().attributes(filter);
+
         if (useOldValue) {
             builder.useOldValue();
         }
+
         return builder.build();
     }
+
     /**
      * 🧬 `descendantAttributes()` — возвращает {@link ObserverOptions} для отслеживания **атрибутов всех потомков** DOM-элемента.
      *
@@ -793,13 +703,19 @@ class ObserverOptions {
      * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет возвращено предыдущее значение атрибута.
      * @returns {ObserverOptions}
      */
-    static descendantAttributes(filter, useOldValue = false) {
+    static descendantAttributes(
+        filter?: string[],
+        useOldValue: boolean = false,
+    ): ObserverOptions {
         const builder = ObserverOptions.new().descendantAttributes(filter);
+
         if (useOldValue) {
             builder.useOldValue();
         }
+
         return builder.build();
     }
+
     /**
      * ✏️ `text()` — возвращает {@link ObserverOptions} для отслеживания изменений текстовых узлов (`characterData`).
      *
@@ -847,13 +763,16 @@ class ObserverOptions {
      * @param {boolean} [useOldValue=false] Если `true`, в `MutationRecord.oldValue` будет сохранено старое значение текста.
      * @returns {ObserverOptions}
      */
-    static text(useOldValue = false) {
+    static text(useOldValue: boolean = false): ObserverOptions {
         const builder = ObserverOptions.new().text();
+
         if (useOldValue) {
             builder.useOldValue();
         }
+
         return builder.build();
     }
+
     /**
      * ✏️ `descendantText()` — возвращает {@link ObserverOptions} для отслеживания изменений текстовых узлов (`characterData`) во всём поддереве.
      *
@@ -902,13 +821,16 @@ class ObserverOptions {
      * @param {boolean} [useOldValue=false] если `true`, в `MutationRecord.oldValue` будет сохранено предыдущее значение текста.
      * @returns {ObserverOptions}
      */
-    static descendantText(useOldValue = false) {
+    static descendantText(useOldValue: boolean = false): ObserverOptions {
         const builder = ObserverOptions.new().descendantText();
+
         if (useOldValue) {
             builder.useOldValue();
         }
+
         return builder.build();
     }
+
     /**
      * 📦 Создаёт конфигурацию для **наблюдения за содержимым** DOM-узла.
      *
@@ -961,13 +883,16 @@ class ObserverOptions {
      * @param {boolean} [useOldValue=false] если `true`, включает сохранение старых значений текста (`characterDataOldValue: true`).
      * @returns {ObserverOptions}
      */
-    static content(useOldValue = false) {
+    static content(useOldValue: boolean = false): ObserverOptions {
         const builder = ObserverOptions.new().content();
+
         if (useOldValue) {
             builder.useOldValue();
         }
+
         return builder.build();
     }
+
     /**
      * 🧿 Создаёт конфигурацию для **полного наблюдения** за изменениями в DOM.
      *
@@ -1027,47 +952,15 @@ class ObserverOptions {
      * @param {boolean} [useOldValue=false] Включить ли сохранение старых значений атрибутов и текста.
      * @returns {ObserverOptions}
      */
-    static all(useOldValue = false) {
+    static all(useOldValue: boolean = false): ObserverOptions {
         const builder = ObserverOptions.new().all();
+
         if (useOldValue) {
             builder.useOldValue();
         }
+
         return builder.build();
     }
 }
+
 export default ObserverOptions;
-//# sourceMappingURL=ObserverOptions.mjs.map</code></pre>
-		</section>
-			</div>
-		</div>
-	</div>
-	<footer>
-				<div class="copyright">Архитектор (rotcetihra), 2025</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
-	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/clipboard.min.js"></script>
-	<script src="js/prism.min.js"></script>
-	<script src="js/template.min.js"></script>
-		<!-- start:lunr-search-modal.hbs -->
-		<div class="modal fade" id="lunr-search-modal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Search results</h4>
-					</div>
-					<div class="modal-body" id="lunr-search-body">
-					</div>
-					<div class="modal-footer" id="lunr-search-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div>
-		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
-	
-</body>
-</html>
-<!-- end:source.tmpl.hbs -->

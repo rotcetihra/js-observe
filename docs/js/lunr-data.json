@@ -88,6 +88,67 @@
           "state']).text().useoldvalu",
           "with(opt"
         ],
+        "ObserverBuilder.html#_callback": [
+          "_callback",
+          "build",
+          "builder.call((mut",
+          "call(callback",
+          "callback",
+          "console.log(m",
+          "gt",
+          "lt;protected&gt",
+          "member",
+          "mutat",
+          "mutationcallback|undefin",
+          "mutationobserv",
+          "mutationrecord",
+          "mutations.foreach(m",
+          "observ",
+          "observerbuilder#_callback",
+          "void"
+        ],
+        "ObserverBuilder.html#_options": [
+          "_option",
+          "b.descendants().attributes(['class']).useoldvalu",
+          "build",
+          "builder",
+          "builder.options((b",
+          "builder.with",
+          "childlist",
+          "gt",
+          "lt;protected&gt",
+          "member",
+          "observ",
+          "observerbuilder#_opt",
+          "observeropt",
+          "observeroptionsbuild",
+          "observeroptions|mutationobserverinit|undefin",
+          "option",
+          "options(buildercallback",
+          "subtre",
+          "true",
+          "undefin",
+          "with(opt"
+        ],
+        "ObserverBuilder.html#_target": [
+          "_target",
+          "build",
+          "builder.for(document.queryselector('#app",
+          "document",
+          "documentfrag",
+          "dom",
+          "element",
+          "for(target",
+          "lt;protected&gt",
+          "member",
+          "mutationobserv",
+          "node",
+          "node|undefin",
+          "observ",
+          "observer.observe(target",
+          "observerbuilder#_target",
+          "target"
+        ],
         "ObserverBuilder.html#for": [
           "build",
           "builder",
@@ -638,6 +699,14 @@
           "text",
           "useoldvalu"
         ],
+        "ObserverOptionsBuilder.html#_options": [
+          "_option",
+          "lt;protect",
+          "member",
+          "observeropt",
+          "observeroptionsbuilder#_opt",
+          "readonly&gt"
+        ],
         "ObserverOptionsBuilder.html#children": [
           "1",
           "appendchild",
@@ -654,7 +723,6 @@
           "observer(callback",
           "observer.observe(document.getelementbyid('list",
           "observeropt",
-          "observeroptionsbuild",
           "observeroptionsbuilder#children",
           "option",
           "removechild",
@@ -676,7 +744,6 @@
           "observer(callback",
           "observer.observe(document.getelementbyid('tre",
           "observeropt",
-          "observeroptionsbuild",
           "observeroptionsbuilder#descend",
           "option",
           "subtre",
@@ -940,6 +1007,61 @@
           "target",
           "true"
         ],
+        "Observer.html#_options": [
+          "_option",
+          "attribut",
+          "attributefilt",
+          "attributeoldvalu",
+          "characterdata",
+          "characterdataoldvalu",
+          "childlist",
+          "dom",
+          "lt;protect",
+          "member",
+          "observ",
+          "observer#_opt",
+          "observeroptions|mutationobserverinit|undefin",
+          "readonly&gt",
+          "subtre"
+        ],
+        "Observer.html#_target": [
+          "_target",
+          "const",
+          "document.bodi",
+          "dom",
+          "lt;protect",
+          "member",
+          "new",
+          "node|undefin",
+          "observ",
+          "observer#_target",
+          "observer(callback",
+          "observer.observ",
+          "option",
+          "readonly&gt",
+          "target"
+        ],
+        "Observer.html#_callback": [
+          "_callback",
+          "callback",
+          "console.log(m",
+          "const",
+          "dom",
+          "gt",
+          "lt;protect",
+          "member",
+          "mutat",
+          "mutationcallback",
+          "mutationobserv",
+          "mutationrecord",
+          "mutations.foreach(m",
+          "new",
+          "observ",
+          "observer#_callback",
+          "observer((mut",
+          "readonly&gt",
+          "void"
+        ],
         "Observer.html#observe": [
           "attribut",
           "attributeoldvalu",
@@ -967,7 +1089,8 @@
           "string",
           "subtre",
           "target",
-          "true"
+          "true",
+          "void"
         ],
         "Observer.html#disconnect": [
           "childlist",
@@ -1036,7 +1159,7 @@
           "useoldvalu"
         ]
       },
-      "length": 43
+      "length": 50
     },
     "tokenStore": {
       "root": {
@@ -1062,6 +1185,10 @@
                 "ObserverBuilder.html": {
                   "ref": "ObserverBuilder.html",
                   "tf": 2.127659574468085
+                },
+                "ObserverBuilder.html#_target": {
+                  "ref": "ObserverBuilder.html#_target",
+                  "tf": 3.3333333333333335
                 },
                 "ObserverBuilder.html#for": {
                   "ref": "ObserverBuilder.html#for",
@@ -1143,6 +1270,18 @@
                   "ref": "Observer.html",
                   "tf": 2.1739130434782608
                 },
+                "Observer.html#_options": {
+                  "ref": "Observer.html#_options",
+                  "tf": 5
+                },
+                "Observer.html#_target": {
+                  "ref": "Observer.html#_target",
+                  "tf": 3.571428571428571
+                },
+                "Observer.html#_callback": {
+                  "ref": "Observer.html#_callback",
+                  "tf": 3.125
+                },
                 "Observer.html#observe": {
                   "ref": "Observer.html#observe",
                   "tf": 1.3888888888888888
@@ -1181,6 +1320,10 @@
                             "ref": "list_class.html",
                             "tf": 35
                           },
+                          "ObserverBuilder.html#_target": {
+                            "ref": "ObserverBuilder.html#_target",
+                            "tf": 3.3333333333333335
+                          },
                           "ObserverBuilder.html#for": {
                             "ref": "ObserverBuilder.html#for",
                             "tf": 2.941176470588235
@@ -1194,6 +1337,10 @@
                               "docs": {},
                               "g": {
                                 "docs": {
+                                  "ObserverBuilder.html#_target": {
+                                    "ref": "ObserverBuilder.html#_target",
+                                    "tf": 3.3333333333333335
+                                  },
                                   "ObserverBuilder.html#for": {
                                     "ref": "ObserverBuilder.html#for",
                                     "tf": 2.941176470588235
@@ -2016,6 +2163,10 @@
                                       "ref": "Observer.html",
                                       "tf": 2.1739130434782608
                                     },
+                                    "Observer.html#_target": {
+                                      "ref": "Observer.html#_target",
+                                      "tf": 7.142857142857142
+                                    },
                                     "Observer.html#disconnect": {
                                       "ref": "Observer.html#disconnect",
                                       "tf": 4.166666666666666
@@ -2071,7 +2222,7 @@
                         },
                         "ObserverOptionsBuilder.html#descendants": {
                           "ref": "ObserverOptionsBuilder.html#descendants",
-                          "tf": 702.5
+                          "tf": 752.5
                         },
                         "Observer.html#.new": {
                           "ref": "Observer.html#.new",
@@ -2106,7 +2257,7 @@
                                               },
                                               "ObserverOptionsBuilder.html#descendantAttributes": {
                                                 "ref": "ObserverOptionsBuilder.html#descendantAttributes",
-                                                "tf": 683.3333333333334
+                                                "tf": 700
                                               }
                                             },
                                             "e": {
@@ -2163,7 +2314,7 @@
                                       },
                                       "ObserverOptionsBuilder.html#descendantText": {
                                         "ref": "ObserverOptionsBuilder.html#descendantText",
-                                        "tf": 703.2258064516129
+                                        "tf": 753.2258064516129
                                       }
                                     }
                                   }
@@ -2724,6 +2875,18 @@
                         "ref": "ObserverBuilder.html",
                         "tf": 3.1914893617021276
                       },
+                      "ObserverBuilder.html#_callback": {
+                        "ref": "ObserverBuilder.html#_callback",
+                        "tf": 11.76470588235294
+                      },
+                      "ObserverBuilder.html#_options": {
+                        "ref": "ObserverBuilder.html#_options",
+                        "tf": 5.263157894736842
+                      },
+                      "ObserverBuilder.html#_target": {
+                        "ref": "ObserverBuilder.html#_target",
+                        "tf": 3.3333333333333335
+                      },
                       "ObserverBuilder.html#for": {
                         "ref": "ObserverBuilder.html#for",
                         "tf": 5.88235294117647
@@ -2856,9 +3019,21 @@
                         "ref": "Observer.html",
                         "tf": 1904.3478260869565
                       },
+                      "Observer.html#_options": {
+                        "ref": "Observer.html#_options",
+                        "tf": 10
+                      },
+                      "Observer.html#_target": {
+                        "ref": "Observer.html#_target",
+                        "tf": 14.285714285714285
+                      },
+                      "Observer.html#_callback": {
+                        "ref": "Observer.html#_callback",
+                        "tf": 6.25
+                      },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 684.7222222222223
+                        "tf": 676.3888888888889
                       },
                       "Observer.html#disconnect": {
                         "ref": "Observer.html#disconnect",
@@ -2919,6 +3094,10 @@
                                           "ref": "Observer.html",
                                           "tf": 1.0869565217391304
                                         },
+                                        "Observer.html#_target": {
+                                          "ref": "Observer.html#_target",
+                                          "tf": 3.571428571428571
+                                        },
                                         "Observer.html#observe": {
                                           "ref": "Observer.html#observe",
                                           "tf": 1.3888888888888888
@@ -2952,6 +3131,10 @@
                                                     "docs": {},
                                                     "t": {
                                                       "docs": {
+                                                        "ObserverBuilder.html#_target": {
+                                                          "ref": "ObserverBuilder.html#_target",
+                                                          "tf": 3.3333333333333335
+                                                        },
                                                         "ObserverBuilder.html#for": {
                                                           "ref": "ObserverBuilder.html#for",
                                                           "tf": 2.941176470588235
@@ -3597,19 +3780,19 @@
                                     },
                                     "ObserverBuilder.html#for": {
                                       "ref": "ObserverBuilder.html#for",
-                                      "tf": 52.94117647058823
+                                      "tf": 2.941176470588235
                                     },
                                     "ObserverBuilder.html#with": {
                                       "ref": "ObserverBuilder.html#with",
-                                      "tf": 52.17391304347826
+                                      "tf": 2.1739130434782608
                                     },
                                     "ObserverBuilder.html#options": {
                                       "ref": "ObserverBuilder.html#options",
-                                      "tf": 35.50724637681159
+                                      "tf": 2.1739130434782608
                                     },
                                     "ObserverBuilder.html#call": {
                                       "ref": "ObserverBuilder.html#call",
-                                      "tf": 35.11904761904761
+                                      "tf": 1.7857142857142856
                                     },
                                     "ObserverBuilder.html#build": {
                                       "ref": "ObserverBuilder.html#build",
@@ -3660,6 +3843,75 @@
                                       },
                                       "#": {
                                         "docs": {},
+                                        "_": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {},
+                                                "l": {
+                                                  "docs": {},
+                                                  "b": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "c": {
+                                                        "docs": {},
+                                                        "k": {
+                                                          "docs": {
+                                                            "ObserverBuilder.html#_callback": {
+                                                              "ref": "ObserverBuilder.html#_callback",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "o": {
+                                            "docs": {},
+                                            "p": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {
+                                                  "ObserverBuilder.html#_options": {
+                                                    "ref": "ObserverBuilder.html#_options",
+                                                    "tf": 1150
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "t": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "g": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "ObserverBuilder.html#_target": {
+                                                          "ref": "ObserverBuilder.html#_target",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
                                         "f": {
                                           "docs": {},
                                           "o": {
@@ -3757,6 +4009,10 @@
                                   "ref": "ObserverBuilder.html",
                                   "tf": 1.0638297872340425
                                 },
+                                "ObserverBuilder.html#_options": {
+                                  "ref": "ObserverBuilder.html#_options",
+                                  "tf": 2.631578947368421
+                                },
                                 "ObserverBuilder.html#with": {
                                   "ref": "ObserverBuilder.html#with",
                                   "tf": 4.3478260869565215
@@ -3805,6 +4061,10 @@
                                   "ref": "ObserverOptionsBuilder.html",
                                   "tf": 1.4285714285714286
                                 },
+                                "ObserverOptionsBuilder.html#_options": {
+                                  "ref": "ObserverOptionsBuilder.html#_options",
+                                  "tf": 75
+                                },
                                 "ObserverOptionsBuilder.html#children": {
                                   "ref": "ObserverOptionsBuilder.html#children",
                                   "tf": 4.545454545454546
@@ -3840,6 +4100,10 @@
                                                     "ref": "ObserverBuilder.html",
                                                     "tf": 3.1914893617021276
                                                   },
+                                                  "ObserverBuilder.html#_options": {
+                                                    "ref": "ObserverBuilder.html#_options",
+                                                    "tf": 2.631578947368421
+                                                  },
                                                   "ObserverBuilder.html#with": {
                                                     "ref": "ObserverBuilder.html#with",
                                                     "tf": 4.3478260869565215
@@ -3860,45 +4124,37 @@
                                                     "ref": "ObserverOptionsBuilder.html",
                                                     "tf": 1902.857142857143
                                                   },
-                                                  "ObserverOptionsBuilder.html#children": {
-                                                    "ref": "ObserverOptionsBuilder.html#children",
-                                                    "tf": 50
-                                                  },
-                                                  "ObserverOptionsBuilder.html#descendants": {
-                                                    "ref": "ObserverOptionsBuilder.html#descendants",
-                                                    "tf": 50
-                                                  },
                                                   "ObserverOptionsBuilder.html#attributes": {
                                                     "ref": "ObserverOptionsBuilder.html#attributes",
-                                                    "tf": 35.18518518518518
+                                                    "tf": 1.8518518518518516
                                                   },
                                                   "ObserverOptionsBuilder.html#descendantAttributes": {
                                                     "ref": "ObserverOptionsBuilder.html#descendantAttributes",
-                                                    "tf": 34.803921568627445
+                                                    "tf": 1.4705882352941175
                                                   },
                                                   "ObserverOptionsBuilder.html#text": {
                                                     "ref": "ObserverOptionsBuilder.html#text",
-                                                    "tf": 51.42857142857143
+                                                    "tf": 1.4285714285714286
                                                   },
                                                   "ObserverOptionsBuilder.html#descendantText": {
                                                     "ref": "ObserverOptionsBuilder.html#descendantText",
-                                                    "tf": 51.61290322580645
+                                                    "tf": 1.6129032258064515
                                                   },
                                                   "ObserverOptionsBuilder.html#subtree": {
                                                     "ref": "ObserverOptionsBuilder.html#subtree",
-                                                    "tf": 51.388888888888886
+                                                    "tf": 1.3888888888888888
                                                   },
                                                   "ObserverOptionsBuilder.html#useOldValue": {
                                                     "ref": "ObserverOptionsBuilder.html#useOldValue",
-                                                    "tf": 51.21951219512195
+                                                    "tf": 1.2195121951219512
                                                   },
                                                   "ObserverOptionsBuilder.html#content": {
                                                     "ref": "ObserverOptionsBuilder.html#content",
-                                                    "tf": 52.27272727272727
+                                                    "tf": 2.272727272727273
                                                   },
                                                   "ObserverOptionsBuilder.html#all": {
                                                     "ref": "ObserverOptionsBuilder.html#all",
-                                                    "tf": 102.17391304347827
+                                                    "tf": 2.1739130434782608
                                                   },
                                                   "ObserverOptionsBuilder.html#build": {
                                                     "ref": "ObserverOptionsBuilder.html#build",
@@ -3911,6 +4167,23 @@
                                                     "docs": {},
                                                     "#": {
                                                       "docs": {},
+                                                      "_": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "p": {
+                                                            "docs": {},
+                                                            "t": {
+                                                              "docs": {
+                                                                "ObserverOptionsBuilder.html#_options": {
+                                                                  "ref": "ObserverOptionsBuilder.html#_options",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
                                                       "c": {
                                                         "docs": {},
                                                         "h": {
@@ -4193,6 +4466,102 @@
                                                                             "ObserverOptionsBuilder.html#useOldValue": {
                                                                               "ref": "ObserverOptionsBuilder.html#useOldValue",
                                                                               "tf": 1.2195121951219512
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "|": {
+                                        "docs": {},
+                                        "m": {
+                                          "docs": {},
+                                          "u": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "b": {
+                                                            "docs": {},
+                                                            "s": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "r": {
+                                                                  "docs": {},
+                                                                  "v": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "r": {
+                                                                        "docs": {},
+                                                                        "i": {
+                                                                          "docs": {},
+                                                                          "n": {
+                                                                            "docs": {},
+                                                                            "i": {
+                                                                              "docs": {},
+                                                                              "t": {
+                                                                                "docs": {},
+                                                                                "|": {
+                                                                                  "docs": {},
+                                                                                  "u": {
+                                                                                    "docs": {},
+                                                                                    "n": {
+                                                                                      "docs": {},
+                                                                                      "d": {
+                                                                                        "docs": {},
+                                                                                        "e": {
+                                                                                          "docs": {},
+                                                                                          "f": {
+                                                                                            "docs": {},
+                                                                                            "i": {
+                                                                                              "docs": {},
+                                                                                              "n": {
+                                                                                                "docs": {
+                                                                                                  "ObserverBuilder.html#_options": {
+                                                                                                    "ref": "ObserverBuilder.html#_options",
+                                                                                                    "tf": 33.33333333333333
+                                                                                                  },
+                                                                                                  "Observer.html#_options": {
+                                                                                                    "ref": "Observer.html#_options",
+                                                                                                    "tf": 25
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
                                                                             }
                                                                           }
                                                                         }
@@ -4829,6 +5198,10 @@
                                       "ref": "Observer.html",
                                       "tf": 1.0869565217391304
                                     },
+                                    "Observer.html#_callback": {
+                                      "ref": "Observer.html#_callback",
+                                      "tf": 3.125
+                                    },
                                     "Observer.html#observe": {
                                       "ref": "Observer.html#observe",
                                       "tf": 1.3888888888888888
@@ -4902,6 +5275,10 @@
                                               "ref": "Observer.html",
                                               "tf": 1.0869565217391304
                                             },
+                                            "Observer.html#_target": {
+                                              "ref": "Observer.html#_target",
+                                              "tf": 3.571428571428571
+                                            },
                                             "Observer.html#disconnect": {
                                               "ref": "Observer.html#disconnect",
                                               "tf": 4.166666666666666
@@ -4957,6 +5334,75 @@
                         },
                         "#": {
                           "docs": {},
+                          "_": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "p": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {
+                                    "Observer.html#_options": {
+                                      "ref": "Observer.html#_options",
+                                      "tf": 1150
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "t": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {
+                                          "Observer.html#_target": {
+                                            "ref": "Observer.html#_target",
+                                            "tf": 1150
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "c": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {},
+                                    "b": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "k": {
+                                            "docs": {
+                                              "Observer.html#_callback": {
+                                                "ref": "Observer.html#_callback",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
                           "o": {
                             "docs": {},
                             "b": {
@@ -5068,13 +5514,17 @@
                   "docs": {},
                   "n": {
                     "docs": {
+                      "ObserverBuilder.html#_options": {
+                        "ref": "ObserverBuilder.html#_options",
+                        "tf": 5.263157894736842
+                      },
                       "ObserverBuilder.html#with": {
                         "ref": "ObserverBuilder.html#with",
-                        "tf": 54.34782608695652
+                        "tf": 104.34782608695652
                       },
                       "ObserverBuilder.html#options": {
                         "ref": "ObserverBuilder.html#options",
-                        "tf": 685.5072463768116
+                        "tf": 702.1739130434783
                       },
                       "ObserverBuilder.html#build": {
                         "ref": "ObserverBuilder.html#build",
@@ -5144,9 +5594,13 @@
                         "ref": "Observer.html",
                         "tf": 2.1739130434782608
                       },
+                      "Observer.html#_target": {
+                        "ref": "Observer.html#_target",
+                        "tf": 3.571428571428571
+                      },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 34.722222222222214
+                        "tf": 26.38888888888889
                       }
                     },
                     "s": {
@@ -5214,6 +5668,41 @@
                                     "Observer.html#.new": {
                                       "ref": "Observer.html#.new",
                                       "tf": 1.7857142857142856
+                                    }
+                                  },
+                                  "e": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "l": {
+                                            "docs": {},
+                                            "l": {
+                                              "docs": {},
+                                              "b": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "k": {
+                                                      "docs": {
+                                                        "ObserverBuilder.html#_options": {
+                                                          "ref": "ObserverBuilder.html#_options",
+                                                          "tf": 2.631578947368421
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
                                     }
                                   }
                                 }
@@ -5423,6 +5912,44 @@
                       "tf": 110
                     }
                   }
+                },
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "y": {
+                        "docs": {},
+                        "&": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "ObserverOptionsBuilder.html#_options": {
+                                  "ref": "ObserverOptionsBuilder.html#_options",
+                                  "tf": 25
+                                },
+                                "Observer.html#_options": {
+                                  "ref": "Observer.html#_options",
+                                  "tf": 25
+                                },
+                                "Observer.html#_target": {
+                                  "ref": "Observer.html#_target",
+                                  "tf": 25
+                                },
+                                "Observer.html#_callback": {
+                                  "ref": "Observer.html#_callback",
+                                  "tf": 25
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -5519,6 +6046,14 @@
                 "ref": "ObserverBuilder.html",
                 "tf": 3.1914893617021276
               },
+              "ObserverBuilder.html#_callback": {
+                "ref": "ObserverBuilder.html#_callback",
+                "tf": 8.823529411764707
+              },
+              "ObserverBuilder.html#_options": {
+                "ref": "ObserverBuilder.html#_options",
+                "tf": 2.631578947368421
+              },
               "ObserverBuilder.html#options": {
                 "ref": "ObserverBuilder.html#options",
                 "tf": 2.1739130434782608
@@ -5586,6 +6121,10 @@
               "Observer.html": {
                 "ref": "Observer.html",
                 "tf": 1.0869565217391304
+              },
+              "Observer.html#_callback": {
+                "ref": "Observer.html#_callback",
+                "tf": 9.375
               },
               "Observer.html#observe": {
                 "ref": "Observer.html#observe",
@@ -5919,7 +6458,7 @@
                   },
                   "ObserverBuilder.html#call": {
                     "ref": "ObserverBuilder.html#call",
-                    "tf": 683.3333333333334
+                    "tf": 700
                   },
                   "ObserverBuilder.html#build": {
                     "ref": "ObserverBuilder.html#build",
@@ -5981,6 +6520,10 @@
                                       "ref": "ObserverBuilder.html",
                                       "tf": 1.0638297872340425
                                     },
+                                    "ObserverBuilder.html#_callback": {
+                                      "ref": "ObserverBuilder.html#_callback",
+                                      "tf": 2.941176470588235
+                                    },
                                     "ObserverBuilder.html#options": {
                                       "ref": "ObserverBuilder.html#options",
                                       "tf": 2.1739130434782608
@@ -6011,17 +6554,25 @@
                             "ref": "ObserverBuilder.html",
                             "tf": 4.25531914893617
                           },
+                          "ObserverBuilder.html#_callback": {
+                            "ref": "ObserverBuilder.html#_callback",
+                            "tf": 2.941176470588235
+                          },
                           "ObserverBuilder.html#options": {
                             "ref": "ObserverBuilder.html#options",
-                            "tf": 35.50724637681159
+                            "tf": 52.17391304347826
                           },
                           "ObserverBuilder.html#call": {
                             "ref": "ObserverBuilder.html#call",
-                            "tf": 40.47619047619047
+                            "tf": 57.14285714285714
                           },
                           "Observer.html": {
                             "ref": "Observer.html",
                             "tf": 1.0869565217391304
+                          },
+                          "Observer.html#_callback": {
+                            "ref": "Observer.html#_callback",
+                            "tf": 3.125
                           },
                           "Observer.html#takeRecords": {
                             "ref": "Observer.html#takeRecords",
@@ -6120,9 +6671,17 @@
                                 "docs": {},
                                 "m": {
                                   "docs": {
+                                    "ObserverBuilder.html#_callback": {
+                                      "ref": "ObserverBuilder.html#_callback",
+                                      "tf": 2.941176470588235
+                                    },
                                     "Observer.html": {
                                       "ref": "Observer.html",
                                       "tf": 1.0869565217391304
+                                    },
+                                    "Observer.html#_callback": {
+                                      "ref": "Observer.html#_callback",
+                                      "tf": 3.125
                                     }
                                   },
                                   "u": {
@@ -6331,6 +6890,14 @@
                       "ref": "Observer.html",
                       "tf": 2.1739130434782608
                     },
+                    "Observer.html#_target": {
+                      "ref": "Observer.html#_target",
+                      "tf": 3.571428571428571
+                    },
+                    "Observer.html#_callback": {
+                      "ref": "Observer.html#_callback",
+                      "tf": 3.125
+                    },
                     "Observer.html#observe": {
                       "ref": "Observer.html#observe",
                       "tf": 2.7777777777777777
@@ -6364,7 +6931,7 @@
                         },
                         "ObserverOptionsBuilder.html#content": {
                           "ref": "ObserverOptionsBuilder.html#content",
-                          "tf": 702.2727272727273
+                          "tf": 752.2727272727273
                         }
                       },
                       "e": {
@@ -6434,6 +7001,95 @@
                 "docs": {},
                 "d": {
                   "docs": {},
+                  "l": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "ObserverBuilder.html#_options": {
+                              "ref": "ObserverBuilder.html#_options",
+                              "tf": 2.631578947368421
+                            },
+                            "ObserverOptions.html": {
+                              "ref": "ObserverOptions.html",
+                              "tf": 5.263157894736842
+                            },
+                            "ObserverOptions.html#childList": {
+                              "ref": "ObserverOptions.html#childList",
+                              "tf": 703.9473684210526
+                            },
+                            "ObserverOptions.html#subtree": {
+                              "ref": "ObserverOptions.html#subtree",
+                              "tf": 2.4390243902439024
+                            },
+                            "ObserverOptions.html#.children": {
+                              "ref": "ObserverOptions.html#.children",
+                              "tf": 7.6923076923076925
+                            },
+                            "ObserverOptions.html#.descendants": {
+                              "ref": "ObserverOptions.html#.descendants",
+                              "tf": 5.88235294117647
+                            },
+                            "ObserverOptions.html#.content": {
+                              "ref": "ObserverOptions.html#.content",
+                              "tf": 2.5
+                            },
+                            "ObserverOptions.html#.all": {
+                              "ref": "ObserverOptions.html#.all",
+                              "tf": 1.9230769230769231
+                            },
+                            "ObserverOptionsBuilder.html": {
+                              "ref": "ObserverOptionsBuilder.html",
+                              "tf": 2.857142857142857
+                            },
+                            "ObserverOptionsBuilder.html#children": {
+                              "ref": "ObserverOptionsBuilder.html#children",
+                              "tf": 2.272727272727273
+                            },
+                            "ObserverOptionsBuilder.html#descendants": {
+                              "ref": "ObserverOptionsBuilder.html#descendants",
+                              "tf": 2.5
+                            },
+                            "ObserverOptionsBuilder.html#subtree": {
+                              "ref": "ObserverOptionsBuilder.html#subtree",
+                              "tf": 1.3888888888888888
+                            },
+                            "ObserverOptionsBuilder.html#content": {
+                              "ref": "ObserverOptionsBuilder.html#content",
+                              "tf": 2.272727272727273
+                            },
+                            "ObserverOptionsBuilder.html#all": {
+                              "ref": "ObserverOptionsBuilder.html#all",
+                              "tf": 2.1739130434782608
+                            },
+                            "Observer.html": {
+                              "ref": "Observer.html",
+                              "tf": 3.260869565217391
+                            },
+                            "Observer.html#_options": {
+                              "ref": "Observer.html#_options",
+                              "tf": 5
+                            },
+                            "Observer.html#observe": {
+                              "ref": "Observer.html#observe",
+                              "tf": 4.166666666666666
+                            },
+                            "Observer.html#disconnect": {
+                              "ref": "Observer.html#disconnect",
+                              "tf": 4.166666666666666
+                            },
+                            "Observer.html#takeRecords": {
+                              "ref": "Observer.html#takeRecords",
+                              "tf": 2.5
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
                   "r": {
                     "docs": {},
                     "e": {
@@ -6458,7 +7114,7 @@
                           },
                           "ObserverOptionsBuilder.html#children": {
                             "ref": "ObserverOptionsBuilder.html#children",
-                            "tf": 702.2727272727273
+                            "tf": 752.2727272727273
                           },
                           "ObserverOptionsBuilder.html#build": {
                             "ref": "ObserverOptionsBuilder.html#build",
@@ -6547,87 +7203,6 @@
                         }
                       }
                     }
-                  },
-                  "l": {
-                    "docs": {},
-                    "i": {
-                      "docs": {},
-                      "s": {
-                        "docs": {},
-                        "t": {
-                          "docs": {
-                            "ObserverOptions.html": {
-                              "ref": "ObserverOptions.html",
-                              "tf": 5.263157894736842
-                            },
-                            "ObserverOptions.html#childList": {
-                              "ref": "ObserverOptions.html#childList",
-                              "tf": 703.9473684210526
-                            },
-                            "ObserverOptions.html#subtree": {
-                              "ref": "ObserverOptions.html#subtree",
-                              "tf": 2.4390243902439024
-                            },
-                            "ObserverOptions.html#.children": {
-                              "ref": "ObserverOptions.html#.children",
-                              "tf": 7.6923076923076925
-                            },
-                            "ObserverOptions.html#.descendants": {
-                              "ref": "ObserverOptions.html#.descendants",
-                              "tf": 5.88235294117647
-                            },
-                            "ObserverOptions.html#.content": {
-                              "ref": "ObserverOptions.html#.content",
-                              "tf": 2.5
-                            },
-                            "ObserverOptions.html#.all": {
-                              "ref": "ObserverOptions.html#.all",
-                              "tf": 1.9230769230769231
-                            },
-                            "ObserverOptionsBuilder.html": {
-                              "ref": "ObserverOptionsBuilder.html",
-                              "tf": 2.857142857142857
-                            },
-                            "ObserverOptionsBuilder.html#children": {
-                              "ref": "ObserverOptionsBuilder.html#children",
-                              "tf": 2.272727272727273
-                            },
-                            "ObserverOptionsBuilder.html#descendants": {
-                              "ref": "ObserverOptionsBuilder.html#descendants",
-                              "tf": 2.5
-                            },
-                            "ObserverOptionsBuilder.html#subtree": {
-                              "ref": "ObserverOptionsBuilder.html#subtree",
-                              "tf": 1.3888888888888888
-                            },
-                            "ObserverOptionsBuilder.html#content": {
-                              "ref": "ObserverOptionsBuilder.html#content",
-                              "tf": 2.272727272727273
-                            },
-                            "ObserverOptionsBuilder.html#all": {
-                              "ref": "ObserverOptionsBuilder.html#all",
-                              "tf": 2.1739130434782608
-                            },
-                            "Observer.html": {
-                              "ref": "Observer.html",
-                              "tf": 3.260869565217391
-                            },
-                            "Observer.html#observe": {
-                              "ref": "Observer.html#observe",
-                              "tf": 4.166666666666666
-                            },
-                            "Observer.html#disconnect": {
-                              "ref": "Observer.html#disconnect",
-                              "tf": 4.166666666666666
-                            },
-                            "Observer.html#takeRecords": {
-                              "ref": "Observer.html#takeRecords",
-                              "tf": 2.5
-                            }
-                          }
-                        }
-                      }
-                    }
                   }
                 }
               }
@@ -6710,6 +7285,10 @@
                                       "ref": "Observer.html",
                                       "tf": 1.0869565217391304
                                     },
+                                    "Observer.html#_options": {
+                                      "ref": "Observer.html#_options",
+                                      "tf": 5
+                                    },
                                     "Observer.html#observe": {
                                       "ref": "Observer.html#observe",
                                       "tf": 2.7777777777777777
@@ -6756,6 +7335,10 @@
                                                   "ObserverOptionsBuilder.html#useOldValue": {
                                                     "ref": "ObserverOptionsBuilder.html#useOldValue",
                                                     "tf": 2.4390243902439024
+                                                  },
+                                                  "Observer.html#_options": {
+                                                    "ref": "Observer.html#_options",
+                                                    "tf": 5
                                                   }
                                                 }
                                               }
@@ -6907,6 +7490,134 @@
             "docs": {},
             ";": {
               "docs": {},
+              "p": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "t": {
+                            "docs": {
+                              "ObserverOptionsBuilder.html#_options": {
+                                "ref": "ObserverOptionsBuilder.html#_options",
+                                "tf": 25
+                              },
+                              "Observer.html#_options": {
+                                "ref": "Observer.html#_options",
+                                "tf": 25
+                              },
+                              "Observer.html#_target": {
+                                "ref": "Observer.html#_target",
+                                "tf": 25
+                              },
+                              "Observer.html#_callback": {
+                                "ref": "Observer.html#_callback",
+                                "tf": 25
+                              }
+                            },
+                            "e": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "&": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {
+                                        "ObserverBuilder.html#_callback": {
+                                          "ref": "ObserverBuilder.html#_callback",
+                                          "tf": 33.33333333333333
+                                        },
+                                        "ObserverBuilder.html#_options": {
+                                          "ref": "ObserverBuilder.html#_options",
+                                          "tf": 33.33333333333333
+                                        },
+                                        "ObserverBuilder.html#_target": {
+                                          "ref": "ObserverBuilder.html#_target",
+                                          "tf": 33.33333333333333
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "&": {
+                  "docs": {},
+                  "g": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      ";": {
+                        "docs": {},
+                        "п": {
+                          "docs": {},
+                          "р": {
+                            "docs": {},
+                            "и": {
+                              "docs": {},
+                              "в": {
+                                "docs": {},
+                                "е": {
+                                  "docs": {},
+                                  "т": {
+                                    "docs": {},
+                                    "&": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          ";": {
+                                            "docs": {},
+                                            "/": {
+                                              "docs": {},
+                                              "p": {
+                                                "docs": {},
+                                                "&": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "ObserverOptions.html#childList": {
+                                                          "ref": "ObserverOptions.html#childList",
+                                                          "tf": 1.3157894736842104
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
               "/": {
                 "docs": {},
                 "d": {
@@ -7020,71 +7731,6 @@
                             "ObserverOptionsBuilder.html#text": {
                               "ref": "ObserverOptionsBuilder.html#text",
                               "tf": 1.4285714285714286
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "p": {
-                "docs": {},
-                "&": {
-                  "docs": {},
-                  "g": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      ";": {
-                        "docs": {},
-                        "п": {
-                          "docs": {},
-                          "р": {
-                            "docs": {},
-                            "и": {
-                              "docs": {},
-                              "в": {
-                                "docs": {},
-                                "е": {
-                                  "docs": {},
-                                  "т": {
-                                    "docs": {},
-                                    "&": {
-                                      "docs": {},
-                                      "l": {
-                                        "docs": {},
-                                        "t": {
-                                          "docs": {},
-                                          ";": {
-                                            "docs": {},
-                                            "/": {
-                                              "docs": {},
-                                              "p": {
-                                                "docs": {},
-                                                "&": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {},
-                                                    "t": {
-                                                      "docs": {
-                                                        "ObserverOptions.html#childList": {
-                                                          "ref": "ObserverOptions.html#childList",
-                                                          "tf": 1.3157894736842104
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
                             }
                           }
                         }
@@ -7325,6 +7971,68 @@
                                                                         }
                                                                       }
                                                                     }
+                                                                  },
+                                                                  "c": {
+                                                                    "docs": {},
+                                                                    "l": {
+                                                                      "docs": {},
+                                                                      "a": {
+                                                                        "docs": {},
+                                                                        "s": {
+                                                                          "docs": {},
+                                                                          "s": {
+                                                                            "docs": {},
+                                                                            "'": {
+                                                                              "docs": {},
+                                                                              "]": {
+                                                                                "docs": {},
+                                                                                ")": {
+                                                                                  "docs": {},
+                                                                                  ".": {
+                                                                                    "docs": {},
+                                                                                    "u": {
+                                                                                      "docs": {},
+                                                                                      "s": {
+                                                                                        "docs": {},
+                                                                                        "e": {
+                                                                                          "docs": {},
+                                                                                          "o": {
+                                                                                            "docs": {},
+                                                                                            "l": {
+                                                                                              "docs": {},
+                                                                                              "d": {
+                                                                                                "docs": {},
+                                                                                                "v": {
+                                                                                                  "docs": {},
+                                                                                                  "a": {
+                                                                                                    "docs": {},
+                                                                                                    "l": {
+                                                                                                      "docs": {},
+                                                                                                      "u": {
+                                                                                                        "docs": {
+                                                                                                          "ObserverBuilder.html#_options": {
+                                                                                                            "ref": "ObserverBuilder.html#_options",
+                                                                                                            "tf": 2.631578947368421
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
                                                                   }
                                                                 }
                                                               }
@@ -7365,6 +8073,18 @@
                     "ObserverBuilder.html": {
                       "ref": "ObserverBuilder.html",
                       "tf": 3.1914893617021276
+                    },
+                    "ObserverBuilder.html#_callback": {
+                      "ref": "ObserverBuilder.html#_callback",
+                      "tf": 2.941176470588235
+                    },
+                    "ObserverBuilder.html#_options": {
+                      "ref": "ObserverBuilder.html#_options",
+                      "tf": 2.631578947368421
+                    },
+                    "ObserverBuilder.html#_target": {
+                      "ref": "ObserverBuilder.html#_target",
+                      "tf": 6.666666666666667
                     },
                     "ObserverBuilder.html#for": {
                       "ref": "ObserverBuilder.html#for",
@@ -7459,6 +8179,10 @@
                           "ref": "ObserverBuilder.html",
                           "tf": 2.127659574468085
                         },
+                        "ObserverBuilder.html#_options": {
+                          "ref": "ObserverBuilder.html#_options",
+                          "tf": 2.631578947368421
+                        },
                         "ObserverBuilder.html#for": {
                           "ref": "ObserverBuilder.html#for",
                           "tf": 2.941176470588235
@@ -7474,6 +8198,194 @@
                         "Observer.html#.new": {
                           "ref": "Observer.html#.new",
                           "tf": 1.7857142857142856
+                        }
+                      },
+                      ".": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "l": {
+                              "docs": {},
+                              "l": {
+                                "docs": {},
+                                "(": {
+                                  "docs": {},
+                                  "(": {
+                                    "docs": {},
+                                    "m": {
+                                      "docs": {},
+                                      "u": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {
+                                            "ObserverBuilder.html#_callback": {
+                                              "ref": "ObserverBuilder.html#_callback",
+                                              "tf": 2.941176470588235
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "o": {
+                          "docs": {},
+                          "p": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "(": {
+                                        "docs": {},
+                                        "(": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {
+                                              "ObserverBuilder.html#_options": {
+                                                "ref": "ObserverBuilder.html#_options",
+                                                "tf": 2.631578947368421
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "w": {
+                          "docs": {},
+                          "i": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "h": {
+                                "docs": {
+                                  "ObserverBuilder.html#_options": {
+                                    "ref": "ObserverBuilder.html#_options",
+                                    "tf": 2.631578947368421
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "f": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "(": {
+                                "docs": {},
+                                "d": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {},
+                                      "u": {
+                                        "docs": {},
+                                        "m": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                ".": {
+                                                  "docs": {},
+                                                  "q": {
+                                                    "docs": {},
+                                                    "u": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "y": {
+                                                            "docs": {},
+                                                            "s": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "l": {
+                                                                  "docs": {},
+                                                                  "e": {
+                                                                    "docs": {},
+                                                                    "c": {
+                                                                      "docs": {},
+                                                                      "t": {
+                                                                        "docs": {},
+                                                                        "o": {
+                                                                          "docs": {},
+                                                                          "r": {
+                                                                            "docs": {},
+                                                                            "(": {
+                                                                              "docs": {},
+                                                                              "'": {
+                                                                                "docs": {},
+                                                                                "#": {
+                                                                                  "docs": {},
+                                                                                  "a": {
+                                                                                    "docs": {},
+                                                                                    "p": {
+                                                                                      "docs": {},
+                                                                                      "p": {
+                                                                                        "docs": {
+                                                                                          "ObserverBuilder.html#_target": {
+                                                                                            "ref": "ObserverBuilder.html#_target",
+                                                                                            "tf": 3.3333333333333335
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -7743,6 +8655,10 @@
                               "ObserverBuilder.html": {
                                 "ref": "ObserverBuilder.html",
                                 "tf": 1.0638297872340425
+                              },
+                              "ObserverBuilder.html#_target": {
+                                "ref": "ObserverBuilder.html#_target",
+                                "tf": 3.3333333333333335
                               }
                             }
                           }
@@ -7912,11 +8828,11 @@
                       },
                       "ObserverOptionsBuilder.html#attributes": {
                         "ref": "ObserverOptionsBuilder.html#attributes",
-                        "tf": 33.33333333333333
+                        "tf": 50
                       },
                       "ObserverOptionsBuilder.html#descendantAttributes": {
                         "ref": "ObserverOptionsBuilder.html#descendantAttributes",
-                        "tf": 34.803921568627445
+                        "tf": 51.470588235294116
                       }
                     }
                   }
@@ -7982,6 +8898,10 @@
                       "ref": "ObserverBuilder.html",
                       "tf": 2.127659574468085
                     },
+                    "ObserverBuilder.html#_callback": {
+                      "ref": "ObserverBuilder.html#_callback",
+                      "tf": 2.941176470588235
+                    },
                     "ObserverBuilder.html#call": {
                       "ref": "ObserverBuilder.html#call",
                       "tf": 1.7857142857142856
@@ -8046,6 +8966,10 @@
                       "ref": "Observer.html",
                       "tf": 1.0869565217391304
                     },
+                    "Observer.html#_callback": {
+                      "ref": "Observer.html#_callback",
+                      "tf": 3.125
+                    },
                     "Observer.html#observe": {
                       "ref": "Observer.html#observe",
                       "tf": 2.7777777777777777
@@ -8073,6 +8997,14 @@
                                   "docs": {},
                                   "v": {
                                     "docs": {
+                                      "ObserverBuilder.html#_callback": {
+                                        "ref": "ObserverBuilder.html#_callback",
+                                        "tf": 2.941176470588235
+                                      },
+                                      "ObserverBuilder.html#_target": {
+                                        "ref": "ObserverBuilder.html#_target",
+                                        "tf": 3.3333333333333335
+                                      },
                                       "ObserverBuilder.html#call": {
                                         "ref": "ObserverBuilder.html#call",
                                         "tf": 1.7857142857142856
@@ -8084,6 +9016,10 @@
                                       "Observer.html": {
                                         "ref": "Observer.html",
                                         "tf": 2.1739130434782608
+                                      },
+                                      "Observer.html#_callback": {
+                                        "ref": "Observer.html#_callback",
+                                        "tf": 3.125
                                       },
                                       "Observer.html#observe": {
                                         "ref": "Observer.html#observe",
@@ -8262,6 +9198,68 @@
                             }
                           }
                         },
+                        "c": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "l": {
+                              "docs": {},
+                              "l": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {},
+                                      "k": {
+                                        "docs": {
+                                          "Observer.html": {
+                                            "ref": "Observer.html",
+                                            "tf": 1.0869565217391304
+                                          },
+                                          "Observer.html#_callback": {
+                                            "ref": "Observer.html#_callback",
+                                            "tf": 25
+                                          }
+                                        },
+                                        "|": {
+                                          "docs": {},
+                                          "u": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "f": {
+                                                    "docs": {},
+                                                    "i": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {
+                                                          "ObserverBuilder.html#_callback": {
+                                                            "ref": "ObserverBuilder.html#_callback",
+                                                            "tf": 33.33333333333333
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
                         "r": {
                           "docs": {},
                           "e": {
@@ -8274,6 +9272,10 @@
                                   "docs": {},
                                   "d": {
                                     "docs": {
+                                      "ObserverBuilder.html#_callback": {
+                                        "ref": "ObserverBuilder.html#_callback",
+                                        "tf": 2.941176470588235
+                                      },
                                       "ObserverBuilder.html#call": {
                                         "ref": "ObserverBuilder.html#call",
                                         "tf": 1.7857142857142856
@@ -8282,9 +9284,55 @@
                                         "ref": "ObserverOptions.html#attributeOldValue",
                                         "tf": 1.4705882352941175
                                       },
+                                      "Observer.html#_callback": {
+                                        "ref": "Observer.html#_callback",
+                                        "tf": 3.125
+                                      },
                                       "Observer.html#takeRecords": {
                                         "ref": "Observer.html#takeRecords",
                                         "tf": 5
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "s": {
+                          "docs": {},
+                          ".": {
+                            "docs": {},
+                            "f": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "h": {
+                                          "docs": {},
+                                          "(": {
+                                            "docs": {},
+                                            "m": {
+                                              "docs": {
+                                                "ObserverBuilder.html#_callback": {
+                                                  "ref": "ObserverBuilder.html#_callback",
+                                                  "tf": 2.941176470588235
+                                                },
+                                                "Observer.html#_callback": {
+                                                  "ref": "Observer.html#_callback",
+                                                  "tf": 3.125
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
                                       }
                                     }
                                   }
@@ -8539,35 +9587,6 @@
                               }
                             }
                           }
-                        },
-                        "c": {
-                          "docs": {},
-                          "a": {
-                            "docs": {},
-                            "l": {
-                              "docs": {},
-                              "l": {
-                                "docs": {},
-                                "b": {
-                                  "docs": {},
-                                  "a": {
-                                    "docs": {},
-                                    "c": {
-                                      "docs": {},
-                                      "k": {
-                                        "docs": {
-                                          "Observer.html": {
-                                            "ref": "Observer.html",
-                                            "tf": 1.0869565217391304
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
                         }
                       }
                     }
@@ -8586,6 +9605,18 @@
                   "docs": {},
                   "r": {
                     "docs": {
+                      "ObserverBuilder.html#_callback": {
+                        "ref": "ObserverBuilder.html#_callback",
+                        "tf": 110
+                      },
+                      "ObserverBuilder.html#_options": {
+                        "ref": "ObserverBuilder.html#_options",
+                        "tf": 110
+                      },
+                      "ObserverBuilder.html#_target": {
+                        "ref": "ObserverBuilder.html#_target",
+                        "tf": 110
+                      },
                       "ObserverOptions.html#childList": {
                         "ref": "ObserverOptions.html#childList",
                         "tf": 110
@@ -8612,6 +9643,22 @@
                       },
                       "ObserverOptions.html#attributeFilter": {
                         "ref": "ObserverOptions.html#attributeFilter",
+                        "tf": 110
+                      },
+                      "ObserverOptionsBuilder.html#_options": {
+                        "ref": "ObserverOptionsBuilder.html#_options",
+                        "tf": 110
+                      },
+                      "Observer.html#_options": {
+                        "ref": "Observer.html#_options",
+                        "tf": 110
+                      },
+                      "Observer.html#_target": {
+                        "ref": "Observer.html#_target",
+                        "tf": 110
+                      },
+                      "Observer.html#_callback": {
+                        "ref": "Observer.html#_callback",
                         "tf": 110
                       }
                     }
@@ -8900,6 +9947,14 @@
                   "ref": "Observer.html",
                   "tf": 2.1739130434782608
                 },
+                "Observer.html#_target": {
+                  "ref": "Observer.html#_target",
+                  "tf": 3.571428571428571
+                },
+                "Observer.html#_callback": {
+                  "ref": "Observer.html#_callback",
+                  "tf": 3.125
+                },
                 "Observer.html#observe": {
                   "ref": "Observer.html#observe",
                   "tf": 1.3888888888888888
@@ -8930,6 +9985,57 @@
               }
             }
           },
+          "o": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "ObserverBuilder.html#_target": {
+                    "ref": "ObserverBuilder.html#_target",
+                    "tf": 3.3333333333333335
+                  },
+                  "Observer.html": {
+                    "ref": "Observer.html",
+                    "tf": 1.0869565217391304
+                  }
+                },
+                "|": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "f": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "n": {
+                                "docs": {
+                                  "ObserverBuilder.html#_target": {
+                                    "ref": "ObserverBuilder.html#_target",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "Observer.html#_target": {
+                                    "ref": "Observer.html#_target",
+                                    "tf": 25
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "u": {
             "docs": {},
             "l": {
@@ -8943,20 +10049,6 @@
                   "ObserverOptions.html#characterDataOldValue": {
                     "ref": "ObserverOptions.html#characterDataOldValue",
                     "tf": 1.7241379310344827
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "d": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "Observer.html": {
-                    "ref": "Observer.html",
-                    "tf": 1.0869565217391304
                   }
                 }
               }
@@ -9144,6 +10236,122 @@
               }
             }
           },
+          "u": {
+            "docs": {},
+            "b": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {
+                      "ObserverBuilder.html#_options": {
+                        "ref": "ObserverBuilder.html#_options",
+                        "tf": 2.631578947368421
+                      },
+                      "ObserverOptions.html": {
+                        "ref": "ObserverOptions.html",
+                        "tf": 2.631578947368421
+                      },
+                      "ObserverOptions.html#childList": {
+                        "ref": "ObserverOptions.html#childList",
+                        "tf": 3.9473684210526314
+                      },
+                      "ObserverOptions.html#attributes": {
+                        "ref": "ObserverOptions.html#attributes",
+                        "tf": 3.1914893617021276
+                      },
+                      "ObserverOptions.html#characterData": {
+                        "ref": "ObserverOptions.html#characterData",
+                        "tf": 1.0638297872340425
+                      },
+                      "ObserverOptions.html#subtree": {
+                        "ref": "ObserverOptions.html#subtree",
+                        "tf": 706.0975609756098
+                      },
+                      "ObserverOptions.html#.new": {
+                        "ref": "ObserverOptions.html#.new",
+                        "tf": 4.3478260869565215
+                      },
+                      "ObserverOptions.html#.descendants": {
+                        "ref": "ObserverOptions.html#.descendants",
+                        "tf": 5.88235294117647
+                      },
+                      "ObserverOptions.html#.descendantAttributes": {
+                        "ref": "ObserverOptions.html#.descendantAttributes",
+                        "tf": 4.166666666666666
+                      },
+                      "ObserverOptions.html#.descendantText": {
+                        "ref": "ObserverOptions.html#.descendantText",
+                        "tf": 4.3478260869565215
+                      },
+                      "ObserverOptions.html#.content": {
+                        "ref": "ObserverOptions.html#.content",
+                        "tf": 2.5
+                      },
+                      "ObserverOptions.html#.all": {
+                        "ref": "ObserverOptions.html#.all",
+                        "tf": 1.9230769230769231
+                      },
+                      "ObserverOptionsBuilder.html": {
+                        "ref": "ObserverOptionsBuilder.html",
+                        "tf": 2.857142857142857
+                      },
+                      "ObserverOptionsBuilder.html#children": {
+                        "ref": "ObserverOptionsBuilder.html#children",
+                        "tf": 2.272727272727273
+                      },
+                      "ObserverOptionsBuilder.html#descendants": {
+                        "ref": "ObserverOptionsBuilder.html#descendants",
+                        "tf": 2.5
+                      },
+                      "ObserverOptionsBuilder.html#descendantAttributes": {
+                        "ref": "ObserverOptionsBuilder.html#descendantAttributes",
+                        "tf": 1.4705882352941175
+                      },
+                      "ObserverOptionsBuilder.html#text": {
+                        "ref": "ObserverOptionsBuilder.html#text",
+                        "tf": 1.4285714285714286
+                      },
+                      "ObserverOptionsBuilder.html#descendantText": {
+                        "ref": "ObserverOptionsBuilder.html#descendantText",
+                        "tf": 1.6129032258064515
+                      },
+                      "ObserverOptionsBuilder.html#subtree": {
+                        "ref": "ObserverOptionsBuilder.html#subtree",
+                        "tf": 755.5555555555555
+                      },
+                      "ObserverOptionsBuilder.html#content": {
+                        "ref": "ObserverOptionsBuilder.html#content",
+                        "tf": 2.272727272727273
+                      },
+                      "ObserverOptionsBuilder.html#all": {
+                        "ref": "ObserverOptionsBuilder.html#all",
+                        "tf": 2.1739130434782608
+                      },
+                      "ObserverOptionsBuilder.html#build": {
+                        "ref": "ObserverOptionsBuilder.html#build",
+                        "tf": 2.631578947368421
+                      },
+                      "Observer.html": {
+                        "ref": "Observer.html",
+                        "tf": 2.1739130434782608
+                      },
+                      "Observer.html#_options": {
+                        "ref": "Observer.html#_options",
+                        "tf": 5
+                      },
+                      "Observer.html#observe": {
+                        "ref": "Observer.html#observe",
+                        "tf": 2.7777777777777777
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "p": {
             "docs": {},
             "e": {
@@ -9260,114 +10468,6 @@
               }
             }
           },
-          "u": {
-            "docs": {},
-            "b": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "e": {
-                    "docs": {
-                      "ObserverOptions.html": {
-                        "ref": "ObserverOptions.html",
-                        "tf": 2.631578947368421
-                      },
-                      "ObserverOptions.html#childList": {
-                        "ref": "ObserverOptions.html#childList",
-                        "tf": 3.9473684210526314
-                      },
-                      "ObserverOptions.html#attributes": {
-                        "ref": "ObserverOptions.html#attributes",
-                        "tf": 3.1914893617021276
-                      },
-                      "ObserverOptions.html#characterData": {
-                        "ref": "ObserverOptions.html#characterData",
-                        "tf": 1.0638297872340425
-                      },
-                      "ObserverOptions.html#subtree": {
-                        "ref": "ObserverOptions.html#subtree",
-                        "tf": 706.0975609756098
-                      },
-                      "ObserverOptions.html#.new": {
-                        "ref": "ObserverOptions.html#.new",
-                        "tf": 4.3478260869565215
-                      },
-                      "ObserverOptions.html#.descendants": {
-                        "ref": "ObserverOptions.html#.descendants",
-                        "tf": 5.88235294117647
-                      },
-                      "ObserverOptions.html#.descendantAttributes": {
-                        "ref": "ObserverOptions.html#.descendantAttributes",
-                        "tf": 4.166666666666666
-                      },
-                      "ObserverOptions.html#.descendantText": {
-                        "ref": "ObserverOptions.html#.descendantText",
-                        "tf": 4.3478260869565215
-                      },
-                      "ObserverOptions.html#.content": {
-                        "ref": "ObserverOptions.html#.content",
-                        "tf": 2.5
-                      },
-                      "ObserverOptions.html#.all": {
-                        "ref": "ObserverOptions.html#.all",
-                        "tf": 1.9230769230769231
-                      },
-                      "ObserverOptionsBuilder.html": {
-                        "ref": "ObserverOptionsBuilder.html",
-                        "tf": 2.857142857142857
-                      },
-                      "ObserverOptionsBuilder.html#children": {
-                        "ref": "ObserverOptionsBuilder.html#children",
-                        "tf": 2.272727272727273
-                      },
-                      "ObserverOptionsBuilder.html#descendants": {
-                        "ref": "ObserverOptionsBuilder.html#descendants",
-                        "tf": 2.5
-                      },
-                      "ObserverOptionsBuilder.html#descendantAttributes": {
-                        "ref": "ObserverOptionsBuilder.html#descendantAttributes",
-                        "tf": 1.4705882352941175
-                      },
-                      "ObserverOptionsBuilder.html#text": {
-                        "ref": "ObserverOptionsBuilder.html#text",
-                        "tf": 1.4285714285714286
-                      },
-                      "ObserverOptionsBuilder.html#descendantText": {
-                        "ref": "ObserverOptionsBuilder.html#descendantText",
-                        "tf": 1.6129032258064515
-                      },
-                      "ObserverOptionsBuilder.html#subtree": {
-                        "ref": "ObserverOptionsBuilder.html#subtree",
-                        "tf": 705.5555555555555
-                      },
-                      "ObserverOptionsBuilder.html#content": {
-                        "ref": "ObserverOptionsBuilder.html#content",
-                        "tf": 2.272727272727273
-                      },
-                      "ObserverOptionsBuilder.html#all": {
-                        "ref": "ObserverOptionsBuilder.html#all",
-                        "tf": 2.1739130434782608
-                      },
-                      "ObserverOptionsBuilder.html#build": {
-                        "ref": "ObserverOptionsBuilder.html#build",
-                        "tf": 2.631578947368421
-                      },
-                      "Observer.html": {
-                        "ref": "Observer.html",
-                        "tf": 2.1739130434782608
-                      },
-                      "Observer.html#observe": {
-                        "ref": "Observer.html#observe",
-                        "tf": 2.7777777777777777
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "e": {
             "docs": {},
             "c": {
@@ -9418,6 +10518,10 @@
                             "ref": "ObserverBuilder.html",
                             "tf": 2.127659574468085
                           },
+                          "ObserverBuilder.html#_options": {
+                            "ref": "ObserverBuilder.html#_options",
+                            "tf": 2.631578947368421
+                          },
                           "ObserverBuilder.html#with": {
                             "ref": "ObserverBuilder.html#with",
                             "tf": 2.1739130434782608
@@ -9431,33 +10535,31 @@
             }
           }
         },
-        "h": {
+        "_": {
           "docs": {},
-          "t": {
+          "c": {
             "docs": {},
-            "m": {
+            "a": {
               "docs": {},
               "l": {
                 "docs": {},
-                "e": {
+                "l": {
                   "docs": {},
-                  "l": {
+                  "b": {
                     "docs": {},
-                    "e": {
+                    "a": {
                       "docs": {},
-                      "m": {
+                      "c": {
                         "docs": {},
-                        "e": {
-                          "docs": {},
-                          "n": {
-                            "docs": {},
-                            "t": {
-                              "docs": {
-                                "ObserverBuilder.html#for": {
-                                  "ref": "ObserverBuilder.html#for",
-                                  "tf": 2.941176470588235
-                                }
-                              }
+                        "k": {
+                          "docs": {
+                            "ObserverBuilder.html#_callback": {
+                              "ref": "ObserverBuilder.html#_callback",
+                              "tf": 683.3333333333334
+                            },
+                            "Observer.html#_callback": {
+                              "ref": "Observer.html#_callback",
+                              "tf": 675
                             }
                           }
                         }
@@ -9467,10 +10569,223 @@
                 }
               }
             }
+          },
+          "o": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "ObserverBuilder.html#_options": {
+                          "ref": "ObserverBuilder.html#_options",
+                          "tf": 683.3333333333334
+                        },
+                        "ObserverOptionsBuilder.html#_options": {
+                          "ref": "ObserverOptionsBuilder.html#_options",
+                          "tf": 675
+                        },
+                        "Observer.html#_options": {
+                          "ref": "Observer.html#_options",
+                          "tf": 675
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "g": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "ObserverBuilder.html#_target": {
+                          "ref": "ObserverBuilder.html#_target",
+                          "tf": 683.3333333333334
+                        },
+                        "Observer.html#_target": {
+                          "ref": "Observer.html#_target",
+                          "tf": 675
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "v": {
+          "docs": {},
+          "o": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "ObserverBuilder.html#_callback": {
+                    "ref": "ObserverBuilder.html#_callback",
+                    "tf": 2.941176470588235
+                  },
+                  "Observer.html#_callback": {
+                    "ref": "Observer.html#_callback",
+                    "tf": 3.125
+                  },
+                  "Observer.html#observe": {
+                    "ref": "Observer.html#observe",
+                    "tf": 25
+                  },
+                  "Observer.html#disconnect": {
+                    "ref": "Observer.html#disconnect",
+                    "tf": 50
+                  }
+                }
+              }
+            }
           }
         },
         "t": {
           "docs": {},
+          "r": {
+            "docs": {},
+            "u": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "ObserverBuilder.html#_options": {
+                    "ref": "ObserverBuilder.html#_options",
+                    "tf": 5.263157894736842
+                  },
+                  "ObserverOptions.html#childList": {
+                    "ref": "ObserverOptions.html#childList",
+                    "tf": 6.578947368421052
+                  },
+                  "ObserverOptions.html#attributes": {
+                    "ref": "ObserverOptions.html#attributes",
+                    "tf": 8.51063829787234
+                  },
+                  "ObserverOptions.html#characterData": {
+                    "ref": "ObserverOptions.html#characterData",
+                    "tf": 7.446808510638298
+                  },
+                  "ObserverOptions.html#subtree": {
+                    "ref": "ObserverOptions.html#subtree",
+                    "tf": 9.75609756097561
+                  },
+                  "ObserverOptions.html#attributeOldValue": {
+                    "ref": "ObserverOptions.html#attributeOldValue",
+                    "tf": 4.411764705882353
+                  },
+                  "ObserverOptions.html#characterDataOldValue": {
+                    "ref": "ObserverOptions.html#characterDataOldValue",
+                    "tf": 5.172413793103448
+                  },
+                  "ObserverOptions.html#attributeFilter": {
+                    "ref": "ObserverOptions.html#attributeFilter",
+                    "tf": 3.6585365853658534
+                  },
+                  "ObserverOptions.html#.children": {
+                    "ref": "ObserverOptions.html#.children",
+                    "tf": 7.6923076923076925
+                  },
+                  "ObserverOptions.html#.descendants": {
+                    "ref": "ObserverOptions.html#.descendants",
+                    "tf": 11.76470588235294
+                  },
+                  "ObserverOptions.html#.attributes": {
+                    "ref": "ObserverOptions.html#.attributes",
+                    "tf": 10
+                  },
+                  "ObserverOptions.html#.descendantAttributes": {
+                    "ref": "ObserverOptions.html#.descendantAttributes",
+                    "tf": 12.5
+                  },
+                  "ObserverOptions.html#.text": {
+                    "ref": "ObserverOptions.html#.text",
+                    "tf": 6.8181818181818175
+                  },
+                  "ObserverOptions.html#.descendantText": {
+                    "ref": "ObserverOptions.html#.descendantText",
+                    "tf": 8.695652173913043
+                  },
+                  "ObserverOptions.html#.all": {
+                    "ref": "ObserverOptions.html#.all",
+                    "tf": 7.6923076923076925
+                  },
+                  "ObserverOptionsBuilder.html#children": {
+                    "ref": "ObserverOptionsBuilder.html#children",
+                    "tf": 2.272727272727273
+                  },
+                  "ObserverOptionsBuilder.html#descendants": {
+                    "ref": "ObserverOptionsBuilder.html#descendants",
+                    "tf": 5
+                  },
+                  "ObserverOptionsBuilder.html#attributes": {
+                    "ref": "ObserverOptionsBuilder.html#attributes",
+                    "tf": 1.8518518518518516
+                  },
+                  "ObserverOptionsBuilder.html#descendantAttributes": {
+                    "ref": "ObserverOptionsBuilder.html#descendantAttributes",
+                    "tf": 2.941176470588235
+                  },
+                  "ObserverOptionsBuilder.html#text": {
+                    "ref": "ObserverOptionsBuilder.html#text",
+                    "tf": 1.4285714285714286
+                  },
+                  "ObserverOptionsBuilder.html#descendantText": {
+                    "ref": "ObserverOptionsBuilder.html#descendantText",
+                    "tf": 3.225806451612903
+                  },
+                  "ObserverOptionsBuilder.html#subtree": {
+                    "ref": "ObserverOptionsBuilder.html#subtree",
+                    "tf": 4.166666666666666
+                  },
+                  "ObserverOptionsBuilder.html#useOldValue": {
+                    "ref": "ObserverOptionsBuilder.html#useOldValue",
+                    "tf": 2.4390243902439024
+                  },
+                  "ObserverOptionsBuilder.html#content": {
+                    "ref": "ObserverOptionsBuilder.html#content",
+                    "tf": 6.8181818181818175
+                  },
+                  "ObserverOptionsBuilder.html#all": {
+                    "ref": "ObserverOptionsBuilder.html#all",
+                    "tf": 8.695652173913043
+                  },
+                  "Observer.html": {
+                    "ref": "Observer.html",
+                    "tf": 4.3478260869565215
+                  },
+                  "Observer.html#observe": {
+                    "ref": "Observer.html#observe",
+                    "tf": 5.555555555555555
+                  },
+                  "Observer.html#disconnect": {
+                    "ref": "Observer.html#disconnect",
+                    "tf": 4.166666666666666
+                  },
+                  "Observer.html#takeRecords": {
+                    "ref": "Observer.html#takeRecords",
+                    "tf": 2.5
+                  }
+                }
+              }
+            }
+          },
           "a": {
             "docs": {},
             "r": {
@@ -9481,9 +10796,13 @@
                   "docs": {},
                   "t": {
                     "docs": {
+                      "ObserverBuilder.html#_target": {
+                        "ref": "ObserverBuilder.html#_target",
+                        "tf": 10
+                      },
                       "ObserverBuilder.html#for": {
                         "ref": "ObserverBuilder.html#for",
-                        "tf": 58.82352941176471
+                        "tf": 108.82352941176471
                       },
                       "ObserverOptions.html#childList": {
                         "ref": "ObserverOptions.html#childList",
@@ -9505,9 +10824,13 @@
                         "ref": "Observer.html",
                         "tf": 3.260869565217391
                       },
+                      "Observer.html#_target": {
+                        "ref": "Observer.html#_target",
+                        "tf": 7.142857142857142
+                      },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 34.722222222222214
+                        "tf": 26.38888888888889
                       }
                     },
                     ".": {
@@ -9859,7 +11182,7 @@
                   },
                   "ObserverOptionsBuilder.html#text": {
                     "ref": "ObserverOptionsBuilder.html#text",
-                    "tf": 704.2857142857143
+                    "tf": 754.2857142857143
                   },
                   "ObserverOptionsBuilder.html#subtree": {
                     "ref": "ObserverOptionsBuilder.html#subtree",
@@ -9983,128 +11306,6 @@
               }
             }
           },
-          "r": {
-            "docs": {},
-            "u": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "ObserverOptions.html#childList": {
-                    "ref": "ObserverOptions.html#childList",
-                    "tf": 6.578947368421052
-                  },
-                  "ObserverOptions.html#attributes": {
-                    "ref": "ObserverOptions.html#attributes",
-                    "tf": 8.51063829787234
-                  },
-                  "ObserverOptions.html#characterData": {
-                    "ref": "ObserverOptions.html#characterData",
-                    "tf": 7.446808510638298
-                  },
-                  "ObserverOptions.html#subtree": {
-                    "ref": "ObserverOptions.html#subtree",
-                    "tf": 9.75609756097561
-                  },
-                  "ObserverOptions.html#attributeOldValue": {
-                    "ref": "ObserverOptions.html#attributeOldValue",
-                    "tf": 4.411764705882353
-                  },
-                  "ObserverOptions.html#characterDataOldValue": {
-                    "ref": "ObserverOptions.html#characterDataOldValue",
-                    "tf": 5.172413793103448
-                  },
-                  "ObserverOptions.html#attributeFilter": {
-                    "ref": "ObserverOptions.html#attributeFilter",
-                    "tf": 3.6585365853658534
-                  },
-                  "ObserverOptions.html#.children": {
-                    "ref": "ObserverOptions.html#.children",
-                    "tf": 7.6923076923076925
-                  },
-                  "ObserverOptions.html#.descendants": {
-                    "ref": "ObserverOptions.html#.descendants",
-                    "tf": 11.76470588235294
-                  },
-                  "ObserverOptions.html#.attributes": {
-                    "ref": "ObserverOptions.html#.attributes",
-                    "tf": 10
-                  },
-                  "ObserverOptions.html#.descendantAttributes": {
-                    "ref": "ObserverOptions.html#.descendantAttributes",
-                    "tf": 12.5
-                  },
-                  "ObserverOptions.html#.text": {
-                    "ref": "ObserverOptions.html#.text",
-                    "tf": 6.8181818181818175
-                  },
-                  "ObserverOptions.html#.descendantText": {
-                    "ref": "ObserverOptions.html#.descendantText",
-                    "tf": 8.695652173913043
-                  },
-                  "ObserverOptions.html#.all": {
-                    "ref": "ObserverOptions.html#.all",
-                    "tf": 7.6923076923076925
-                  },
-                  "ObserverOptionsBuilder.html#children": {
-                    "ref": "ObserverOptionsBuilder.html#children",
-                    "tf": 2.272727272727273
-                  },
-                  "ObserverOptionsBuilder.html#descendants": {
-                    "ref": "ObserverOptionsBuilder.html#descendants",
-                    "tf": 5
-                  },
-                  "ObserverOptionsBuilder.html#attributes": {
-                    "ref": "ObserverOptionsBuilder.html#attributes",
-                    "tf": 1.8518518518518516
-                  },
-                  "ObserverOptionsBuilder.html#descendantAttributes": {
-                    "ref": "ObserverOptionsBuilder.html#descendantAttributes",
-                    "tf": 2.941176470588235
-                  },
-                  "ObserverOptionsBuilder.html#text": {
-                    "ref": "ObserverOptionsBuilder.html#text",
-                    "tf": 1.4285714285714286
-                  },
-                  "ObserverOptionsBuilder.html#descendantText": {
-                    "ref": "ObserverOptionsBuilder.html#descendantText",
-                    "tf": 3.225806451612903
-                  },
-                  "ObserverOptionsBuilder.html#subtree": {
-                    "ref": "ObserverOptionsBuilder.html#subtree",
-                    "tf": 4.166666666666666
-                  },
-                  "ObserverOptionsBuilder.html#useOldValue": {
-                    "ref": "ObserverOptionsBuilder.html#useOldValue",
-                    "tf": 2.4390243902439024
-                  },
-                  "ObserverOptionsBuilder.html#content": {
-                    "ref": "ObserverOptionsBuilder.html#content",
-                    "tf": 6.8181818181818175
-                  },
-                  "ObserverOptionsBuilder.html#all": {
-                    "ref": "ObserverOptionsBuilder.html#all",
-                    "tf": 8.695652173913043
-                  },
-                  "Observer.html": {
-                    "ref": "Observer.html",
-                    "tf": 4.3478260869565215
-                  },
-                  "Observer.html#observe": {
-                    "ref": "Observer.html#observe",
-                    "tf": 5.555555555555555
-                  },
-                  "Observer.html#disconnect": {
-                    "ref": "Observer.html#disconnect",
-                    "tf": 4.166666666666666
-                  },
-                  "Observer.html#takeRecords": {
-                    "ref": "Observer.html#takeRecords",
-                    "tf": 2.5
-                  }
-                }
-              }
-            }
-          },
           "i": {
             "docs": {},
             "t": {
@@ -10204,6 +11405,212 @@
             }
           }
         },
+        "u": {
+          "docs": {},
+          "n": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "f": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "ObserverBuilder.html#_options": {
+                          "ref": "ObserverBuilder.html#_options",
+                          "tf": 2.631578947368421
+                        },
+                        "ObserverBuilder.html#with": {
+                          "ref": "ObserverBuilder.html#with",
+                          "tf": 2.1739130434782608
+                        },
+                        "ObserverBuilder.html#options": {
+                          "ref": "ObserverBuilder.html#options",
+                          "tf": 2.1739130434782608
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "d": {
+                    "docs": {},
+                    "v": {
+                      "docs": {},
+                      "a": {
+                        "docs": {},
+                        "l": {
+                          "docs": {},
+                          "u": {
+                            "docs": {
+                              "ObserverBuilder.html#with": {
+                                "ref": "ObserverBuilder.html#with",
+                                "tf": 2.1739130434782608
+                              },
+                              "ObserverBuilder.html#options": {
+                                "ref": "ObserverBuilder.html#options",
+                                "tf": 2.1739130434782608
+                              },
+                              "ObserverOptions.html#.new": {
+                                "ref": "ObserverOptions.html#.new",
+                                "tf": 2.1739130434782608
+                              },
+                              "ObserverOptions.html#.attributes": {
+                                "ref": "ObserverOptions.html#.attributes",
+                                "tf": 20
+                              },
+                              "ObserverOptions.html#.descendantAttributes": {
+                                "ref": "ObserverOptions.html#.descendantAttributes",
+                                "tf": 20
+                              },
+                              "ObserverOptions.html#.text": {
+                                "ref": "ObserverOptions.html#.text",
+                                "tf": 25
+                              },
+                              "ObserverOptions.html#.descendantText": {
+                                "ref": "ObserverOptions.html#.descendantText",
+                                "tf": 25
+                              },
+                              "ObserverOptions.html#.content": {
+                                "ref": "ObserverOptions.html#.content",
+                                "tf": 25
+                              },
+                              "ObserverOptions.html#.all": {
+                                "ref": "ObserverOptions.html#.all",
+                                "tf": 37.179487179487175
+                              },
+                              "ObserverOptionsBuilder.html": {
+                                "ref": "ObserverOptionsBuilder.html",
+                                "tf": 2.857142857142857
+                              },
+                              "ObserverOptionsBuilder.html#attributes": {
+                                "ref": "ObserverOptionsBuilder.html#attributes",
+                                "tf": 3.7037037037037033
+                              },
+                              "ObserverOptionsBuilder.html#descendantAttributes": {
+                                "ref": "ObserverOptionsBuilder.html#descendantAttributes",
+                                "tf": 1.4705882352941175
+                              },
+                              "ObserverOptionsBuilder.html#text": {
+                                "ref": "ObserverOptionsBuilder.html#text",
+                                "tf": 2.857142857142857
+                              },
+                              "ObserverOptionsBuilder.html#descendantText": {
+                                "ref": "ObserverOptionsBuilder.html#descendantText",
+                                "tf": 3.225806451612903
+                              },
+                              "ObserverOptionsBuilder.html#useOldValue": {
+                                "ref": "ObserverOptionsBuilder.html#useOldValue",
+                                "tf": 752.439024390244
+                              },
+                              "ObserverOptionsBuilder.html#content": {
+                                "ref": "ObserverOptionsBuilder.html#content",
+                                "tf": 2.272727272727273
+                              },
+                              "ObserverOptionsBuilder.html#build": {
+                                "ref": "ObserverOptionsBuilder.html#build",
+                                "tf": 2.631578947368421
+                              },
+                              "Observer.html#.new": {
+                                "ref": "Observer.html#.new",
+                                "tf": 1.7857142857142856
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "e": {
+          "docs": {},
+          "l": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "ObserverBuilder.html#_target": {
+                          "ref": "ObserverBuilder.html#_target",
+                          "tf": 3.3333333333333335
+                        },
+                        "ObserverOptions.html#characterData": {
+                          "ref": "ObserverOptions.html#characterData",
+                          "tf": 1.0638297872340425
+                        },
+                        "ObserverOptions.html#.text": {
+                          "ref": "ObserverOptions.html#.text",
+                          "tf": 2.272727272727273
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h": {
+          "docs": {},
+          "t": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "ObserverBuilder.html#for": {
+                                  "ref": "ObserverBuilder.html#for",
+                                  "tf": 2.941176470588235
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "a": {
           "docs": {},
           "t": {
@@ -10266,7 +11673,7 @@
                           },
                           "ObserverOptionsBuilder.html#attributes": {
                             "ref": "ObserverOptionsBuilder.html#attributes",
-                            "tf": 685.1851851851852
+                            "tf": 701.8518518518518
                           },
                           "ObserverOptionsBuilder.html#descendantAttributes": {
                             "ref": "ObserverOptionsBuilder.html#descendantAttributes",
@@ -10291,6 +11698,10 @@
                           "Observer.html": {
                             "ref": "Observer.html",
                             "tf": 1.0869565217391304
+                          },
+                          "Observer.html#_options": {
+                            "ref": "Observer.html#_options",
+                            "tf": 5
                           },
                           "Observer.html#observe": {
                             "ref": "Observer.html#observe",
@@ -10447,6 +11858,10 @@
                                     "ObserverOptionsBuilder.html#descendantAttributes": {
                                       "ref": "ObserverOptionsBuilder.html#descendantAttributes",
                                       "tf": 1.4705882352941175
+                                    },
+                                    "Observer.html#_options": {
+                                      "ref": "Observer.html#_options",
+                                      "tf": 5
                                     }
                                   }
                                 }
@@ -10498,6 +11913,10 @@
                                           "ObserverOptionsBuilder.html#useOldValue": {
                                             "ref": "ObserverOptionsBuilder.html#useOldValue",
                                             "tf": 2.4390243902439024
+                                          },
+                                          "Observer.html#_options": {
+                                            "ref": "Observer.html#_options",
+                                            "tf": 5
                                           },
                                           "Observer.html#observe": {
                                             "ref": "Observer.html#observe",
@@ -10718,189 +12137,15 @@
               }
             }
           }
-        },
-        "u": {
-          "docs": {},
-          "n": {
-            "docs": {},
-            "d": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "f": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "n": {
-                      "docs": {
-                        "ObserverBuilder.html#with": {
-                          "ref": "ObserverBuilder.html#with",
-                          "tf": 2.1739130434782608
-                        },
-                        "ObserverBuilder.html#options": {
-                          "ref": "ObserverBuilder.html#options",
-                          "tf": 2.1739130434782608
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "s": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "l": {
-                  "docs": {},
-                  "d": {
-                    "docs": {},
-                    "v": {
-                      "docs": {},
-                      "a": {
-                        "docs": {},
-                        "l": {
-                          "docs": {},
-                          "u": {
-                            "docs": {
-                              "ObserverBuilder.html#with": {
-                                "ref": "ObserverBuilder.html#with",
-                                "tf": 2.1739130434782608
-                              },
-                              "ObserverBuilder.html#options": {
-                                "ref": "ObserverBuilder.html#options",
-                                "tf": 2.1739130434782608
-                              },
-                              "ObserverOptions.html#.new": {
-                                "ref": "ObserverOptions.html#.new",
-                                "tf": 2.1739130434782608
-                              },
-                              "ObserverOptions.html#.attributes": {
-                                "ref": "ObserverOptions.html#.attributes",
-                                "tf": 20
-                              },
-                              "ObserverOptions.html#.descendantAttributes": {
-                                "ref": "ObserverOptions.html#.descendantAttributes",
-                                "tf": 20
-                              },
-                              "ObserverOptions.html#.text": {
-                                "ref": "ObserverOptions.html#.text",
-                                "tf": 25
-                              },
-                              "ObserverOptions.html#.descendantText": {
-                                "ref": "ObserverOptions.html#.descendantText",
-                                "tf": 25
-                              },
-                              "ObserverOptions.html#.content": {
-                                "ref": "ObserverOptions.html#.content",
-                                "tf": 25
-                              },
-                              "ObserverOptions.html#.all": {
-                                "ref": "ObserverOptions.html#.all",
-                                "tf": 37.179487179487175
-                              },
-                              "ObserverOptionsBuilder.html": {
-                                "ref": "ObserverOptionsBuilder.html",
-                                "tf": 2.857142857142857
-                              },
-                              "ObserverOptionsBuilder.html#attributes": {
-                                "ref": "ObserverOptionsBuilder.html#attributes",
-                                "tf": 3.7037037037037033
-                              },
-                              "ObserverOptionsBuilder.html#descendantAttributes": {
-                                "ref": "ObserverOptionsBuilder.html#descendantAttributes",
-                                "tf": 1.4705882352941175
-                              },
-                              "ObserverOptionsBuilder.html#text": {
-                                "ref": "ObserverOptionsBuilder.html#text",
-                                "tf": 2.857142857142857
-                              },
-                              "ObserverOptionsBuilder.html#descendantText": {
-                                "ref": "ObserverOptionsBuilder.html#descendantText",
-                                "tf": 3.225806451612903
-                              },
-                              "ObserverOptionsBuilder.html#useOldValue": {
-                                "ref": "ObserverOptionsBuilder.html#useOldValue",
-                                "tf": 702.439024390244
-                              },
-                              "ObserverOptionsBuilder.html#content": {
-                                "ref": "ObserverOptionsBuilder.html#content",
-                                "tf": 2.272727272727273
-                              },
-                              "ObserverOptionsBuilder.html#build": {
-                                "ref": "ObserverOptionsBuilder.html#build",
-                                "tf": 2.631578947368421
-                              },
-                              "Observer.html#.new": {
-                                "ref": "Observer.html#.new",
-                                "tf": 1.7857142857142856
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "e": {
-          "docs": {},
-          "l": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "m": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "ObserverOptions.html#characterData": {
-                          "ref": "ObserverOptions.html#characterData",
-                          "tf": 1.0638297872340425
-                        },
-                        "ObserverOptions.html#.text": {
-                          "ref": "ObserverOptions.html#.text",
-                          "tf": 2.272727272727273
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "v": {
-          "docs": {},
-          "o": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "d": {
-                "docs": {
-                  "Observer.html#disconnect": {
-                    "ref": "Observer.html#disconnect",
-                    "tf": 50
-                  }
-                }
-              }
-            }
-          }
         }
       },
-      "length": 910
+      "length": 1019
     },
     "corpusTokens": [
       "1",
+      "_callback",
+      "_option",
+      "_target",
       "activ",
       "app",
       "appendchild",
@@ -10914,12 +12159,17 @@
       "attributes(filt",
       "attributes(filter).subtre",
       "b",
+      "b.descendants().attributes(['class']).useoldvalu",
       "b.descendants().attributes(['data",
       "bodi",
       "boolean",
       "box",
       "build",
       "builder",
+      "builder.call((mut",
+      "builder.for(document.queryselector('#app",
+      "builder.options((b",
+      "builder.with",
       "call",
       "call((mut",
       "call(callback",
@@ -11009,6 +12259,8 @@
       "lt;div",
       "lt;div&gt",
       "lt;p&gt;привет&lt;/p&gt",
+      "lt;protect",
+      "lt;protected&gt",
       "lt;section&gt",
       "lt;span&gt",
       "lt;static&gt",
@@ -11024,6 +12276,7 @@
       "mutation.target.data",
       "mutation.target.getattribute(mutation.attributenam",
       "mutationcallback",
+      "mutationcallback|undefin",
       "mutationobserv",
       "mutationobserver((mut",
       "mutationobserver(console.log",
@@ -11031,14 +12284,19 @@
       "mutationobserver.observ",
       "mutationobserverinit",
       "mutationrecord",
+      "mutations.foreach(m",
       "nest",
       "new",
       "node",
+      "node|undefin",
       "null",
       "o",
       "o.descendants().text",
       "o.descendants().text().useoldvalu",
       "observ",
+      "observer#_callback",
+      "observer#_opt",
+      "observer#_target",
       "observer#disconnect",
       "observer#observ",
       "observer#takerecord",
@@ -11068,6 +12326,9 @@
       "observer.observe(textnod",
       "observer.takerecord",
       "observerbuild",
+      "observerbuilder#_callback",
+      "observerbuilder#_opt",
+      "observerbuilder#_target",
       "observerbuilder#build",
       "observerbuilder#cal",
       "observerbuilder#for",
@@ -11100,6 +12361,7 @@
       "observeroptions.text",
       "observeroptions.text(tru",
       "observeroptionsbuild",
+      "observeroptionsbuilder#_opt",
       "observeroptionsbuilder#al",
       "observeroptionsbuilder#attribut",
       "observeroptionsbuilder#build",
@@ -11112,15 +12374,18 @@
       "observeroptionsbuilder#text",
       "observeroptionsbuilder#useoldvalu",
       "observeroptionsbuilder.useoldvalu",
+      "observeroptions|mutationobserverinit|undefin",
       "oldvalu",
       "option",
       "options((b",
       "options((build",
       "options((o",
       "options(build",
+      "options(buildercallback",
       "options(cb",
       "options(configurefn",
       "readm",
+      "readonly&gt",
       "record",
       "removechild",
       "root",
@@ -11206,10 +12471,40 @@
       "description": "🧱 ObserverBuilder — строитель (builder) для удобного создания экземпляров Observer. Позволяет наглядно и пошагово задать конфигурацию наблюдателя за DOM: целевой узел, параметры отслеживания и callback. Поддерживает декларативную и безопасную настройку параметров через встроенный ObserverOptionsBuilder. 🚀 Преимущества: 📦 Инкапсуляция логики и валидации конфигурации. 💬 Fluent-интерфейс: цепочки вызовов для читаемости и наглядности. 🔧 Поддержка двух способов конфигурации: .with(options) — если параметры уже известны .options(builder =&gt; builder.…) — декларативная сборка параметров через ObserverOptionsBuilder 🛡️ Встроенная проверка обязательного callback перед созданием. 🛠️ Методы: for(target) — установить DOM-узел, за которым нужно наблюдать. with(options) — напрямую передать объект опций (MutationObserverInit / ObserverOptions). options(configureFn) — передать функцию, конфигурирующую ObserverOptionsBuilder. call(callback) — задать callback-функцию, вызываемую при мутациях. build() — создать экземпляр Observer с указанными параметрами. ✅ Пример использования: import ObserverBuilder from './ObserverBuilder.mjs'; const observer = new ObserverBuilder() .for(document.getElementById('content')) .options((b) =&gt; b.descendants().attributes(['data-state']).text().useOldValue()) .call((mutations) =&gt; { for (const mutation of mutations) { console.log(mutation); } }) .build(); observer.observe(); ⚠️ Важно: Метод call() является обязательным — без указания callback вызов .build() выбросит исключение.",
       "body": ""
     },
+    "ObserverBuilder.html#_callback": {
+      "id": "ObserverBuilder.html#_callback",
+      "kind": "member",
+      "title": "&lt;protected&gt; _callback :MutationCallback|undefined",
+      "longname": "ObserverBuilder#_callback",
+      "name": "_callback",
+      "tags": "ObserverBuilder#_callback _callback",
+      "summary": "",
+      "description": "🧩 Callback-функция, вызываемая при срабатывании Observer. Представляет собой обязательную часть конфигурации наблюдателя. Задаётся с помощью метода .call(callback) и передаётся в конструктор Observer при вызове .build(). 📐 Сигнатура: (mutations: MutationRecord[], observer: MutationObserver) =&gt; void ✅ Пример: builder.call((mutations, observer) =&gt; { mutations.forEach(m =&gt; console.log(m)); });"
+    },
+    "ObserverBuilder.html#_options": {
+      "id": "ObserverBuilder.html#_options",
+      "kind": "member",
+      "title": "&lt;protected&gt; _options :ObserverOptions|MutationObserverInit|undefined",
+      "longname": "ObserverBuilder#_options",
+      "name": "_options",
+      "tags": "ObserverBuilder#_options _options",
+      "summary": "",
+      "description": "⚙️ Конфигурация параметров наблюдения (ObserverOptions), применяемая при вызове observe(). Устанавливается двумя способами: с помощью метода .with(options), где options — это вручную собранный объект или через метод .options(builderCallback), используя ObserverOptionsBuilder для декларативной сборки 🔍 Пример использования с .with(): builder.with({ childList: true, subtree: true }); 🔍 Пример с .options() и builder-ом: builder.options((b) =&gt; b.descendants().attributes(['class']).useOldValue()); Если параметр не установлен, при сборке через .build() будет передан undefined, что может привести к созданию наблюдателя без настроек (необходимо будет передать опции непосредственно в метод observe)."
+    },
+    "ObserverBuilder.html#_target": {
+      "id": "ObserverBuilder.html#_target",
+      "kind": "member",
+      "title": "&lt;protected&gt; _target :Node|undefined",
+      "longname": "ObserverBuilder#_target",
+      "name": "_target",
+      "tags": "ObserverBuilder#_target _target",
+      "summary": "",
+      "description": "🎯 Целевой DOM-элемент, за изменениями которого будет вестись наблюдение. Устанавливается через метод .for(target), где target — это любой Node, поддерживаемый MutationObserver, например: Element, Document, DocumentFragment. ✅ Пример использования: builder.for(document.querySelector('#app')); Если целевой узел не задан, его можно передать напрямую при вызове observer.observe(target). Однако для полного построения наблюдателя через .build(), рекомендуется явно указать target. 💡 Особенности: Можно вызывать в любой момент до .build(). Позволяет удобно переиспользовать одну и ту же конфигурацию для разных узлов (создавая несколько Observer-ов). Если вызвать несколько раз — будет использоваться последний переданный target."
+    },
     "ObserverBuilder.html#for": {
       "id": "ObserverBuilder.html#for",
       "kind": "function",
-      "title": "for( target ) → {ObserverBuilder}",
+      "title": "for( target ) → {this}",
       "longname": "ObserverBuilder#for",
       "name": "for",
       "tags": "ObserverBuilder#for for",
@@ -11219,7 +12514,7 @@
     "ObserverBuilder.html#with": {
       "id": "ObserverBuilder.html#with",
       "kind": "function",
-      "title": "with( options ) → {ObserverBuilder}",
+      "title": "with( options ) → {this}",
       "longname": "ObserverBuilder#with",
       "name": "with",
       "tags": "ObserverBuilder#with with",
@@ -11229,7 +12524,7 @@
     "ObserverBuilder.html#options": {
       "id": "ObserverBuilder.html#options",
       "kind": "function",
-      "title": "options( callback ) → {ObserverBuilder}",
+      "title": "options( callback ) → {this}",
       "longname": "ObserverBuilder#options",
       "name": "options",
       "tags": "ObserverBuilder#options options",
@@ -11239,7 +12534,7 @@
     "ObserverBuilder.html#call": {
       "id": "ObserverBuilder.html#call",
       "kind": "function",
-      "title": "call( callback ) → {ObserverBuilder}",
+      "title": "call( callback ) → {this}",
       "longname": "ObserverBuilder#call",
       "name": "call",
       "tags": "ObserverBuilder#call call",
@@ -11438,10 +12733,20 @@
       "description": "🛠️✨ ObserverOptionsBuilder — удобный и безопасный builder для создания конфигурации наблюдателя за DOM. Позволяет с помощью fluent-интерфейса (цепочки вызовов) гибко и наглядно настраивать, какие именно изменения DOM следует отслеживать: атрибуты, текст, дочерние элементы, вложенные узлы и т.д. 🌟 Преимущества: 🚫 Исключает ошибки в ручной сборке объекта опций. 📝 Позволяет явно и декларативно описывать нужное поведение. 🔁 Упрощает повторное использование и читаемость кода. ──────────────── 🧩 Методы: children() — 👶 отслеживать только прямых потомков (childList) descendants() — 🌳 отслеживать все вложенные элементы (childList + subtree) attributes(filter?) — 🏷️ отслеживать изменения атрибутов, опционально только указанных text() — ✏️ отслеживать изменения текстовых узлов subtree() — 🌲 включить наблюдение за потомками useOldValue() — ⏪ возвращать старые значения атрибутов/текста (требует вызова attributes() и/или text()) build() — 🏗️ получить итоговый объект ObserverOptions ──────────────── ✅ Пример const options = new ObserverOptionsBuilder() .descendants() .attributes(['class', 'style']) .text() .useOldValue() .build(); const observer = new Observer(callback, options, targetNode); observer.observe();",
       "body": ""
     },
+    "ObserverOptionsBuilder.html#_options": {
+      "id": "ObserverOptionsBuilder.html#_options",
+      "kind": "member",
+      "title": "&lt;protected, readonly&gt; _options :ObserverOptions",
+      "longname": "ObserverOptionsBuilder#_options",
+      "name": "_options",
+      "tags": "ObserverOptionsBuilder#_options _options",
+      "summary": "",
+      "description": "⚙️ Внутренний объект опций ObserverOptions, который постепенно конфигурируется методами билдера."
+    },
     "ObserverOptionsBuilder.html#children": {
       "id": "ObserverOptionsBuilder.html#children",
       "kind": "function",
-      "title": "children() → {ObserverOptionsBuilder}",
+      "title": "children() → {this}",
       "longname": "ObserverOptionsBuilder#children",
       "name": "children",
       "tags": "ObserverOptionsBuilder#children children",
@@ -11451,17 +12756,17 @@
     "ObserverOptionsBuilder.html#descendants": {
       "id": "ObserverOptionsBuilder.html#descendants",
       "kind": "function",
-      "title": "descendants() → {ObserverOptionsBuilder}",
+      "title": "descendants() → {this}",
       "longname": "ObserverOptionsBuilder#descendants",
       "name": "descendants",
       "tags": "ObserverOptionsBuilder#descendants descendants",
       "summary": "",
-      "description": "🌳 Включает отслеживание всех вложенных DOM-изменений — не только прямых, но и глубоких потомков. 📌 Что делает Комбинирует два режима: childList: true — отслеживает добавление и удаление узлов subtree: true — расширяет область наблюдения на всех потомков Эквивалентно: .children().subtree(), но читается декларативнее. 📎 Когда использовать При отслеживании динамически изменяемого контента Когда изменения могут происходить в глубине дерева ✅ Пример const options = ObserverOptions .new() .descendants() .build(); const observer = new Observer(callback); observer.observe(document.getElementById('tree'), options); // Добавление вложенного узла: document.querySelector('#tree .deep').appendChild(document.createElement('div'));"
+      "description": "🌳 Включает отслеживание всех вложенных DOM-изменений — не только прямых, но и глубоких потомков. 📌 Что делает Комбинирует два режима: childList: true — отслеживает добавление и удаление узлов subtree: true — расширяет область наблюдения на всех потомках Эквивалентно: .children().subtree(), но читается декларативнее. 📎 Когда использовать При отслеживании динамически изменяемого контента Когда изменения могут происходить в глубине дерева ✅ Пример const options = ObserverOptions .new() .descendants() .build(); const observer = new Observer(callback); observer.observe(document.getElementById('tree'), options); // Добавление вложенного узла: document.querySelector('#tree .deep').appendChild(document.createElement('div'));"
     },
     "ObserverOptionsBuilder.html#attributes": {
       "id": "ObserverOptionsBuilder.html#attributes",
       "kind": "function",
-      "title": "attributes( [ filter ] ) → {ObserverOptionsBuilder}",
+      "title": "attributes( [ filter ] ) → {this}",
       "longname": "ObserverOptionsBuilder#attributes",
       "name": "attributes",
       "tags": "ObserverOptionsBuilder#attributes attributes",
@@ -11471,17 +12776,17 @@
     "ObserverOptionsBuilder.html#descendantAttributes": {
       "id": "ObserverOptionsBuilder.html#descendantAttributes",
       "kind": "function",
-      "title": "descendantAttributes( [ filter ] ) → {ObserverOptionsBuilder}",
+      "title": "descendantAttributes( [ filter ] ) → {this}",
       "longname": "ObserverOptionsBuilder#descendantAttributes",
       "name": "descendantAttributes",
       "tags": "ObserverOptionsBuilder#descendantAttributes descendantAttributes",
       "summary": "",
-      "description": "🏷️🌳 Включает отслеживание изменений атрибутов во всех потомках целевого элемента. Это сокращение для цепочки вызовов: .attributes(filter).subtree() 🔍 Что делает: Включает attributes: true — отслеживает изменения атрибутов Включает subtree: true — расширяет наблюдение на всех потомков Если указан параметр filter, устанавливает attributeFilter — ограничивает отслеживание указанными атрибутами ✅ Пример: const options = new ObserverOptionsBuilder() .descendantAttributes(['data-state', 'class']) .useOldValue() .build(); const observer = new Observer((mutations) =&gt; { for (const m of mutations) { console.log(`Атрибут \"${m.attributeName}\" изменён в:`, m.target); } }); observer.observe(document.getElementById('app'), options); // При изменении атрибута на любом уровне вложенности внутри #app — будет зафиксировано 🧠 Используйте, когда: Нужно следить за class, style, data-* и другими атрибутами в глубоко вложенных элементах Важно централизованно отслеживать состояние всей DOM-структуры (например, в компонентных системах)"
+      "description": "🏷️🌳 Включает отслеживание изменений атрибутов во всех потомках целевого элемента. Это сокращение для цепочки вызовов: .attributes(filter).subtree() 🔍 Что делает: Включает attributes: true — отслеживает изменения атрибутов Включает subtree: true — расширяет наблюдение на всех потомках Если указан параметр filter, устанавливает attributeFilter — ограничивает отслеживание указанными атрибутами ✅ Пример: const options = new ObserverOptionsBuilder() .descendantAttributes(['data-state', 'class']) .useOldValue() .build(); const observer = new Observer((mutations) =&gt; { for (const m of mutations) { console.log(`Атрибут \"${m.attributeName}\" изменён в:`, m.target); } }); observer.observe(document.getElementById('app'), options); // При изменении атрибута на любом уровне вложенности внутри #app — будет зафиксировано 🧠 Используйте, когда: Нужно следить за class, style, data-* и другими атрибутами в глубоко вложенных элементах Важно централизованно отслеживать состояние всей DOM-структуры (например, в компонентных системах)"
     },
     "ObserverOptionsBuilder.html#text": {
       "id": "ObserverOptionsBuilder.html#text",
       "kind": "function",
-      "title": "text() → {ObserverOptionsBuilder}",
+      "title": "text() → {this}",
       "longname": "ObserverOptionsBuilder#text",
       "name": "text",
       "tags": "ObserverOptionsBuilder#text text",
@@ -11491,17 +12796,17 @@
     "ObserverOptionsBuilder.html#descendantText": {
       "id": "ObserverOptionsBuilder.html#descendantText",
       "kind": "function",
-      "title": "descendantText() → {ObserverOptionsBuilder}",
+      "title": "descendantText() → {this}",
       "longname": "ObserverOptionsBuilder#descendantText",
       "name": "descendantText",
       "tags": "ObserverOptionsBuilder#descendantText descendantText",
       "summary": "",
-      "description": "✏️🌲 Включает отслеживание изменений текста во всех вложенных узлах. Это удобное сокращение для цепочки вызовов: .text().subtree() 🔍 Что делает: Устанавливает characterData: true — отслеживает изменения в текстовых узлах Устанавливает subtree: true — расширяет наблюдение на всех потомков ⚠️ Чтобы получить предыдущее значение текста, вызовите .useOldValue() после .descendantText(). ✅ Пример: const options = new ObserverOptionsBuilder() .descendantText() .useOldValue() .build(); const observer = new Observer((mutations) =&gt; { for (const mutation of mutations) { console.log(`Текст изменился:`, mutation.oldValue, '→', mutation.target.data); } }); observer.observe(document.getElementById('output'), options); // Позже: document.querySelector('#output .info .line').textContent = 'Новая строка'; 🧠 Полезно для: Слежения за текстом внутри contenteditable-областей Реактивных интерфейсов, где важно понимать, что именно изменилось Отладки и логирования текстовых изменений"
+      "description": "✏️🌲 Включает отслеживание изменений текста во всех вложенных узлах. Это удобное сокращение для цепочки вызовов: .text().subtree() 🔍 Что делает: Устанавливает characterData: true — отслеживает изменения в текстовых узлах Устанавливает subtree: true — расширяет наблюдение на всех потомках ⚠️ Чтобы получить предыдущее значение текста, вызовите .useOldValue() после .descendantText(). ✅ Пример: const options = new ObserverOptionsBuilder() .descendantText() .useOldValue() .build(); const observer = new Observer((mutations) =&gt; { for (const mutation of mutations) { console.log(`Текст изменился:`, mutation.oldValue, '→', mutation.target.data); } }); observer.observe(document.getElementById('output'), options); // Позже: document.querySelector('#output .info .line').textContent = 'Новая строка'; 🧠 Полезно для: Слежения за текстом внутри contenteditable-областей Реактивных интерфейсов, где важно понимать, что именно изменилось Отладки и логирования текстовых изменений"
     },
     "ObserverOptionsBuilder.html#subtree": {
       "id": "ObserverOptionsBuilder.html#subtree",
       "kind": "function",
-      "title": "subtree() → {ObserverOptionsBuilder}",
+      "title": "subtree() → {this}",
       "longname": "ObserverOptionsBuilder#subtree",
       "name": "subtree",
       "tags": "ObserverOptionsBuilder#subtree subtree",
@@ -11511,7 +12816,7 @@
     "ObserverOptionsBuilder.html#useOldValue": {
       "id": "ObserverOptionsBuilder.html#useOldValue",
       "kind": "function",
-      "title": "useOldValue() → {ObserverOptionsBuilder}",
+      "title": "useOldValue() → {this}",
       "longname": "ObserverOptionsBuilder#useOldValue",
       "name": "useOldValue",
       "tags": "ObserverOptionsBuilder#useOldValue useOldValue",
@@ -11521,7 +12826,7 @@
     "ObserverOptionsBuilder.html#content": {
       "id": "ObserverOptionsBuilder.html#content",
       "kind": "function",
-      "title": "content() → {ObserverOptionsBuilder}",
+      "title": "content() → {this}",
       "longname": "ObserverOptionsBuilder#content",
       "name": "content",
       "tags": "ObserverOptionsBuilder#content content",
@@ -11531,7 +12836,7 @@
     "ObserverOptionsBuilder.html#all": {
       "id": "ObserverOptionsBuilder.html#all",
       "kind": "function",
-      "title": "all() → {ObserverOptionsBuilder}",
+      "title": "all() → {this}",
       "longname": "ObserverOptionsBuilder#all",
       "name": "all",
       "tags": "ObserverOptionsBuilder#all all",
@@ -11559,10 +12864,40 @@
       "description": "🧭 Observer — удобная обёртка над стандартным MutationObserver с предустановленными параметрами и (опционально) целевым DOM-узлом. Класс инкапсулирует логику повторного использования конфигурации и узла, позволяя отслеживать изменения в разных элементах без повторного указания одних и тех же опций. ⚙️ Назначение: Повторно использовать один и тот же набор опций для нескольких элементов. Упростить вызов .observe() без необходимости передавать конфигурацию и узел каждый раз. Опционально задать целевой узел наблюдения в конструкторе. 📐 Сигнатура конструктора: new Observer(callback, options?, target?) callback {MutationCallback} — вызывается при каждом изменении. options {MutationObserverInit} — конфигурация (например, { childList: true, subtree: true }). target {Node} — DOM-узел, за которым нужно следить по умолчанию. ✅ Пример использования: const observer = new Observer((mutations) =&gt; { for (const m of mutations) { console.log(m); } }, { childList: true, subtree: true }, document.body); observer.observe(); // будет использовать document.body и указанные опции observer.observe(document.querySelector('#header')); // target переопределён ⚠️ Важно: По спецификации MutationObserver необходимо указать хотя бы один из следующих параметров: childList attributes characterData В противном случае вызов .observe() приведёт к исключению: An invalid or illegal string was specified",
       "body": ""
     },
+    "Observer.html#_options": {
+      "id": "Observer.html#_options",
+      "kind": "member",
+      "title": "&lt;protected, readonly&gt; _options :ObserverOptions|MutationObserverInit|undefined",
+      "longname": "Observer#_options",
+      "name": "_options",
+      "tags": "Observer#_options _options",
+      "summary": "",
+      "description": "⚙️ Конфигурация для Observer. Содержит параметры, указывающие, какие типы изменений в DOM необходимо отслеживать: childList: отслеживание добавления/удаления узлов. attributes: отслеживание изменений атрибутов. characterData: отслеживание изменений текста. subtree, attributeOldValue, characterDataOldValue, attributeFilter и др. Значение передаётся в метод .observe() при вызове."
+    },
+    "Observer.html#_target": {
+      "id": "Observer.html#_target",
+      "kind": "member",
+      "title": "&lt;protected, readonly&gt; _target :Node|undefined",
+      "longname": "Observer#_target",
+      "name": "_target",
+      "tags": "Observer#_target _target",
+      "summary": "",
+      "description": "🎯 Целевой DOM-узел для наблюдения по умолчанию. Используется в методе observe(), если не был явно передан target. Позволяет задать основной элемент для отслеживания прямо при создании экземпляра Observer, избавляя от необходимости указывать его каждый раз. Применение: Если observe() вызывается без аргументов, будет использован #target. Пример: const observer = new Observer(callback, options, document.body); observer.observe(); // будет использован document.body"
+    },
+    "Observer.html#_callback": {
+      "id": "Observer.html#_callback",
+      "kind": "member",
+      "title": "&lt;protected, readonly&gt; _callback :MutationCallback",
+      "longname": "Observer#_callback",
+      "name": "_callback",
+      "tags": "Observer#_callback _callback",
+      "summary": "",
+      "description": "📞 Callback-функция, вызываемая при каждом изменении DOM. Передаётся в конструктор и используется как основной обработчик мутаций. Сигнатура: (mutations: MutationRecord[], observer: MutationObserver) =&gt; void Пример: const observer = new Observer((mutations) =&gt; { mutations.forEach(m =&gt; console.log(m)); });"
+    },
     "Observer.html#observe": {
       "id": "Observer.html#observe",
       "kind": "function",
-      "title": "observe( [ target [, options ] ] )",
+      "title": "observe( [ target [, options ] ] ) → {void}",
       "longname": "Observer#observe",
       "name": "observe",
       "tags": "Observer#observe observe",

@@ -1,5 +1,5 @@
-import ObserverOptions from '../src/ObserverOptions.mjs';
-import ObserverOptionsBuilder from '../src/ObserverOptionsBuilder.mjs';
+import ObserverOptions from '../dist/ObserverOptions.mjs';
+import ObserverOptionsBuilder from '../dist/ObserverOptionsBuilder.mjs';
 import { describe, test, expect } from '@jest/globals';
 
 function expectEqual(options, object) {

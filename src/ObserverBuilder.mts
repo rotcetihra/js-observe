@@ -92,9 +92,10 @@ class ObserverBuilder {
      *
      * ---
      *
-     * @type {MutationCallback|null}
+     * @type {MutationCallback | undefined}
+     * @protected
      */
-    #callback = null;
+    protected _callback?: MutationCallback;
 
     /**
      * ⚙️ Конфигурация параметров наблюдения ({@link ObserverOptions}), применяемая при вызове `observe()`.
@@ -129,9 +130,10 @@ class ObserverBuilder {
      *
      * ---
      *
-     * @type {ObserverOptions|MutationObserverInit|null}
+     * @type {ObserverOptions | MutationObserverInit | undefined}
+     * @protected
      */
-    #options = null;
+    protected _options?: ObserverOptions | MutationObserverInit;
 
     /**
      * 🎯 Целевой DOM-элемент, за изменениями которого будет вестись наблюдение.
@@ -163,9 +165,10 @@ class ObserverBuilder {
      *
      * ---
      *
-     * @type {Node|null}
+     * @type {Node|undefined}
+     * @protected
      */
-    #target = null;
+    protected _target?: Node;
 
     /**
      * 🎯 Устанавливает **целевой DOM-узел** для наблюдения.
@@ -200,10 +203,10 @@ class ObserverBuilder {
      * ---
      *
      * @param {Node} target - DOM-узел (например, HTMLElement, Document, DocumentFragment), за которым нужно наблюдать.
-     * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    for(target) {
-        this.#target = target;
+    for(target: Node): this {
+        this._target = target;
 
         return this;
     }
@@ -243,11 +246,11 @@ class ObserverBuilder {
      *
      * ---
      *
-     * @param {MutationObserverInit} options - Объект конфигурации наблюдателя (например, из ObserverOptionsBuilder или вручную).
-     * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
+     * @param {ObserverOptions | MutationObserverInit} options - Объект конфигурации наблюдателя (например, из ObserverOptionsBuilder или вручную).
+     * @returns {this}
      */
-    with(options) {
-        this.#options = options;
+    with(options: ObserverOptions | MutationObserverInit): this {
+        this._options = options;
 
         return this;
     }
@@ -293,14 +296,14 @@ class ObserverBuilder {
      * ---
      *
      * @param {function(ObserverOptionsBuilder): void} callback — функция, принимающая билдер опций для пошаговой настройки.
-     * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    options(callback) {
+    options(callback: Function): this {
         const builder = new ObserverOptionsBuilder();
 
         callback(builder);
 
-        this.#options = builder.build();
+        this._options = builder.build();
 
         return this;
     }
@@ -343,10 +346,10 @@ class ObserverBuilder {
      * ---
      *
      * @param {MutationCallback} callback - Функция, вызываемая при изменениях в DOM. Принимает массив `MutationRecord[]` и объект `MutationObserver`.
-     * @returns {ObserverBuilder} this — для продолжения цепочки вызовов.
+     * @returns {this}
      */
-    call(callback) {
-        this.#callback = callback;
+    call(callback: MutationCallback): this {
+        this._callback = callback;
 
         return this;
     }
@@ -392,16 +395,16 @@ class ObserverBuilder {
      * ---
      *
      * @throws {Error} Если не был вызван `.call()`.
-     * @returns {Observer} Экземпляр класса {@link Observer}, готовый к вызову `.observe()`.
+     * @returns {Observer}
      */
-    build() {
-        if (!this.#callback) {
+    build(): Observer {
+        if (!this._callback) {
             throw new Error(
                 'Пропущен вызов обязательного метода ObserverBuilder.call().',
             );
         }
 
-        return new Observer(this.#callback, this.#options, this.#target);
+        return new Observer(this._callback, this._options, this._target);
     }
 }
 

@@ -2,13 +2,13 @@
     "name": "@rotcetihra/js-observe",
     "version": "1.1.1",
     "description": "Declarative wrapper over MutationObserver",
-    "main": "src/index.mjs",
+    "main": "./dist/index.mjs",
     "type": "module",
     "exports": {
-        "import": "./index.mjs",
-        "types": "./types/index.d.ts"
+        "import": "./dist/index.mjs",
+        "types": "./dist/index.d.ts"
     },
-    "types": "./types/index.d.ts",
+    "types": "./dist/index.d.ts",
     "keywords": [
         "dom",
         "mutationobserver",
@@ -36,6 +36,6 @@
     "scripts": {
         "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
         "docs": "./node_modules/.bin/jsdoc -c jsdoc.config.json",
-        "types": "npx tsc"
+        "build": "npx tsc"
     }
 }

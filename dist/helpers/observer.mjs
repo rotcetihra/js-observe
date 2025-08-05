@@ -1,5 +1,4 @@
 import ObserverBuilder from '../ObserverBuilder.mjs';
-
 /**
  * 🛠️ Создаёт новый экземпляр {@link ObserverBuilder} — строитель для конфигурации {@link Observer}.
  *
@@ -24,9 +23,10 @@ import ObserverBuilder from '../ObserverBuilder.mjs';
  *
  * ---
  *
- * @returns {ObserverBuilder} Новый экземпляр {@link ObserverBuilder} для создания наблюдателя.
+ * @returns {ObserverBuilder}
  * @function observer
  */
 export default function observer() {
     return new ObserverBuilder();
 }
+//# sourceMappingURL=observer.mjs.map

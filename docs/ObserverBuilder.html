@@ -42,7 +42,7 @@
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"DD MMM YYYY","systemName":"js-observe","systemSummary":"Наблюдатель за изменениями в DOM-элементе.","systemLogo":"","systemColor":"#48036F","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Архитектор (rotcetihra), 2025","linenums":false,"collapseSymbols":true,"inverseNav":false,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":null,"stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = true;
-			window.DOCLET_AFILTER_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = true;
 		</script>
 </head>
 <body>
@@ -107,6 +107,16 @@
 							<li><a href="list_class.html">Classes</a></li>
 							<li class="active">ObserverBuilder</li>
 						</ol>
+						<div class="access-filter">
+								<label class="checkbox-inline">
+									<input class="toggle-public" type="checkbox" value="" checked>
+									Public
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-protected" type="checkbox" value="" checked>
+									Protected
+								</label>
+						</div>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
@@ -193,11 +203,202 @@
 </dd>
 							</dl>
 							<article class="secondary">
+									<h3>Members</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id="_callback" class="member protected"><span class="signature-attribs">&lt;protected> </span><span class="name">_callback</span><span class="signature-type"> :MutationCallback|undefined</span></h4>
+		</dt>
+<dd class="symbol-details member protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🧩 Callback-функция, вызываемая при срабатывании <a href="Observer.html">Observer</a>.</p>
+			<p>Представляет собой обязательную часть конфигурации наблюдателя.
+			Задаётся с помощью метода <code>.call(callback)</code> и передаётся в конструктор <code>Observer</code> при вызове <code>.build()</code>.</p>
+			<hr>
+			<h3>📐 Сигнатура:</h3>
+			<pre class="prettyprint source lang-ts"><code>
+			(mutations: MutationRecord[], observer: MutationObserver) => void
+			
+			</code></pre>
+			<hr>
+			<h3>✅ Пример:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			builder.call((mutations, observer) => {
+			    mutations.forEach(m => console.log(m));
+			});
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">MutationCallback</span> | <span class="param-type">undefined</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverBuilder.mjs.html">ObserverBuilder.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id="_options" class="member protected"><span class="signature-attribs">&lt;protected> </span><span class="name">_options</span><span class="signature-type"> :<a href="ObserverOptions.html">ObserverOptions</a>|MutationObserverInit|undefined</span></h4>
+		</dt>
+<dd class="symbol-details member protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>⚙️ Конфигурация параметров наблюдения (<a href="ObserverOptions.html">ObserverOptions</a>), применяемая при вызове <code>observe()</code>.</p>
+			<p>Устанавливается двумя способами:</p>
+			<ul>
+			<li>с помощью метода <code>.with(options)</code>, где <code>options</code> — это вручную собранный объект</li>
+			<li>или через метод <code>.options(builderCallback)</code>, используя <a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a> для декларативной сборки</li>
+			</ul>
+			<hr>
+			<h3>🔍 Пример использования с <code>.with()</code>:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			builder.with({ childList: true, subtree: true });
+			
+			</code></pre>
+			<h3>🔍 Пример с <code>.options()</code> и builder-ом:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			builder.options((b) => b.descendants().attributes(['class']).useOldValue());
+			
+			</code></pre>
+			<hr>
+			<p>Если параметр не установлен, при сборке через <code>.build()</code> будет передан <code>undefined</code>,
+			что может привести к созданию наблюдателя без настроек (необходимо будет передать опции непосредственно в метод <code>observe</code>).</p>
+			<hr></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span> | <span class="param-type">MutationObserverInit</span> | <span class="param-type">undefined</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverBuilder.mjs.html">ObserverBuilder.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id="_target" class="member protected"><span class="signature-attribs">&lt;protected> </span><span class="name">_target</span><span class="signature-type"> :Node|undefined</span></h4>
+		</dt>
+<dd class="symbol-details member protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🎯 Целевой DOM-элемент, за изменениями которого будет вестись наблюдение.</p>
+			<p>Устанавливается через метод <code>.for(target)</code>, где <code>target</code> — это любой <code>Node</code>,
+			поддерживаемый MutationObserver, например: <code>Element</code>, <code>Document</code>, <code>DocumentFragment</code>.</p>
+			<hr>
+			<h3>✅ Пример использования:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			builder.for(document.querySelector('#app'));
+			
+			</code></pre>
+			<hr>
+			<p>Если целевой узел не задан, его можно передать напрямую при вызове <code>observer.observe(target)</code>.
+			Однако для полного построения наблюдателя через <code>.build()</code>, рекомендуется явно указать target.</p>
+			<hr>
+			<h3>💡 Особенности:</h3>
+			<ul>
+			<li>Можно вызывать в любой момент до <code>.build()</code>.</li>
+			<li>Позволяет удобно переиспользовать одну и ту же конфигурацию для разных узлов (создавая несколько Observer-ов).</li>
+			<li>Если вызвать несколько раз — будет использоваться последний переданный target.</li>
+			</ul>
+			<hr></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Node</span> | <span class="param-type">undefined</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="ObserverBuilder.mjs.html">ObserverBuilder.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="for" class="function public"><span class="name">for</span><span class="signature-params">( <span class="signature-param">target</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverBuilder.html">ObserverBuilder</a>}</span></h4>
+			<h4 id="for" class="function public"><span class="name">for</span><span class="signature-params">( <span class="signature-param">target</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -245,9 +446,9 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverBuilder.html">ObserverBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>this — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -283,7 +484,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="with" class="function public"><span class="name">with</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverBuilder.html">ObserverBuilder</a>}</span></h4>
+			<h4 id="with" class="function public"><span class="name">with</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -326,7 +527,7 @@
 					<tbody>
 						<tr>
 								<td><code>options</code></td>
-							<td><span class="param-type">MutationObserverInit</span></td>
+							<td><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span> | <span class="param-type">MutationObserverInit</span></td>
 							<td class="last">
 									<p>Объект конфигурации наблюдателя (например, из ObserverOptionsBuilder или вручную).</p>
 							</td>
@@ -336,9 +537,9 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverBuilder.html">ObserverBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>this — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -374,7 +575,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="options" class="function public"><span class="name">options</span><span class="signature-params">( <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverBuilder.html">ObserverBuilder</a>}</span></h4>
+			<h4 id="options" class="function public"><span class="name">options</span><span class="signature-params">( <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -432,9 +633,9 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverBuilder.html">ObserverBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>this — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -470,7 +671,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="call" class="function public"><span class="name">call</span><span class="signature-params">( <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{<a href="ObserverBuilder.html">ObserverBuilder</a>}</span></h4>
+			<h4 id="call" class="function public"><span class="name">call</span><span class="signature-params">( <span class="signature-param">callback</span>&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{this}</span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
@@ -525,9 +726,9 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="ObserverBuilder.html">ObserverBuilder</a></span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">this</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>this — для продолжения цепочки вызовов.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>
@@ -601,7 +802,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="Observer.html">Observer</a></span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Экземпляр класса <a href="Observer.html">Observer</a>, готовый к вызову <code>.observe()</code>.</p></div>
+									<div class="form-control-static returns-description"></div>
 								</div>
 							</div>
 					</form>

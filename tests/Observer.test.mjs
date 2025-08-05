@@ -1,4 +1,4 @@
-import Observer from '../src/Observer.mjs';
+import Observer from '../dist/Observer.mjs';
 import {
     describe,
     test,
@@ -7,8 +7,8 @@ import {
     beforeEach,
     afterEach,
 } from '@jest/globals';
-import ObserverOptions from '../src/ObserverOptions.mjs';
-import ObserverBuilder from '../src/ObserverBuilder.mjs';
+import ObserverOptions from '../dist/ObserverOptions.mjs';
+import ObserverBuilder from '../dist/ObserverBuilder.mjs';
 
 let observer, native, observerCallback, nativeCallback;
 
