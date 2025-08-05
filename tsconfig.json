@@ -5,12 +5,11 @@
         "declaration": true,
         "sourceMap": true,
         "outDir": "./dist",
-        "module": "ESNext",
+        "module": "node16",
         "target": "ESNext",
-        "moduleResolution": "node",
+        "moduleResolution": "node16",
         "strict": true,
-        "skipLibCheck": true,
-        "rootDir": "./src"
+        "skipLibCheck": true
     },
     "include": ["src"]
 }

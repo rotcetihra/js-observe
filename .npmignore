@@ -4,3 +4,4 @@ tests/
 src/
 jsdoc.config.json
 jest.config.mjs
+tsconfig.json
