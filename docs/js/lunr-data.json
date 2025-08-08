@@ -977,34 +977,66 @@
         ],
         "Observer.html": [
           "attribut",
+          "autodisconnect",
           "callback",
+          "cancelautodisconnect",
           "characterdata",
           "childlist",
           "class",
           "console.log(m",
           "const",
+          "disconnect",
           "document.bodi",
           "dom",
+          "fluent",
           "gt",
           "illeg",
+          "import",
           "invalid",
-          "m",
+          "isobserv",
           "mutat",
           "mutationcallback",
           "mutationobserv",
           "mutationobserverinit",
+          "mutations.foreach(m",
           "new",
           "node",
           "observ",
-          "observer((mut",
           "observer(callback",
+          "observer.new",
           "observer.observ",
           "observer.observe(document.queryselector('#head",
+          "observerbuild",
+          "observeropt",
+          "observeroptions.al",
+          "observeroptionsbuild",
           "option",
+          "rotcetihra/j",
           "specifi",
           "string",
           "subtre",
+          "takerecord",
           "target",
+          "true"
+        ],
+        "Observer.html#isObserving": [
+          "boolean",
+          "childlist",
+          "console.log(obs.isobserv",
+          "const",
+          "disconnect",
+          "document.bodi",
+          "dom",
+          "fals",
+          "isobserv",
+          "member",
+          "new",
+          "ob",
+          "obs.disconnect",
+          "obs.observ",
+          "observ",
+          "observer#isobserv",
+          "observer(callback",
           "true"
         ],
         "Observer.html#_options": [
@@ -1062,6 +1094,36 @@
           "readonly&gt",
           "void"
         ],
+        "Observer.html#_autoDisconnectLock": [
+          "_autodisconnectlock",
+          "autodisconnect",
+          "boolean",
+          "disconnect",
+          "lt;protected&gt",
+          "member",
+          "observer#_autodisconnectlock"
+        ],
+        "Observer.html#_autoDisconnectTimer": [
+          "_autodisconnecttim",
+          "autodisconnect",
+          "cancelautodisconnect",
+          "lt;protected&gt",
+          "member",
+          "nodejs.timeout|numb",
+          "observer#_autodisconnecttim",
+          "settimeout",
+          "undefin"
+        ],
+        "Observer.html#_autoDisconnectPromiseResolve": [
+          "_autodisconnectpromiseresolv",
+          "autodisconnect",
+          "disconnect",
+          "function|undefin",
+          "lt;protected&gt",
+          "member",
+          "observer#_autodisconnectpromiseresolv",
+          "resolv"
+        ],
         "Observer.html#observe": [
           "attribut",
           "attributeoldvalu",
@@ -1069,6 +1131,7 @@
           "childlist",
           "console.log(mut",
           "const",
+          "disconnect",
           "document.getelementbyid('app",
           "dom",
           "function",
@@ -1093,19 +1156,68 @@
           "void"
         ],
         "Observer.html#disconnect": [
+          "autodisconnect",
+          "cancelautodisconnect",
           "childlist",
           "const",
           "disconnect",
           "document.bodi",
           "dom",
+          "fals",
           "function",
-          "mutationobserver.disconnect",
+          "isobserv",
           "new",
           "observ",
           "observer#disconnect",
           "observer(callback",
           "observer.disconnect",
           "observer.observ",
+          "true",
+          "void"
+        ],
+        "Observer.html#autoDisconnect": [
+          "0",
+          "autodisconnect",
+          "await",
+          "childlist",
+          "console.log",
+          "const",
+          "disconnect",
+          "document.bodi",
+          "fals",
+          "function",
+          "gt",
+          "isobserv",
+          "lt",
+          "ms",
+          "new",
+          "observ",
+          "observer#autodisconnect",
+          "observer(callback",
+          "observer.autodisconnect(5000",
+          "observer.observ",
+          "ondisconnect",
+          "promis",
+          "promise.&lt;void&gt",
+          "settimeout",
+          "true"
+        ],
+        "Observer.html#cancelAutoDisconnect": [
+          "autodisconnect",
+          "cancelautodisconnect",
+          "childlist",
+          "cleartimeout",
+          "const",
+          "document.bodi",
+          "function",
+          "new",
+          "observ",
+          "observer#cancelautodisconnect",
+          "observer(callback",
+          "observer.autodisconnect(5000",
+          "observer.cancelautodisconnect",
+          "observer.observ",
+          "resolv",
           "true",
           "void"
         ],
@@ -1159,10 +1271,18 @@
           "useoldvalu"
         ]
       },
-      "length": 50
+      "length": 56
     },
     "tokenStore": {
       "root": {
+        "0": {
+          "docs": {
+            "Observer.html#autoDisconnect": {
+              "ref": "Observer.html#autoDisconnect",
+              "tf": 2
+            }
+          }
+        },
         "1": {
           "docs": {
             "ObserverOptionsBuilder.html#children": {
@@ -1268,6 +1388,10 @@
                 },
                 "Observer.html": {
                   "ref": "Observer.html",
+                  "tf": 2.459016393442623
+                },
+                "Observer.html#isObserving": {
+                  "ref": "Observer.html#isObserving",
                   "tf": 2.1739130434782608
                 },
                 "Observer.html#_options": {
@@ -1284,11 +1408,11 @@
                 },
                 "Observer.html#observe": {
                   "ref": "Observer.html#observe",
-                  "tf": 1.3888888888888888
+                  "tf": 1.1627906976744187
                 },
                 "Observer.html#disconnect": {
                   "ref": "Observer.html#disconnect",
-                  "tf": 4.166666666666666
+                  "tf": 2.380952380952381
                 },
                 "Observer.html#takeRecords": {
                   "ref": "Observer.html#takeRecords",
@@ -1680,7 +1804,7 @@
                                                                 "docs": {
                                                                   "Observer.html#observe": {
                                                                     "ref": "Observer.html#observe",
-                                                                    "tf": 1.3888888888888888
+                                                                    "tf": 1.1627906976744187
                                                                   }
                                                                 }
                                                               }
@@ -2161,6 +2285,10 @@
                                   "docs": {
                                     "Observer.html": {
                                       "ref": "Observer.html",
+                                      "tf": 1.639344262295082
+                                    },
+                                    "Observer.html#isObserving": {
+                                      "ref": "Observer.html#isObserving",
                                       "tf": 2.1739130434782608
                                     },
                                     "Observer.html#_target": {
@@ -2169,7 +2297,15 @@
                                     },
                                     "Observer.html#disconnect": {
                                       "ref": "Observer.html#disconnect",
-                                      "tf": 4.166666666666666
+                                      "tf": 2.380952380952381
+                                    },
+                                    "Observer.html#autoDisconnect": {
+                                      "ref": "Observer.html#autoDisconnect",
+                                      "tf": 2
+                                    },
+                                    "Observer.html#cancelAutoDisconnect": {
+                                      "ref": "Observer.html#cancelAutoDisconnect",
+                                      "tf": 3.3333333333333335
                                     },
                                     "Observer.html#takeRecords": {
                                       "ref": "Observer.html#takeRecords",
@@ -2523,9 +2659,33 @@
                           "docs": {},
                           "t": {
                             "docs": {
+                              "Observer.html": {
+                                "ref": "Observer.html",
+                                "tf": 0.819672131147541
+                              },
+                              "Observer.html#isObserving": {
+                                "ref": "Observer.html#isObserving",
+                                "tf": 4.3478260869565215
+                              },
+                              "Observer.html#_autoDisconnectLock": {
+                                "ref": "Observer.html#_autoDisconnectLock",
+                                "tf": 16.666666666666664
+                              },
+                              "Observer.html#_autoDisconnectPromiseResolve": {
+                                "ref": "Observer.html#_autoDisconnectPromiseResolve",
+                                "tf": 16.666666666666664
+                              },
+                              "Observer.html#observe": {
+                                "ref": "Observer.html#observe",
+                                "tf": 1.1627906976744187
+                              },
                               "Observer.html#disconnect": {
                                 "ref": "Observer.html#disconnect",
-                                "tf": 700
+                                "tf": 702.3809523809524
+                              },
+                              "Observer.html#autoDisconnect": {
+                                "ref": "Observer.html#autoDisconnect",
+                                "tf": 4
                               }
                             }
                           }
@@ -2572,11 +2732,11 @@
                         },
                         "Observer.html": {
                           "ref": "Observer.html",
-                          "tf": 1.0869565217391304
+                          "tf": 0.819672131147541
                         },
                         "Observer.html#observe": {
                           "ref": "Observer.html#observe",
-                          "tf": 1.3888888888888888
+                          "tf": 1.1627906976744187
                         }
                       }
                     }
@@ -2641,6 +2801,10 @@
                       "ObserverBuilder.html": {
                         "ref": "ObserverBuilder.html",
                         "tf": 1.0638297872340425
+                      },
+                      "Observer.html": {
+                        "ref": "Observer.html",
+                        "tf": 0.819672131147541
                       }
                     }
                   }
@@ -2662,11 +2826,11 @@
                     },
                     "Observer.html": {
                       "ref": "Observer.html",
-                      "tf": 1.0869565217391304
+                      "tf": 0.819672131147541
                     },
                     "Observer.html#observe": {
                       "ref": "Observer.html#observe",
-                      "tf": 1.3888888888888888
+                      "tf": 1.1627906976744187
                     }
                   }
                 }
@@ -2833,6 +2997,44 @@
                 }
               }
             }
+          },
+          "s": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "v": {
+                        "docs": {
+                          "Observer.html": {
+                            "ref": "Observer.html",
+                            "tf": 0.819672131147541
+                          },
+                          "Observer.html#isObserving": {
+                            "ref": "Observer.html#isObserving",
+                            "tf": 702.1739130434783
+                          },
+                          "Observer.html#disconnect": {
+                            "ref": "Observer.html#disconnect",
+                            "tf": 2.380952380952381
+                          },
+                          "Observer.html#autoDisconnect": {
+                            "ref": "Observer.html#autoDisconnect",
+                            "tf": 2
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "j": {
@@ -2858,7 +3060,12 @@
             }
           },
           "b": {
-            "docs": {},
+            "docs": {
+              "Observer.html#isObserving": {
+                "ref": "Observer.html#isObserving",
+                "tf": 2.1739130434782608
+              }
+            },
             "s": {
               "docs": {},
               "e": {
@@ -3017,7 +3224,11 @@
                       },
                       "Observer.html": {
                         "ref": "Observer.html",
-                        "tf": 1904.3478260869565
+                        "tf": 1907.377049180328
+                      },
+                      "Observer.html#isObserving": {
+                        "ref": "Observer.html#isObserving",
+                        "tf": 8.695652173913043
                       },
                       "Observer.html#_options": {
                         "ref": "Observer.html#_options",
@@ -3033,11 +3244,19 @@
                       },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 676.3888888888889
+                        "tf": 677.3255813953489
                       },
                       "Observer.html#disconnect": {
                         "ref": "Observer.html#disconnect",
-                        "tf": 8.333333333333332
+                        "tf": 7.142857142857142
+                      },
+                      "Observer.html#autoDisconnect": {
+                        "ref": "Observer.html#autoDisconnect",
+                        "tf": 2
+                      },
+                      "Observer.html#cancelAutoDisconnect": {
+                        "ref": "Observer.html#cancelAutoDisconnect",
+                        "tf": 3.3333333333333335
                       },
                       "Observer.html#takeRecords": {
                         "ref": "Observer.html#takeRecords",
@@ -3092,7 +3311,7 @@
                                         },
                                         "Observer.html": {
                                           "ref": "Observer.html",
-                                          "tf": 1.0869565217391304
+                                          "tf": 0.819672131147541
                                         },
                                         "Observer.html#_target": {
                                           "ref": "Observer.html#_target",
@@ -3100,11 +3319,19 @@
                                         },
                                         "Observer.html#observe": {
                                           "ref": "Observer.html#observe",
-                                          "tf": 1.3888888888888888
+                                          "tf": 1.1627906976744187
                                         },
                                         "Observer.html#disconnect": {
                                           "ref": "Observer.html#disconnect",
-                                          "tf": 4.166666666666666
+                                          "tf": 2.380952380952381
+                                        },
+                                        "Observer.html#autoDisconnect": {
+                                          "ref": "Observer.html#autoDisconnect",
+                                          "tf": 2
+                                        },
+                                        "Observer.html#cancelAutoDisconnect": {
+                                          "ref": "Observer.html#cancelAutoDisconnect",
+                                          "tf": 3.3333333333333335
                                         },
                                         "Observer.html#takeRecords": {
                                           "ref": "Observer.html#takeRecords",
@@ -3593,11 +3820,11 @@
                                                                                                     "docs": {
                                                                                                       "Observer.html": {
                                                                                                         "ref": "Observer.html",
-                                                                                                        "tf": 1.0869565217391304
+                                                                                                        "tf": 0.819672131147541
                                                                                                       },
                                                                                                       "Observer.html#observe": {
                                                                                                         "ref": "Observer.html#observe",
-                                                                                                        "tf": 1.3888888888888888
+                                                                                                        "tf": 1.1627906976744187
                                                                                                       }
                                                                                                     }
                                                                                                   }
@@ -3679,6 +3906,24 @@
                               }
                             }
                           },
+                          "n": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "w": {
+                                "docs": {
+                                  "Observer.html": {
+                                    "ref": "Observer.html",
+                                    "tf": 0.819672131147541
+                                  },
+                                  "Observer.html#.new": {
+                                    "ref": "Observer.html#.new",
+                                    "tf": 1151.7857142857142
+                                  }
+                                }
+                              }
+                            }
+                          },
                           "d": {
                             "docs": {},
                             "i": {
@@ -3701,7 +3946,138 @@
                                               "docs": {
                                                 "Observer.html#disconnect": {
                                                   "ref": "Observer.html#disconnect",
-                                                  "tf": 4.166666666666666
+                                                  "tf": 2.380952380952381
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "a": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {},
+                                                      "(": {
+                                                        "5": {
+                                                          "0": {
+                                                            "0": {
+                                                              "0": {
+                                                                "docs": {
+                                                                  "Observer.html#autoDisconnect": {
+                                                                    "ref": "Observer.html#autoDisconnect",
+                                                                    "tf": 2
+                                                                  },
+                                                                  "Observer.html#cancelAutoDisconnect": {
+                                                                    "ref": "Observer.html#cancelAutoDisconnect",
+                                                                    "tf": 3.3333333333333335
+                                                                  }
+                                                                }
+                                                              },
+                                                              "docs": {}
+                                                            },
+                                                            "docs": {}
+                                                          },
+                                                          "docs": {}
+                                                        },
+                                                        "docs": {}
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "c": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {},
+                                                          "n": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "c": {
+                                                                "docs": {},
+                                                                "t": {
+                                                                  "docs": {
+                                                                    "Observer.html#cancelAutoDisconnect": {
+                                                                      "ref": "Observer.html#cancelAutoDisconnect",
+                                                                      "tf": 3.3333333333333335
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
                                                 }
                                               }
                                             }
@@ -3748,20 +4124,6 @@
                                 }
                               }
                             }
-                          },
-                          "n": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "w": {
-                                "docs": {
-                                  "Observer.html#.new": {
-                                    "ref": "Observer.html#.new",
-                                    "tf": 1151.7857142857142
-                                  }
-                                }
-                              }
-                            }
                           }
                         },
                         "b": {
@@ -3797,6 +4159,10 @@
                                     "ObserverBuilder.html#build": {
                                       "ref": "ObserverBuilder.html#build",
                                       "tf": 4.3478260869565215
+                                    },
+                                    "Observer.html": {
+                                      "ref": "Observer.html",
+                                      "tf": 0.819672131147541
                                     },
                                     "Observer.html#.new": {
                                       "ref": "Observer.html#.new",
@@ -4076,6 +4442,10 @@
                                 "ObserverOptionsBuilder.html#build": {
                                   "ref": "ObserverOptionsBuilder.html#build",
                                   "tf": 52.63157894736842
+                                },
+                                "Observer.html": {
+                                  "ref": "Observer.html",
+                                  "tf": 0.819672131147541
                                 }
                               },
                               "i": {
@@ -4159,6 +4529,10 @@
                                                   "ObserverOptionsBuilder.html#build": {
                                                     "ref": "ObserverOptionsBuilder.html#build",
                                                     "tf": 5.263157894736842
+                                                  },
+                                                  "Observer.html": {
+                                                    "ref": "Observer.html",
+                                                    "tf": 0.819672131147541
                                                   }
                                                 },
                                                 "e": {
@@ -5082,6 +5456,10 @@
                                               "ObserverOptions.html#.all": {
                                                 "ref": "ObserverOptions.html#.all",
                                                 "tf": 1300
+                                              },
+                                              "Observer.html": {
+                                                "ref": "Observer.html",
+                                                "tf": 0.819672131147541
                                               }
                                             },
                                             "l": {
@@ -5194,17 +5572,13 @@
                                       "ref": "ObserverOptionsBuilder.html#useOldValue",
                                       "tf": 1.2195121951219512
                                     },
-                                    "Observer.html": {
-                                      "ref": "Observer.html",
-                                      "tf": 1.0869565217391304
-                                    },
                                     "Observer.html#_callback": {
                                       "ref": "Observer.html#_callback",
                                       "tf": 3.125
                                     },
                                     "Observer.html#observe": {
                                       "ref": "Observer.html#observe",
-                                      "tf": 1.3888888888888888
+                                      "tf": 1.1627906976744187
                                     }
                                   }
                                 }
@@ -5273,7 +5647,11 @@
                                             },
                                             "Observer.html": {
                                               "ref": "Observer.html",
-                                              "tf": 1.0869565217391304
+                                              "tf": 0.819672131147541
+                                            },
+                                            "Observer.html#isObserving": {
+                                              "ref": "Observer.html#isObserving",
+                                              "tf": 2.1739130434782608
                                             },
                                             "Observer.html#_target": {
                                               "ref": "Observer.html#_target",
@@ -5281,7 +5659,15 @@
                                             },
                                             "Observer.html#disconnect": {
                                               "ref": "Observer.html#disconnect",
-                                              "tf": 4.166666666666666
+                                              "tf": 2.380952380952381
+                                            },
+                                            "Observer.html#autoDisconnect": {
+                                              "ref": "Observer.html#autoDisconnect",
+                                              "tf": 2
+                                            },
+                                            "Observer.html#cancelAutoDisconnect": {
+                                              "ref": "Observer.html#cancelAutoDisconnect",
+                                              "tf": 3.3333333333333335
                                             }
                                           }
                                         }
@@ -5334,6 +5720,35 @@
                         },
                         "#": {
                           "docs": {},
+                          "i": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "v": {
+                                          "docs": {
+                                            "Observer.html#isObserving": {
+                                              "ref": "Observer.html#isObserving",
+                                              "tf": 1150
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
                           "_": {
                             "docs": {},
                             "o": {
@@ -5392,6 +5807,123 @@
                                               "Observer.html#_callback": {
                                                 "ref": "Observer.html#_callback",
                                                 "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "a": {
+                              "docs": {},
+                              "u": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "t": {
+                                                        "docs": {},
+                                                        "l": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "c": {
+                                                              "docs": {},
+                                                              "k": {
+                                                                "docs": {
+                                                                  "Observer.html#_autoDisconnectLock": {
+                                                                    "ref": "Observer.html#_autoDisconnectLock",
+                                                                    "tf": 1150
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "t": {
+                                                          "docs": {},
+                                                          "i": {
+                                                            "docs": {},
+                                                            "m": {
+                                                              "docs": {
+                                                                "Observer.html#_autoDisconnectTimer": {
+                                                                  "ref": "Observer.html#_autoDisconnectTimer",
+                                                                  "tf": 1150
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "p": {
+                                                          "docs": {},
+                                                          "r": {
+                                                            "docs": {},
+                                                            "o": {
+                                                              "docs": {},
+                                                              "m": {
+                                                                "docs": {},
+                                                                "i": {
+                                                                  "docs": {},
+                                                                  "s": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "r": {
+                                                                        "docs": {},
+                                                                        "e": {
+                                                                          "docs": {},
+                                                                          "s": {
+                                                                            "docs": {},
+                                                                            "o": {
+                                                                              "docs": {},
+                                                                              "l": {
+                                                                                "docs": {},
+                                                                                "v": {
+                                                                                  "docs": {
+                                                                                    "Observer.html#_autoDisconnectPromiseResolve": {
+                                                                                      "ref": "Observer.html#_autoDisconnectPromiseResolve",
+                                                                                      "tf": 1150
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
                                               }
                                             }
                                           }
@@ -5461,6 +5993,118 @@
                               }
                             }
                           },
+                          "a": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "Observer.html#autoDisconnect": {
+                                                          "ref": "Observer.html#autoDisconnect",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "c": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {},
+                                                          "n": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "c": {
+                                                                "docs": {},
+                                                                "t": {
+                                                                  "docs": {
+                                                                    "Observer.html#cancelAutoDisconnect": {
+                                                                      "ref": "Observer.html#cancelAutoDisconnect",
+                                                                      "tf": 1150
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
                           "t": {
                             "docs": {},
                             "a": {
@@ -5493,6 +6137,67 @@
                                     }
                                   }
                                 }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              ".": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "n": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {
+                                      "Observer.html#isObserving": {
+                                        "ref": "Observer.html#isObserving",
+                                        "tf": 2.1739130434782608
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "o": {
+                  "docs": {},
+                  "b": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "v": {
+                            "docs": {
+                              "Observer.html#isObserving": {
+                                "ref": "Observer.html#isObserving",
+                                "tf": 2.1739130434782608
                               }
                             }
                           }
@@ -5592,7 +6297,7 @@
                       },
                       "Observer.html": {
                         "ref": "Observer.html",
-                        "tf": 2.1739130434782608
+                        "tf": 1.639344262295082
                       },
                       "Observer.html#_target": {
                         "ref": "Observer.html#_target",
@@ -5600,7 +6305,7 @@
                       },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 26.38888888888889
+                        "tf": 27.325581395348838
                       }
                     },
                     "s": {
@@ -5895,6 +6600,44 @@
                 }
               }
             }
+          },
+          "n": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "n": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "t": {
+                                "docs": {
+                                  "Observer.html#autoDisconnect": {
+                                    "ref": "Observer.html#autoDisconnect",
+                                    "tf": 27
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "r": {
@@ -5985,6 +6728,27 @@
                 }
               }
             },
+            "s": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "v": {
+                    "docs": {
+                      "Observer.html#_autoDisconnectPromiseResolve": {
+                        "ref": "Observer.html#_autoDisconnectPromiseResolve",
+                        "tf": 8.333333333333332
+                      },
+                      "Observer.html#cancelAutoDisconnect": {
+                        "ref": "Observer.html#cancelAutoDisconnect",
+                        "tf": 3.3333333333333335
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "c": {
               "docs": {},
               "o": {
@@ -6012,6 +6776,41 @@
                   "ObserverOptions.html#.descendantText": {
                     "ref": "ObserverOptions.html#.descendantText",
                     "tf": 2.1739130434782608
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "h": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "/": {
+                              "docs": {},
+                              "j": {
+                                "docs": {
+                                  "Observer.html": {
+                                    "ref": "Observer.html",
+                                    "tf": 0.819672131147541
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -6120,7 +6919,7 @@
               },
               "Observer.html": {
                 "ref": "Observer.html",
-                "tf": 1.0869565217391304
+                "tf": 1.639344262295082
               },
               "Observer.html#_callback": {
                 "ref": "Observer.html#_callback",
@@ -6128,7 +6927,11 @@
               },
               "Observer.html#observe": {
                 "ref": "Observer.html#observe",
-                "tf": 1.3888888888888888
+                "tf": 1.1627906976744187
+              },
+              "Observer.html#autoDisconnect": {
+                "ref": "Observer.html#autoDisconnect",
+                "tf": 2
               },
               "Observer.html#takeRecords": {
                 "ref": "Observer.html#takeRecords",
@@ -6444,6 +7247,41 @@
                   }
                 }
               }
+            },
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "t": {
+                                "docs": {
+                                  "Observer.html#cancelAutoDisconnect": {
+                                    "ref": "Observer.html#cancelAutoDisconnect",
+                                    "tf": 3.3333333333333335
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "a": {
@@ -6568,7 +7406,7 @@
                           },
                           "Observer.html": {
                             "ref": "Observer.html",
-                            "tf": 1.0869565217391304
+                            "tf": 1.639344262295082
                           },
                           "Observer.html#_callback": {
                             "ref": "Observer.html#_callback",
@@ -6577,6 +7415,77 @@
                           "Observer.html#takeRecords": {
                             "ref": "Observer.html#takeRecords",
                             "tf": 5
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "u": {
+                        "docs": {},
+                        "t": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "d": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {
+                                                  "Observer.html": {
+                                                    "ref": "Observer.html",
+                                                    "tf": 0.819672131147541
+                                                  },
+                                                  "Observer.html#_autoDisconnectTimer": {
+                                                    "ref": "Observer.html#_autoDisconnectTimer",
+                                                    "tf": 8.333333333333332
+                                                  },
+                                                  "Observer.html#disconnect": {
+                                                    "ref": "Observer.html#disconnect",
+                                                    "tf": 2.380952380952381
+                                                  },
+                                                  "Observer.html#cancelAutoDisconnect": {
+                                                    "ref": "Observer.html#cancelAutoDisconnect",
+                                                    "tf": 700
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           }
                         }
                       }
@@ -6665,6 +7574,10 @@
                                 "ObserverOptionsBuilder.html#useOldValue": {
                                   "ref": "ObserverOptionsBuilder.html#useOldValue",
                                   "tf": 1.2195121951219512
+                                },
+                                "Observer.html#autoDisconnect": {
+                                  "ref": "Observer.html#autoDisconnect",
+                                  "tf": 2
                                 }
                               },
                               "(": {
@@ -6677,7 +7590,7 @@
                                     },
                                     "Observer.html": {
                                       "ref": "Observer.html",
-                                      "tf": 1.0869565217391304
+                                      "tf": 0.819672131147541
                                     },
                                     "Observer.html#_callback": {
                                       "ref": "Observer.html#_callback",
@@ -6694,7 +7607,48 @@
                                         },
                                         "Observer.html#observe": {
                                           "ref": "Observer.html#observe",
-                                          "tf": 1.3888888888888888
+                                          "tf": 1.1627906976744187
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "o": {
+                                  "docs": {},
+                                  "b": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      ".": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "b": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "r": {
+                                                      "docs": {},
+                                                      "v": {
+                                                        "docs": {
+                                                          "Observer.html#isObserving": {
+                                                            "ref": "Observer.html#isObserving",
+                                                            "tf": 4.3478260869565215
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
                                         }
                                       }
                                     }
@@ -6888,6 +7842,10 @@
                     },
                     "Observer.html": {
                       "ref": "Observer.html",
+                      "tf": 0.819672131147541
+                    },
+                    "Observer.html#isObserving": {
+                      "ref": "Observer.html#isObserving",
                       "tf": 2.1739130434782608
                     },
                     "Observer.html#_target": {
@@ -6900,11 +7858,19 @@
                     },
                     "Observer.html#observe": {
                       "ref": "Observer.html#observe",
-                      "tf": 2.7777777777777777
+                      "tf": 2.3255813953488373
                     },
                     "Observer.html#disconnect": {
                       "ref": "Observer.html#disconnect",
-                      "tf": 4.166666666666666
+                      "tf": 2.380952380952381
+                    },
+                    "Observer.html#autoDisconnect": {
+                      "ref": "Observer.html#autoDisconnect",
+                      "tf": 2
+                    },
+                    "Observer.html#cancelAutoDisconnect": {
+                      "ref": "Observer.html#cancelAutoDisconnect",
+                      "tf": 3.3333333333333335
                     },
                     "Observer.html#takeRecords": {
                       "ref": "Observer.html#takeRecords",
@@ -7067,7 +8033,11 @@
                             },
                             "Observer.html": {
                               "ref": "Observer.html",
-                              "tf": 3.260869565217391
+                              "tf": 1.639344262295082
+                            },
+                            "Observer.html#isObserving": {
+                              "ref": "Observer.html#isObserving",
+                              "tf": 2.1739130434782608
                             },
                             "Observer.html#_options": {
                               "ref": "Observer.html#_options",
@@ -7075,11 +8045,19 @@
                             },
                             "Observer.html#observe": {
                               "ref": "Observer.html#observe",
-                              "tf": 4.166666666666666
+                              "tf": 4.651162790697675
                             },
                             "Observer.html#disconnect": {
                               "ref": "Observer.html#disconnect",
-                              "tf": 4.166666666666666
+                              "tf": 2.380952380952381
+                            },
+                            "Observer.html#autoDisconnect": {
+                              "ref": "Observer.html#autoDisconnect",
+                              "tf": 2
+                            },
+                            "Observer.html#cancelAutoDisconnect": {
+                              "ref": "Observer.html#cancelAutoDisconnect",
+                              "tf": 3.3333333333333335
                             },
                             "Observer.html#takeRecords": {
                               "ref": "Observer.html#takeRecords",
@@ -7283,7 +8261,7 @@
                                     },
                                     "Observer.html": {
                                       "ref": "Observer.html",
-                                      "tf": 1.0869565217391304
+                                      "tf": 0.819672131147541
                                     },
                                     "Observer.html#_options": {
                                       "ref": "Observer.html#_options",
@@ -7291,7 +8269,7 @@
                                     },
                                     "Observer.html#observe": {
                                       "ref": "Observer.html#observe",
-                                      "tf": 2.7777777777777777
+                                      "tf": 3.488372093023256
                                     }
                                   },
                                   "o": {
@@ -7487,7 +8465,12 @@
             }
           },
           "t": {
-            "docs": {},
+            "docs": {
+              "Observer.html#autoDisconnect": {
+                "ref": "Observer.html#autoDisconnect",
+                "tf": 2
+              }
+            },
             ";": {
               "docs": {},
               "p": {
@@ -7541,6 +8524,18 @@
                                         },
                                         "ObserverBuilder.html#_target": {
                                           "ref": "ObserverBuilder.html#_target",
+                                          "tf": 33.33333333333333
+                                        },
+                                        "Observer.html#_autoDisconnectLock": {
+                                          "ref": "Observer.html#_autoDisconnectLock",
+                                          "tf": 33.33333333333333
+                                        },
+                                        "Observer.html#_autoDisconnectTimer": {
+                                          "ref": "Observer.html#_autoDisconnectTimer",
+                                          "tf": 33.33333333333333
+                                        },
+                                        "Observer.html#_autoDisconnectPromiseResolve": {
+                                          "ref": "Observer.html#_autoDisconnectPromiseResolve",
                                           "tf": 33.33333333333333
                                         }
                                       }
@@ -8429,6 +9424,14 @@
                         "ObserverOptions.html#characterDataOldValue": {
                           "ref": "ObserverOptions.html#characterDataOldValue",
                           "tf": 50
+                        },
+                        "Observer.html#isObserving": {
+                          "ref": "Observer.html#isObserving",
+                          "tf": 50
+                        },
+                        "Observer.html#_autoDisconnectLock": {
+                          "ref": "Observer.html#_autoDisconnectLock",
+                          "tf": 33.33333333333333
                         }
                       }
                     }
@@ -8488,6 +9491,10 @@
                       "ObserverOptionsBuilder.html": {
                         "ref": "ObserverOptionsBuilder.html",
                         "tf": 1.4285714285714286
+                      },
+                      "Observer.html": {
+                        "ref": "Observer.html",
+                        "tf": 0.819672131147541
                       },
                       "Observer.html#.new": {
                         "ref": "Observer.html#.new",
@@ -8792,6 +9799,14 @@
                             "ref": "Observer.html#disconnect",
                             "tf": 110
                           },
+                          "Observer.html#autoDisconnect": {
+                            "ref": "Observer.html#autoDisconnect",
+                            "tf": 110
+                          },
+                          "Observer.html#cancelAutoDisconnect": {
+                            "ref": "Observer.html#cancelAutoDisconnect",
+                            "tf": 110
+                          },
                           "Observer.html#takeRecords": {
                             "ref": "Observer.html#takeRecords",
                             "tf": 110
@@ -8799,6 +9814,35 @@
                           "Observer.html#.new": {
                             "ref": "Observer.html#.new",
                             "tf": 110
+                          }
+                        },
+                        "|": {
+                          "docs": {},
+                          "u": {
+                            "docs": {},
+                            "n": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "f": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {
+                                          "Observer.html#_autoDisconnectPromiseResolve": {
+                                            "ref": "Observer.html#_autoDisconnectPromiseResolve",
+                                            "tf": 33.33333333333333
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           }
                         }
                       }
@@ -8849,6 +9893,18 @@
                   "ObserverOptions.html#.all": {
                     "ref": "ObserverOptions.html#.all",
                     "tf": 1.9230769230769231
+                  },
+                  "Observer.html#isObserving": {
+                    "ref": "Observer.html#isObserving",
+                    "tf": 4.3478260869565215
+                  },
+                  "Observer.html#disconnect": {
+                    "ref": "Observer.html#disconnect",
+                    "tf": 2.380952380952381
+                  },
+                  "Observer.html#autoDisconnect": {
+                    "ref": "Observer.html#autoDisconnect",
+                    "tf": 2
                   }
                 }
               }
@@ -8880,10 +9936,6 @@
             "ObserverOptionsBuilder.html#subtree": {
               "ref": "ObserverOptionsBuilder.html#subtree",
               "tf": 1.3888888888888888
-            },
-            "Observer.html": {
-              "ref": "Observer.html",
-              "tf": 1.0869565217391304
             }
           },
           "u": {
@@ -8964,7 +10016,7 @@
                     },
                     "Observer.html": {
                       "ref": "Observer.html",
-                      "tf": 1.0869565217391304
+                      "tf": 0.819672131147541
                     },
                     "Observer.html#_callback": {
                       "ref": "Observer.html#_callback",
@@ -8972,7 +10024,7 @@
                     },
                     "Observer.html#observe": {
                       "ref": "Observer.html#observe",
-                      "tf": 2.7777777777777777
+                      "tf": 2.3255813953488373
                     },
                     "Observer.html#.new": {
                       "ref": "Observer.html#.new",
@@ -9015,7 +10067,7 @@
                                       },
                                       "Observer.html": {
                                         "ref": "Observer.html",
-                                        "tf": 2.1739130434782608
+                                        "tf": 1.639344262295082
                                       },
                                       "Observer.html#_callback": {
                                         "ref": "Observer.html#_callback",
@@ -9023,7 +10075,7 @@
                                       },
                                       "Observer.html#observe": {
                                         "ref": "Observer.html#observe",
-                                        "tf": 1.3888888888888888
+                                        "tf": 1.1627906976744187
                                       },
                                       "Observer.html#takeRecords": {
                                         "ref": "Observer.html#takeRecords",
@@ -9052,7 +10104,7 @@
                                                   },
                                                   "Observer.html": {
                                                     "ref": "Observer.html",
-                                                    "tf": 1.0869565217391304
+                                                    "tf": 0.819672131147541
                                                   }
                                                 }
                                               }
@@ -9145,42 +10197,7 @@
                                                       "docs": {
                                                         "Observer.html#observe": {
                                                           "ref": "Observer.html#observe",
-                                                          "tf": 1.3888888888888888
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          },
-                                          "d": {
-                                            "docs": {},
-                                            "i": {
-                                              "docs": {},
-                                              "s": {
-                                                "docs": {},
-                                                "c": {
-                                                  "docs": {},
-                                                  "o": {
-                                                    "docs": {},
-                                                    "n": {
-                                                      "docs": {},
-                                                      "n": {
-                                                        "docs": {},
-                                                        "e": {
-                                                          "docs": {},
-                                                          "c": {
-                                                            "docs": {},
-                                                            "t": {
-                                                              "docs": {
-                                                                "Observer.html#disconnect": {
-                                                                  "ref": "Observer.html#disconnect",
-                                                                  "tf": 4.166666666666666
-                                                                }
-                                                              }
-                                                            }
-                                                          }
+                                                          "tf": 1.1627906976744187
                                                         }
                                                       }
                                                     }
@@ -9216,7 +10233,7 @@
                                         "docs": {
                                           "Observer.html": {
                                             "ref": "Observer.html",
-                                            "tf": 1.0869565217391304
+                                            "tf": 0.819672131147541
                                           },
                                           "Observer.html#_callback": {
                                             "ref": "Observer.html#_callback",
@@ -9324,6 +10341,10 @@
                                                 "ObserverBuilder.html#_callback": {
                                                   "ref": "ObserverBuilder.html#_callback",
                                                   "tf": 2.941176470588235
+                                                },
+                                                "Observer.html": {
+                                                  "ref": "Observer.html",
+                                                  "tf": 0.819672131147541
                                                 },
                                                 "Observer.html#_callback": {
                                                   "ref": "Observer.html#_callback",
@@ -9649,6 +10670,10 @@
                         "ref": "ObserverOptionsBuilder.html#_options",
                         "tf": 110
                       },
+                      "Observer.html#isObserving": {
+                        "ref": "Observer.html#isObserving",
+                        "tf": 110
+                      },
                       "Observer.html#_options": {
                         "ref": "Observer.html#_options",
                         "tf": 110
@@ -9659,6 +10684,18 @@
                       },
                       "Observer.html#_callback": {
                         "ref": "Observer.html#_callback",
+                        "tf": 110
+                      },
+                      "Observer.html#_autoDisconnectLock": {
+                        "ref": "Observer.html#_autoDisconnectLock",
+                        "tf": 110
+                      },
+                      "Observer.html#_autoDisconnectTimer": {
+                        "ref": "Observer.html#_autoDisconnectTimer",
+                        "tf": 110
+                      },
+                      "Observer.html#_autoDisconnectPromiseResolve": {
+                        "ref": "Observer.html#_autoDisconnectPromiseResolve",
                         "tf": 110
                       }
                     }
@@ -9797,6 +10834,14 @@
                     }
                   }
                 }
+              }
+            }
+          },
+          "s": {
+            "docs": {
+              "Observer.html#autoDisconnect": {
+                "ref": "Observer.html#autoDisconnect",
+                "tf": 27
               }
             }
           }
@@ -9945,6 +10990,10 @@
                 },
                 "Observer.html": {
                   "ref": "Observer.html",
+                  "tf": 1.639344262295082
+                },
+                "Observer.html#isObserving": {
+                  "ref": "Observer.html#isObserving",
                   "tf": 2.1739130434782608
                 },
                 "Observer.html#_target": {
@@ -9957,11 +11006,19 @@
                 },
                 "Observer.html#observe": {
                   "ref": "Observer.html#observe",
-                  "tf": 1.3888888888888888
+                  "tf": 1.1627906976744187
                 },
                 "Observer.html#disconnect": {
                   "ref": "Observer.html#disconnect",
-                  "tf": 4.166666666666666
+                  "tf": 2.380952380952381
+                },
+                "Observer.html#autoDisconnect": {
+                  "ref": "Observer.html#autoDisconnect",
+                  "tf": 2
+                },
+                "Observer.html#cancelAutoDisconnect": {
+                  "ref": "Observer.html#cancelAutoDisconnect",
+                  "tf": 3.3333333333333335
                 },
                 "Observer.html#takeRecords": {
                   "ref": "Observer.html#takeRecords",
@@ -9997,7 +11054,7 @@
                   },
                   "Observer.html": {
                     "ref": "Observer.html",
-                    "tf": 1.0869565217391304
+                    "tf": 0.819672131147541
                   }
                 },
                 "|": {
@@ -10023,6 +11080,56 @@
                                   "Observer.html#_target": {
                                     "ref": "Observer.html#_target",
                                     "tf": 25
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "j": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    ".": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "m": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "|": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "b": {
+                                              "docs": {
+                                                "Observer.html#_autoDisconnectTimer": {
+                                                  "ref": "Observer.html#_autoDisconnectTimer",
+                                                  "tf": 33.33333333333333
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
                                   }
                                 }
                               }
@@ -10194,11 +11301,11 @@
                       },
                       "Observer.html": {
                         "ref": "Observer.html",
-                        "tf": 1.0869565217391304
+                        "tf": 0.819672131147541
                       },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 1.3888888888888888
+                        "tf": 1.1627906976744187
                       }
                     }
                   }
@@ -10336,7 +11443,7 @@
                       },
                       "Observer.html": {
                         "ref": "Observer.html",
-                        "tf": 2.1739130434782608
+                        "tf": 0.819672131147541
                       },
                       "Observer.html#_options": {
                         "ref": "Observer.html#_options",
@@ -10344,7 +11451,7 @@
                       },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 2.7777777777777777
+                        "tf": 2.3255813953488373
                       }
                     }
                   }
@@ -10370,11 +11477,11 @@
                         },
                         "Observer.html": {
                           "ref": "Observer.html",
-                          "tf": 1.0869565217391304
+                          "tf": 0.819672131147541
                         },
                         "Observer.html#observe": {
                           "ref": "Observer.html#observe",
-                          "tf": 1.3888888888888888
+                          "tf": 1.1627906976744187
                         }
                       }
                     }
@@ -10487,6 +11594,39 @@
                             "ObserverOptions.html#subtree": {
                               "ref": "ObserverOptions.html#subtree",
                               "tf": 1.2195121951219512
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "u": {
+                          "docs": {},
+                          "t": {
+                            "docs": {
+                              "Observer.html#_autoDisconnectTimer": {
+                                "ref": "Observer.html#_autoDisconnectTimer",
+                                "tf": 8.333333333333332
+                              },
+                              "Observer.html#autoDisconnect": {
+                                "ref": "Observer.html#autoDisconnect",
+                                "tf": 2
+                              }
                             }
                           }
                         }
@@ -10627,6 +11767,123 @@
                 }
               }
             }
+          },
+          "a": {
+            "docs": {},
+            "u": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "d": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "n": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "k": {
+                                              "docs": {
+                                                "Observer.html#_autoDisconnectLock": {
+                                                  "ref": "Observer.html#_autoDisconnectLock",
+                                                  "tf": 683.3333333333334
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "t": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {
+                                              "Observer.html#_autoDisconnectTimer": {
+                                                "ref": "Observer.html#_autoDisconnectTimer",
+                                                "tf": 691.6666666666667
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "p": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "m": {
+                                              "docs": {},
+                                              "i": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "r": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "s": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "l": {
+                                                              "docs": {},
+                                                              "v": {
+                                                                "docs": {
+                                                                  "Observer.html#_autoDisconnectPromiseResolve": {
+                                                                    "ref": "Observer.html#_autoDisconnectPromiseResolve",
+                                                                    "tf": 683.3333333333334
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "v": {
@@ -10651,6 +11908,10 @@
                   },
                   "Observer.html#disconnect": {
                     "ref": "Observer.html#disconnect",
+                    "tf": 50
+                  },
+                  "Observer.html#cancelAutoDisconnect": {
+                    "ref": "Observer.html#cancelAutoDisconnect",
                     "tf": 50
                   }
                 }
@@ -10768,15 +12029,27 @@
                   },
                   "Observer.html": {
                     "ref": "Observer.html",
-                    "tf": 4.3478260869565215
+                    "tf": 1.639344262295082
+                  },
+                  "Observer.html#isObserving": {
+                    "ref": "Observer.html#isObserving",
+                    "tf": 6.521739130434782
                   },
                   "Observer.html#observe": {
                     "ref": "Observer.html#observe",
-                    "tf": 5.555555555555555
+                    "tf": 4.651162790697675
                   },
                   "Observer.html#disconnect": {
                     "ref": "Observer.html#disconnect",
-                    "tf": 4.166666666666666
+                    "tf": 2.380952380952381
+                  },
+                  "Observer.html#autoDisconnect": {
+                    "ref": "Observer.html#autoDisconnect",
+                    "tf": 2
+                  },
+                  "Observer.html#cancelAutoDisconnect": {
+                    "ref": "Observer.html#cancelAutoDisconnect",
+                    "tf": 3.3333333333333335
                   },
                   "Observer.html#takeRecords": {
                     "ref": "Observer.html#takeRecords",
@@ -10822,7 +12095,7 @@
                       },
                       "Observer.html": {
                         "ref": "Observer.html",
-                        "tf": 3.260869565217391
+                        "tf": 2.459016393442623
                       },
                       "Observer.html#_target": {
                         "ref": "Observer.html#_target",
@@ -10830,7 +12103,7 @@
                       },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 26.38888888888889
+                        "tf": 27.325581395348838
                       }
                     },
                     ".": {
@@ -11136,6 +12409,10 @@
                           "docs": {},
                           "d": {
                             "docs": {
+                              "Observer.html": {
+                                "ref": "Observer.html",
+                                "tf": 0.819672131147541
+                              },
                               "Observer.html#takeRecords": {
                                 "ref": "Observer.html#takeRecords",
                                 "tf": 700
@@ -11430,6 +12707,10 @@
                         "ObserverBuilder.html#options": {
                           "ref": "ObserverBuilder.html#options",
                           "tf": 2.1739130434782608
+                        },
+                        "Observer.html#_autoDisconnectTimer": {
+                          "ref": "Observer.html#_autoDisconnectTimer",
+                          "tf": 16.666666666666664
                         }
                       }
                     }
@@ -11697,7 +12978,7 @@
                           },
                           "Observer.html": {
                             "ref": "Observer.html",
-                            "tf": 1.0869565217391304
+                            "tf": 0.819672131147541
                           },
                           "Observer.html#_options": {
                             "ref": "Observer.html#_options",
@@ -11705,7 +12986,7 @@
                           },
                           "Observer.html#observe": {
                             "ref": "Observer.html#observe",
-                            "tf": 4.166666666666666
+                            "tf": 4.651162790697675
                           }
                         },
                         "e": {
@@ -11920,7 +13201,7 @@
                                           },
                                           "Observer.html#observe": {
                                             "ref": "Observer.html#observe",
-                                            "tf": 1.3888888888888888
+                                            "tf": 1.1627906976744187
                                           }
                                         }
                                       }
@@ -12136,13 +13417,169 @@
                 }
               }
             }
+          },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "n": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {
+                                      "Observer.html": {
+                                        "ref": "Observer.html",
+                                        "tf": 0.819672131147541
+                                      },
+                                      "Observer.html#_autoDisconnectLock": {
+                                        "ref": "Observer.html#_autoDisconnectLock",
+                                        "tf": 33.33333333333333
+                                      },
+                                      "Observer.html#_autoDisconnectTimer": {
+                                        "ref": "Observer.html#_autoDisconnectTimer",
+                                        "tf": 8.333333333333332
+                                      },
+                                      "Observer.html#_autoDisconnectPromiseResolve": {
+                                        "ref": "Observer.html#_autoDisconnectPromiseResolve",
+                                        "tf": 25
+                                      },
+                                      "Observer.html#disconnect": {
+                                        "ref": "Observer.html#disconnect",
+                                        "tf": 11.904761904761903
+                                      },
+                                      "Observer.html#autoDisconnect": {
+                                        "ref": "Observer.html#autoDisconnect",
+                                        "tf": 677
+                                      },
+                                      "Observer.html#cancelAutoDisconnect": {
+                                        "ref": "Observer.html#cancelAutoDisconnect",
+                                        "tf": 10
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "w": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "Observer.html#autoDisconnect": {
+                      "ref": "Observer.html#autoDisconnect",
+                      "tf": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "p": {
+          "docs": {},
+          "r": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "Observer.html#autoDisconnect": {
+                        "ref": "Observer.html#autoDisconnect",
+                        "tf": 6
+                      }
+                    },
+                    "e": {
+                      "docs": {},
+                      ".": {
+                        "docs": {},
+                        "&": {
+                          "docs": {},
+                          "l": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              ";": {
+                                "docs": {},
+                                "v": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "&": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {
+                                                "Observer.html#autoDisconnect": {
+                                                  "ref": "Observer.html#autoDisconnect",
+                                                  "tf": 25
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },
-      "length": 1019
+      "length": 1119
     },
     "corpusTokens": [
+      "0",
       "1",
+      "_autodisconnectlock",
+      "_autodisconnectpromiseresolv",
+      "_autodisconnecttim",
       "_callback",
       "_option",
       "_target",
@@ -12158,6 +13595,8 @@
       "attributes(['data",
       "attributes(filt",
       "attributes(filter).subtre",
+      "autodisconnect",
+      "await",
       "b",
       "b.descendants().attributes(['class']).useoldvalu",
       "b.descendants().attributes(['data",
@@ -12174,6 +13613,7 @@
       "call((mut",
       "call(callback",
       "callback",
+      "cancelautodisconnect",
       "cdata",
       "cdatasect",
       "characterdata",
@@ -12187,11 +13627,13 @@
       "class=\"box\"&gt;&lt;/div&gt",
       "class=\"primary\"&gt;кнопка&lt;/button&gt",
       "class=\"r",
+      "cleartimeout",
       "comment",
       "console.log",
       "console.log('mut",
       "console.log(m",
       "console.log(mut",
+      "console.log(obs.isobserv",
       "console.log(record",
       "const",
       "content",
@@ -12233,6 +13675,7 @@
       "for(document.getelementbyid('cont",
       "for(target",
       "function",
+      "function|undefin",
       "global",
       "green",
       "gt",
@@ -12249,10 +13692,12 @@
       "info",
       "insertbefor",
       "invalid",
+      "isobserv",
       "js",
       "line').textcont",
       "list",
       "list:class",
+      "lt",
       "lt;/div&gt",
       "lt;/section&gt",
       "lt;button",
@@ -12270,6 +13715,7 @@
       "m.target",
       "m.target.data",
       "member",
+      "ms",
       "mutat",
       "mutation.attributenam",
       "mutation.oldvalu",
@@ -12280,7 +13726,6 @@
       "mutationobserv",
       "mutationobserver((mut",
       "mutationobserver(console.log",
-      "mutationobserver.disconnect",
       "mutationobserver.observ",
       "mutationobserverinit",
       "mutationrecord",
@@ -12288,21 +13733,33 @@
       "nest",
       "new",
       "node",
+      "nodejs.timeout|numb",
       "node|undefin",
       "null",
       "o",
       "o.descendants().text",
       "o.descendants().text().useoldvalu",
+      "ob",
+      "obs.disconnect",
+      "obs.observ",
       "observ",
+      "observer#_autodisconnectlock",
+      "observer#_autodisconnectpromiseresolv",
+      "observer#_autodisconnecttim",
       "observer#_callback",
       "observer#_opt",
       "observer#_target",
+      "observer#autodisconnect",
+      "observer#cancelautodisconnect",
       "observer#disconnect",
+      "observer#isobserv",
       "observer#observ",
       "observer#takerecord",
       "observer((mut",
       "observer(callback",
       "observer(console.log",
+      "observer.autodisconnect(5000",
+      "observer.cancelautodisconnect",
       "observer.disconnect",
       "observer.new",
       "observer.observ",
@@ -12376,6 +13833,7 @@
       "observeroptionsbuilder.useoldvalu",
       "observeroptions|mutationobserverinit|undefin",
       "oldvalu",
+      "ondisconnect",
       "option",
       "options((b",
       "options((build",
@@ -12384,12 +13842,17 @@
       "options(buildercallback",
       "options(cb",
       "options(configurefn",
+      "promis",
+      "promise.&lt;void&gt",
       "readm",
       "readonly&gt",
       "record",
       "removechild",
+      "resolv",
       "root",
+      "rotcetihra/j",
       "secondari",
+      "settimeout",
       "span",
       "span').textcont",
       "span.textcont",
@@ -12861,8 +14324,18 @@
       "name": "Observer",
       "tags": "Observer",
       "summary": "",
-      "description": "🧭 Observer — удобная обёртка над стандартным MutationObserver с предустановленными параметрами и (опционально) целевым DOM-узлом. Класс инкапсулирует логику повторного использования конфигурации и узла, позволяя отслеживать изменения в разных элементах без повторного указания одних и тех же опций. ⚙️ Назначение: Повторно использовать один и тот же набор опций для нескольких элементов. Упростить вызов .observe() без необходимости передавать конфигурацию и узел каждый раз. Опционально задать целевой узел наблюдения в конструкторе. 📐 Сигнатура конструктора: new Observer(callback, options?, target?) callback {MutationCallback} — вызывается при каждом изменении. options {MutationObserverInit} — конфигурация (например, { childList: true, subtree: true }). target {Node} — DOM-узел, за которым нужно следить по умолчанию. ✅ Пример использования: const observer = new Observer((mutations) =&gt; { for (const m of mutations) { console.log(m); } }, { childList: true, subtree: true }, document.body); observer.observe(); // будет использовать document.body и указанные опции observer.observe(document.querySelector('#header')); // target переопределён ⚠️ Важно: По спецификации MutationObserver необходимо указать хотя бы один из следующих параметров: childList attributes characterData В противном случае вызов .observe() приведёт к исключению: An invalid or illegal string was specified",
+      "description": "🧭 Observer — расширенная обёртка над стандартным MutationObserver с поддержкой предустановленных параметров и (опционально) целевого DOM-узла. Класс инкапсулирует логику повторного использования конфигурации и узла, позволяя отслеживать изменения в разных элементах без повторного указания одних и тех же опций. 🧩 Возможности ♻️ Повторное использование набора опций и callback для разных DOM-узлов. 🚀 Упрощённый вызов .observe() без необходимости каждый раз передавать параметры и целевой узел. 🏗️ Fluent-интерфейс через ObserverBuilder и ObserverOptionsBuilder. 🛑 Методы управления жизненным циклом: observe, disconnect, autoDisconnect, cancelAutoDisconnect, takeRecords. 🟢 Безопасная работа с состоянием наблюдения (isObserving). 📐 Сигнатура конструктора new Observer(callback, options?, target?) callback {MutationCallback} — вызывается при каждом изменении. options {MutationObserverInit} — конфигурация (например, { childList: true, subtree: true }). target {Node} — DOM-узел, за которым нужно следить по умолчанию. ✅ Пример использования import { Observer, ObserverOptions } from '@rotcetihra/js-observe'; const observer = new Observer( (mutations) =&gt; { mutations.forEach(m =&gt; console.log(m)); }, ObserverOptions.all(), document.body ); observer.observe(); // будет использовать document.body и указанные опции observer.observe(document.querySelector('#header')); // target переопределён ⚠️ Важно По спецификации MutationObserver необходимо указать хотя бы один из параметров: 👶 childList 🏷️ attributes ✏️ characterData В противном случае вызов .observe() приведёт к исключению: 🚫 \"An invalid or illegal string was specified\" Для декларативного создания используйте Observer.new или функцию observer.",
       "body": ""
+    },
+    "Observer.html#isObserving": {
+      "id": "Observer.html#isObserving",
+      "kind": "member",
+      "title": "isObserving :boolean",
+      "longname": "Observer#isObserving",
+      "name": "isObserving",
+      "tags": "Observer#isObserving isObserving",
+      "summary": "",
+      "description": "🟢 isObserving — флаг, указывающий, активно ли в данный момент наблюдение за DOM-узлом. 📋 Описание: Значение true означает, что метод observe был вызван и Observer следит за изменениями. После вызова disconnect значение сбрасывается в false. Используется для предотвращения повторного запуска наблюдения и корректного управления жизненным циклом Observer. Позволяет безопасно вызывать observe() и disconnect() несколько раз подряд без ошибок. 🧑‍💻 Пример использования: const obs = new Observer(callback, { childList: true }, document.body); obs.observe(); console.log(obs.isObserving); // 👉 true obs.disconnect(); console.log(obs.isObserving); // 👉 false"
     },
     "Observer.html#_options": {
       "id": "Observer.html#_options",
@@ -12894,6 +14367,36 @@
       "summary": "",
       "description": "📞 Callback-функция, вызываемая при каждом изменении DOM. Передаётся в конструктор и используется как основной обработчик мутаций. Сигнатура: (mutations: MutationRecord[], observer: MutationObserver) =&gt; void Пример: const observer = new Observer((mutations) =&gt; { mutations.forEach(m =&gt; console.log(m)); });"
     },
+    "Observer.html#_autoDisconnectLock": {
+      "id": "Observer.html#_autoDisconnectLock",
+      "kind": "member",
+      "title": "&lt;protected&gt; _autoDisconnectLock :boolean",
+      "longname": "Observer#_autoDisconnectLock",
+      "name": "_autoDisconnectLock",
+      "tags": "Observer#_autoDisconnectLock _autoDisconnectLock",
+      "summary": "",
+      "description": "🔒 Внутренний флаг блокировки для autoDisconnect. Используется для предотвращения повторного запуска автоматического отключения: если autoDisconnect() уже был вызван и таймер ещё не сработал, повторные вызовы игнорируются. После срабатывания таймера и вызова disconnect() флаг сбрасывается."
+    },
+    "Observer.html#_autoDisconnectTimer": {
+      "id": "Observer.html#_autoDisconnectTimer",
+      "kind": "member",
+      "title": "&lt;protected&gt; _autoDisconnectTimer :NodeJS.Timeout|number",
+      "longname": "Observer#_autoDisconnectTimer",
+      "name": "_autoDisconnectTimer",
+      "tags": "Observer#_autoDisconnectTimer _autoDisconnectTimer",
+      "summary": "",
+      "description": "⏲️ _autoDisconnectTimer — идентификатор активного таймера автоотключения. Используется для хранения результата setTimeout из autoDisconnect. Позволяет отменить или сбросить таймер через cancelAutoDisconnect. undefined — таймер не запущен. После срабатывания или отмены всегда сбрасывается в undefined."
+    },
+    "Observer.html#_autoDisconnectPromiseResolve": {
+      "id": "Observer.html#_autoDisconnectPromiseResolve",
+      "kind": "member",
+      "title": "&lt;protected&gt; _autoDisconnectPromiseResolve :function|undefined",
+      "longname": "Observer#_autoDisconnectPromiseResolve",
+      "name": "_autoDisconnectPromiseResolve",
+      "tags": "Observer#_autoDisconnectPromiseResolve _autoDisconnectPromiseResolve",
+      "summary": "",
+      "description": "🔗 Внутренняя функция-resolve для промиса autoDisconnect. Используется для ручного завершения промиса, возвращаемого методом autoDisconnect, если отключение происходит не по таймеру, а вручную через disconnect. Это позволяет корректно резолвить промис даже при ручном отключении наблюдения. Устанавливается при запуске autoDisconnect. Вызывается и сбрасывается при disconnect или по таймеру."
+    },
     "Observer.html#observe": {
       "id": "Observer.html#observe",
       "kind": "function",
@@ -12902,7 +14405,7 @@
       "name": "observe",
       "tags": "Observer#observe observe",
       "summary": "",
-      "description": "🛰️ Запускает отслеживание изменений в DOM-узле. Обёртка над MutationObserver.observe(), использующая параметры и целевой узел, заданные в конструкторе, либо переопределяемые вручную при вызове. ──────────────── 📝 Что можно отслеживать: ➕➖ добавление/удаление дочерних элементов (childList) 🏷️ изменения атрибутов (attributes) 📝✏️ изменения текстового содержимого (characterData) 🌳 изменения во вложенных узлах (subtree) ──────────────── ⚠️ Важно: По спецификации MutationObserver, обязательно должна быть указана хотя бы одна из опций: childList attributes characterData Иначе будет выброшено исключение: \"An invalid or illegal string was specified\" ──────────────── ✅ Пример const observer = new Observer((mutations) =&gt; { for (const mutation of mutations) { console.log(mutation); } }, { attributes: true, attributeOldValue: true, subtree: true }, document.getElementById('app')); observer.observe(); // или переопределить target и options вручную: observer.observe(document.querySelector('#header'), { childList: true });"
+      "description": "🛰️ Запускает отслеживание изменений в DOM-узле. Обёртка над MutationObserver.observe(), использующая параметры и целевой узел, заданные в конструкторе, либо переопределяемые вручную при вызове. 📋 Что делает: Если параметры target и/или options не переданы, используются значения из конструктора. Если не указан ни один из обязательных параметров (childList, attributes, characterData), будет выброшено исключение. Повторный вызов observe() без предварительного disconnect() не приведёт к повторному запуску наблюдения. 📝 Что можно отслеживать: ➕➖ добавление/удаление дочерних элементов (childList) 🏷️ изменения атрибутов (attributes) 📝✏️ изменения текстового содержимого (characterData) 🌳 изменения во вложенных узлах (subtree) ⚠️ Важно: По спецификации MutationObserver, обязательно должна быть указана хотя бы одна из опций: childList attributes characterData Иначе будет выброшено исключение: \"An invalid or illegal string was specified\" ✅ Пример: const observer = new Observer((mutations) =&gt; { for (const mutation of mutations) { console.log(mutation); } }, { attributes: true, attributeOldValue: true, subtree: true }, document.getElementById('app')); observer.observe(); // или переопределить target и options вручную: observer.observe(document.querySelector('#header'), { childList: true });"
     },
     "Observer.html#disconnect": {
       "id": "Observer.html#disconnect",
@@ -12912,7 +14415,27 @@
       "name": "disconnect",
       "tags": "Observer#disconnect disconnect",
       "summary": "",
-      "description": "🔌 Отключает наблюдение за всеми ранее отслеживаемыми DOM-узлами. Обёртка над стандартным методом MutationObserver.disconnect(). Прекращает получение уведомлений обо всех изменениях, за которыми следил данный Observer. 🧹 Когда использовать: Когда наблюдение больше не требуется. Чтобы освободить ресурсы и предотвратить утечки памяти. ✅ Пример: const observer = new Observer(callback, { childList: true }, document.body); observer.observe(); // Через некоторое время... observer.disconnect(); // Отключение отслеживания"
+      "description": "🔌 Останавливает наблюдение за всеми ранее отслеживаемыми DOM-узлами. 📋 Что делает: Прекращает получение уведомлений обо всех изменениях, за которыми следил данный Observer. Сбрасывает флаг isObserving в false. Если был активен таймер автоотключения (autoDisconnect), отменяет его через cancelAutoDisconnect и завершает промис autoDisconnect. Безопасно вызывать несколько раз подряд — повторные вызовы не приводят к ошибкам. 🧑‍💻 Пример использования: const observer = new Observer(callback, { childList: true }, document.body); observer.observe(); // ...позже observer.disconnect(); // Отключение отслеживания 📝 Когда использовать: Когда наблюдение больше не требуется. Чтобы освободить ресурсы и предотвратить утечки памяти. Перед повторным запуском наблюдения с другими параметрами. ⚠️ Особенности: Если был запущен autoDisconnect, таймер будет отменён и промис autoDisconnect завершится. После вызова disconnect можно снова запускать observe или autoDisconnect."
+    },
+    "Observer.html#autoDisconnect": {
+      "id": "Observer.html#autoDisconnect",
+      "kind": "function",
+      "title": "autoDisconnect( ms [, onDisconnect ] ) → {Promise.&lt;void&gt;}",
+      "longname": "Observer#autoDisconnect",
+      "name": "autoDisconnect",
+      "tags": "Observer#autoDisconnect autoDisconnect",
+      "summary": "",
+      "description": "⏳ Автоматически отключает наблюдение через заданное количество миллисекунд. 📋 Что делает: Запускает таймер, по истечении которого вызывается disconnect() и наблюдение прекращается. Если наблюдение уже неактивно (isObserving: false), метод ничего не делает и возвращает сразу резолвящийся Promise. Если autoDisconnect уже был вызван и таймер ещё не сработал, повторные вызовы возвращают новый Promise, который резолвится одновременно с первым. После отключения (или ручного вызова disconnect) возможность автоотключения восстанавливается. ⚠️ Особенности: Если ms &lt;= 0, выбрасывается ошибка. Отключение происходит асинхронно через setTimeout. Безопасно вызывать несколько раз подряд — отключение произойдёт только один раз, все промисы резолвятся. Возвращает Promise, который резолвится после отключения (или сразу, если наблюдение неактивно). Можно передать необязательный колбэк onDisconnect, который будет вызван после отключения. 🧑‍💻 Пример использования: const observer = new Observer(callback, { childList: true }, document.body); observer.observe(); await observer.autoDisconnect(5000, () =&gt; { console.log('Наблюдение отключено!'); });"
+    },
+    "Observer.html#cancelAutoDisconnect": {
+      "id": "Observer.html#cancelAutoDisconnect",
+      "kind": "function",
+      "title": "cancelAutoDisconnect() → {void}",
+      "longname": "Observer#cancelAutoDisconnect",
+      "name": "cancelAutoDisconnect",
+      "tags": "Observer#cancelAutoDisconnect cancelAutoDisconnect",
+      "summary": "",
+      "description": "⏹️ Отменяет запланированное автоматическое отключение наблюдения. 📋 Что делает: Если был запущен таймер через autoDisconnect, отменяет его с помощью clearTimeout. Завершает все промисы, возвращённые autoDisconnect, вызвав их resolve. Сбрасывает внутренние флаги блокировки, позволяя снова вызвать autoDisconnect. Если таймер не был установлен, метод ничего не делает. 🧑‍💻 Пример использования: const observer = new Observer(callback, { childList: true }, document.body); observer.observe(); observer.autoDisconnect(5000); // ...решили отменить автоотключение: observer.cancelAutoDisconnect();"
     },
     "Observer.html#takeRecords": {
       "id": "Observer.html#takeRecords",

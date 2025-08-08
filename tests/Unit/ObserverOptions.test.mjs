@@ -1,29 +1,11 @@
-import ObserverOptions from '../dist/ObserverOptions.mjs';
+import Options from '/dist/ObserverOptions.mjs';
+import Builder from '/dist/ObserverOptionsBuilder.mjs';
+import Test from '/tests/TestObserverOptions.mjs';
 import { describe, test, expect } from '@jest/globals';
-import ObserverOptionsBuilder from '../dist/ObserverOptionsBuilder.mjs';
-
-function expectEqual(options, object) {
-    expect(options).toEqual(
-        Object.assign(
-            {
-                childList: false,
-                attributes: false,
-                characterData: false,
-                subtree: false,
-                attributeOldValue: false,
-                characterDataOldValue: false,
-                attributeFilter: undefined,
-            },
-            object,
-        ),
-    );
-}
 
 describe('ObserverOptions', () => {
     test('по умолчанию содержит корректные значения', () => {
-        const opts = new ObserverOptions();
-
-        expect(new ObserverOptions()).toEqual({
+        Test.expect(new Options()).toEqual({
             childList: false,
             attributes: false,
             characterData: false,
@@ -35,37 +17,37 @@ describe('ObserverOptions', () => {
     });
 
     test('метод new возвращает экземпляр ObserverOptionsBuilder', () => {
-        expect(ObserverOptions.new()).toBeInstanceOf(ObserverOptionsBuilder);
+        expect(Options.new()).toBeInstanceOf(Builder);
     });
 
     test('метод children возвращает опции для наблюдения за дочерними элементами', () => {
-        expectEqual(ObserverOptions.children(), {
+        Test.expect(Options.children()).toEqual({
             childList: true,
         });
     });
 
     test('метод descendants возвращает опции для наблюдения за потомками', () => {
-        expectEqual(ObserverOptions.descendants(), {
+        Test.expect(Options.descendants()).toEqual({
             childList: true,
             subtree: true,
         });
     });
 
     test('метод attributes возвращает опции для наблюдения за любыми атрибутами целевого элемента', () => {
-        expectEqual(ObserverOptions.attributes(), {
+        Test.expect(Options.attributes()).toEqual({
             attributes: true,
         });
     });
 
     test('метод attributes возвращает опции для наблюдения за конкретными атрибутами целевого элемента', () => {
-        expectEqual(ObserverOptions.attributes(['class', 'data-state']), {
+        Test.expect(Options.attributes(['class', 'data-state'])).toEqual({
             attributes: true,
             attributeFilter: ['class', 'data-state'],
         });
     });
 
     test('метод attributes возвращает опции для наблюдения за конкретными атрибутами целевого элемента с сохранением старого значения атрибута', () => {
-        expectEqual(ObserverOptions.attributes(['class', 'data-state'], true), {
+        Test.expect(Options.attributes(['class', 'data-state'], true)).toEqual({
             attributes: true,
             attributeFilter: ['class', 'data-state'],
             attributeOldValue: true,
@@ -73,57 +55,55 @@ describe('ObserverOptions', () => {
     });
 
     test('метод descendantAttributes возвращает опции для наблюдения за любыми атрибутами целевого элемента и его потомков', () => {
-        expectEqual(ObserverOptions.descendantAttributes(), {
+        Test.expect(Options.descendantAttributes()).toEqual({
             attributes: true,
             subtree: true,
         });
     });
 
     test('метод descendantAttributes возвращает опции для наблюдения за конкретными атрибутами целевого элемента и его потомков', () => {
-        expectEqual(
-            ObserverOptions.descendantAttributes(['class', 'data-state']),
-            {
-                attributes: true,
-                subtree: true,
-                attributeFilter: ['class', 'data-state'],
-            },
-        );
+        Test.expect(
+            Options.descendantAttributes(['class', 'data-state']),
+        ).toEqual({
+            attributes: true,
+            subtree: true,
+            attributeFilter: ['class', 'data-state'],
+        });
     });
 
     test('метод descendantAttributes возвращает опции для наблюдения за конкретными атрибутами целевого элемента и его потомков с сохранением старого значения атрибута', () => {
-        expectEqual(
-            ObserverOptions.descendantAttributes(['class', 'data-state'], true),
-            {
-                attributes: true,
-                subtree: true,
-                attributeFilter: ['class', 'data-state'],
-                attributeOldValue: true,
-            },
-        );
+        Test.expect(
+            Options.descendantAttributes(['class', 'data-state'], true),
+        ).toEqual({
+            attributes: true,
+            subtree: true,
+            attributeFilter: ['class', 'data-state'],
+            attributeOldValue: true,
+        });
     });
 
     test('метод text возвращает опции для наблюдения за текстом в текстовом узле', () => {
-        expectEqual(ObserverOptions.text(), {
+        Test.expect(Options.text()).toEqual({
             characterData: true,
         });
     });
 
     test('метод text возвращает опции для наблюдения за текстом в текстовом узле с сохранением старого значения', () => {
-        expectEqual(ObserverOptions.text(true), {
+        Test.expect(Options.text(true)).toEqual({
             characterData: true,
             characterDataOldValue: true,
         });
     });
 
     test('метод descendantText возвращает опции для наблюдения за текстом в целевом элементе и его потомках', () => {
-        expectEqual(ObserverOptions.descendantText(), {
+        Test.expect(Options.descendantText()).toEqual({
             characterData: true,
             subtree: true,
         });
     });
 
     test('метод descendantText возвращает опции для наблюдения за текстом в целевом элементе и его потомках с сохранением старого значения', () => {
-        expectEqual(ObserverOptions.descendantText(true), {
+        Test.expect(Options.descendantText(true)).toEqual({
             characterData: true,
             characterDataOldValue: true,
             subtree: true,
@@ -131,7 +111,7 @@ describe('ObserverOptions', () => {
     });
 
     test('метод content возвращает опции для наблюдения за содержимом внутри целевого элемента', () => {
-        expectEqual(ObserverOptions.content(), {
+        Test.expect(Options.content()).toEqual({
             childList: true,
             characterData: true,
             subtree: true,
@@ -139,7 +119,7 @@ describe('ObserverOptions', () => {
     });
 
     test('метод content возвращает опции для наблюдения за содержимом внутри целевого элемента с сохранением старого значения', () => {
-        expectEqual(ObserverOptions.content(true), {
+        Test.expect(Options.content(true)).toEqual({
             childList: true,
             characterData: true,
             subtree: true,
@@ -148,7 +128,7 @@ describe('ObserverOptions', () => {
     });
 
     test('метод all возвращает опции для наблюдения за всеми изменениями', () => {
-        expectEqual(ObserverOptions.all(), {
+        Test.expect(Options.all()).toEqual({
             childList: true,
             attributes: true,
             characterData: true,
@@ -157,7 +137,7 @@ describe('ObserverOptions', () => {
     });
 
     test('метод all возвращает опции для наблюдения за всеми изменениями с сохранением старых значений', () => {
-        expectEqual(ObserverOptions.all(true), {
+        Test.expect(Options.all(true)).toEqual({
             childList: true,
             attributes: true,
             characterData: true,
@@ -171,7 +151,7 @@ describe('ObserverOptions', () => {
         expect(() =>
             new MutationObserver(() => {}).observe(
                 document.body,
-                new ObserverOptions(),
+                new Options(),
             ),
         ).toThrow(
             "The options object must set at least one of 'attributes', 'characterData', or 'childList' to true.",

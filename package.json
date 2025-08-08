@@ -27,6 +27,7 @@
     },
     "homepage": "https://rotcetihra.github.io/js-observe/index.html",
     "devDependencies": {
+        "fast-check": "^4.2.0",
         "foodoc": "^0.0.9",
         "jest": "^30.0.5",
         "jest-environment-jsdom": "^30.0.5",

@@ -1,5 +1,5 @@
-import ObserverBuilder from '../dist/ObserverBuilder.mjs';
-import Observer from '../dist/Observer.mjs';
+import Builder from '/dist/ObserverBuilder.mjs';
+import Observer from '/dist/Observer.mjs';
 import { describe, test, expect, jest } from '@jest/globals';
 
 describe('ObserverBuilder', () => {
@@ -8,7 +8,7 @@ describe('ObserverBuilder', () => {
         const options = { childList: true };
         const callback = jest.fn();
 
-        const observer = new ObserverBuilder()
+        const observer = new Builder()
             .for(target)
             .with(options)
             .call(callback)
@@ -22,7 +22,7 @@ describe('ObserverBuilder', () => {
         const target = document.createElement('div');
         const callback = jest.fn();
 
-        const observer = new ObserverBuilder()
+        const observer = new Builder()
             .for(target)
             .options((b) => b.children())
             .call(callback)
@@ -37,7 +37,7 @@ describe('ObserverBuilder', () => {
         const target = document.createElement('div');
         const options = { childList: true };
 
-        const observer = new ObserverBuilder().call(callback).build();
+        const observer = new Builder().call(callback).build();
 
         expect(observer).toBeInstanceOf(Observer);
         expect(() => observer.observe(target, options)).not.toThrow();
@@ -47,7 +47,7 @@ describe('ObserverBuilder', () => {
         const target = document.createElement('div');
         const callback = jest.fn();
 
-        const observer = new ObserverBuilder()
+        const observer = new Builder()
             .for(target)
             .with({ childList: true })
             .options((b) => b.attributes())
@@ -64,7 +64,7 @@ describe('ObserverBuilder', () => {
         const cb1 = jest.fn();
         const cb2 = jest.fn();
 
-        const observer = new ObserverBuilder()
+        const observer = new Builder()
             .for(target)
             .with({ childList: true })
             .call(cb1)
@@ -83,7 +83,7 @@ describe('ObserverBuilder', () => {
     });
 
     test('выбрасывает ошибку, если не вызван .call', () => {
-        const builder = new ObserverBuilder().with({ childList: true });
+        const builder = new Builder().with({ childList: true });
         expect(() => builder.build()).toThrow(
             'Пропущен вызов обязательного метода ObserverBuilder.call().',
         );
@@ -94,10 +94,7 @@ describe('ObserverBuilder', () => {
         const target = document.createElement('div');
         const options = { childList: true };
 
-        const observer = new ObserverBuilder()
-            .with(options)
-            .call(callback)
-            .build();
+        const observer = new Builder().with(options).call(callback).build();
 
         expect(observer).toBeInstanceOf(Observer);
         expect(() => observer.observe(target)).not.toThrow();

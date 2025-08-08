@@ -124,18 +124,20 @@
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>🧭 <code>Observer</code> — удобная обёртка над стандартным <code>MutationObserver</code> с предустановленными параметрами и (опционально) целевым DOM-узлом.</p>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>🧭 <strong><code>Observer</code></strong> — расширенная обёртка над стандартным <a href="https://developer.mozilla.org/ru/docs/Web/API/MutationObserver"><code>MutationObserver</code></a> с поддержкой предустановленных параметров и (опционально) целевого DOM-узла.</p>
 			<p>Класс инкапсулирует логику повторного использования конфигурации и узла, позволяя отслеживать изменения
 			в разных элементах без повторного указания одних и тех же опций.</p>
 			<hr>
-			<h3>⚙️ Назначение:</h3>
+			<h3>🧩 <strong>Возможности</strong></h3>
 			<ul>
-			<li>Повторно использовать один и тот же набор опций для нескольких элементов.</li>
-			<li>Упростить вызов <code>.observe()</code> без необходимости передавать конфигурацию и узел каждый раз.</li>
-			<li>Опционально задать целевой узел наблюдения в конструкторе.</li>
+			<li>♻️ <strong>Повторное использование</strong> набора опций и callback для разных DOM-узлов.</li>
+			<li>🚀 <strong>Упрощённый вызов</strong> <code>.observe()</code> без необходимости каждый раз передавать параметры и целевой узел.</li>
+			<li>🏗️ <strong>Fluent-интерфейс</strong> через <a href="ObserverBuilder.html">ObserverBuilder</a> и <a href="ObserverOptionsBuilder.html">ObserverOptionsBuilder</a>.</li>
+			<li>🛑 Методы управления жизненным циклом: <code>observe</code>, <code>disconnect</code>, <code>autoDisconnect</code>, <code>cancelAutoDisconnect</code>, <code>takeRecords</code>.</li>
+			<li>🟢 Безопасная работа с состоянием наблюдения (<code>isObserving</code>).</li>
 			</ul>
 			<hr>
-			<h3>📐 Сигнатура конструктора:</h3>
+			<h3>📐 <strong>Сигнатура конструктора</strong></h3>
 			<pre class="prettyprint source lang-ts"><code>
 			new Observer(callback, options?, target?)
 			
@@ -146,30 +148,32 @@
 			<li><code>target</code> <code>{Node}</code> — DOM-узел, за которым нужно следить по умолчанию.</li>
 			</ul>
 			<hr>
-			<h3>✅ Пример использования:</h3>
+			<h3>✅ <strong>Пример использования</strong></h3>
 			<pre class="prettyprint source lang-js"><code>
-			const observer = new Observer((mutations) => {
-			    for (const m of mutations) {
-			        console.log(m);
-			    }
-			}, {
-			    childList: true,
-			    subtree: true
-			}, document.body);
+			import { Observer, ObserverOptions } from '@rotcetihra/js-observe';
+			
+			const observer = new Observer(
+			    (mutations) => { mutations.forEach(m => console.log(m)); },
+			    ObserverOptions.all(),
+			    document.body
+			);
 			
 			observer.observe(); // будет использовать document.body и указанные опции
 			observer.observe(document.querySelector('#header')); // target переопределён
 			
 			</code></pre>
 			<hr>
-			<h3>⚠️ Важно:</h3>
-			<p>По спецификации <code>MutationObserver</code> необходимо указать хотя бы один из следующих параметров:</p>
+			<h3>⚠️ <strong>Важно</strong></h3>
+			<p>По спецификации MutationObserver необходимо указать хотя бы один из параметров:</p>
 			<ul>
-			<li><code>childList</code></li>
-			<li><code>attributes</code></li>
-			<li><code>characterData</code></li>
+			<li>👶 <code>childList</code></li>
+			<li>🏷️ <code>attributes</code></li>
+			<li>✏️ <code>characterData</code></li>
 			</ul>
-			<p>В противном случае вызов <code>.observe()</code> приведёт к исключению: <code>An invalid or illegal string was specified</code></p></div>
+			<p>В противном случае вызов <code>.observe()</code> приведёт к исключению:
+			🚫 <code>&quot;An invalid or illegal string was specified&quot;</code></p>
+			<hr>
+			<p>Для декларативного создания используйте <a href="Observer.html#.new">Observer.new</a> или функцию <a href="global.html#observer">observer</a>.</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -206,13 +210,6 @@
 			
 			
 			
-							<!-- augments -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Augments</label>
-								<div class="col-sm-9">
-										<p class="form-control-static">MutationObserver</p>
-								</div>
-							</div>
 			
 			
 			
@@ -243,6 +240,71 @@
 							<article class="secondary">
 									<h3>Members</h3>
 									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="isObserving" class="member public"><span class="name">isObserving</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🟢 <code>isObserving</code> — флаг, указывающий, активно ли в данный момент наблюдение за DOM-узлом.</p>
+			<hr>
+			<h3>📋 Описание:</h3>
+			<ul>
+			<li>Значение <code>true</code> означает, что метод <a href="global.html#observe">observe</a> был вызван и <a href="Observer.html">Observer</a> следит за изменениями.</li>
+			<li>После вызова disconnect значение сбрасывается в <code>false</code>.</li>
+			<li>Используется для предотвращения повторного запуска наблюдения и корректного управления жизненным циклом Observer.</li>
+			<li>Позволяет безопасно вызывать <code>observe()</code> и <code>disconnect()</code> несколько раз подряд без ошибок.</li>
+			</ul>
+			<hr>
+			<h3>🧑‍💻 Пример использования:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const obs = new Observer(callback, { childList: true }, document.body);
+			
+			obs.observe();
+			console.log(obs.isObserving); // 👉 true
+			
+			obs.disconnect();
+			console.log(obs.isObserving); // 👉 false
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="Observer.mjs.html">Observer.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 											<hr/>
 											<dt class="symbol-title member protected collapsible-symbol">
 			<h4 id="_options" class="member protected"><span class="signature-attribs">&lt;protected, readonly> </span><span class="name">_options</span><span class="signature-type"> :<a href="ObserverOptions.html">ObserverOptions</a>|MutationObserverInit|undefined</span></h4>
@@ -364,9 +426,11 @@
 			Сигнатура: <code>(mutations: MutationRecord[], observer: MutationObserver) =&gt; void</code></p>
 			<hr>
 			<h3>Пример:</h3>
-			<pre class="prettyprint source lang-js"><code>const observer = new Observer((mutations) => {
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer((mutations) => {
 			    mutations.forEach(m => console.log(m));
 			});
+			
 			</code></pre>
 			<hr></div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
@@ -376,6 +440,156 @@
 								<label class="col-sm-3 control-label">Type</label>
 								<div class="col-sm-9">
 									<div class="form-control-static type-names"><span class="param-type">MutationCallback</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="Observer.mjs.html">Observer.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id="_autoDisconnectLock" class="member protected"><span class="signature-attribs">&lt;protected> </span><span class="name">_autoDisconnectLock</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🔒 Внутренний флаг блокировки для autoDisconnect.</p>
+			<p>Используется для предотвращения повторного запуска автоматического отключения:
+			если autoDisconnect() уже был вызван и таймер ещё не сработал, повторные вызовы игнорируются.
+			После срабатывания таймера и вызова disconnect() флаг сбрасывается.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="Observer.mjs.html">Observer.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id="_autoDisconnectTimer" class="member protected"><span class="signature-attribs">&lt;protected> </span><span class="name">_autoDisconnectTimer</span><span class="signature-type"> :NodeJS.Timeout|number</span></h4>
+		</dt>
+<dd class="symbol-details member protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>⏲️ <code>_autoDisconnectTimer</code> — идентификатор активного таймера автоотключения.</p>
+			<hr>
+			<p>Используется для хранения результата <code>setTimeout</code> из autoDisconnect.
+			Позволяет отменить или сбросить таймер через cancelAutoDisconnect.</p>
+			<ul>
+			<li><code>undefined</code> — таймер не запущен.</li>
+			<li>После срабатывания или отмены всегда сбрасывается в <code>undefined</code>.</li>
+			</ul></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">NodeJS.Timeout</span> | <span class="param-type">number</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="Observer.mjs.html">Observer.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id="_autoDisconnectPromiseResolve" class="member protected"><span class="signature-attribs">&lt;protected> </span><span class="name">_autoDisconnectPromiseResolve</span><span class="signature-type"> :function|undefined</span></h4>
+		</dt>
+<dd class="symbol-details member protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🔗 Внутренняя функция-resolve для промиса autoDisconnect.</p>
+			<hr>
+			<p>Используется для ручного завершения промиса, возвращаемого методом autoDisconnect,
+			если отключение происходит не по таймеру, а вручную через disconnect.
+			Это позволяет корректно резолвить промис даже при ручном отключении наблюдения.</p>
+			<ul>
+			<li>Устанавливается при запуске autoDisconnect.</li>
+			<li>Вызывается и сбрасывается при disconnect или по таймеру.</li>
+			</ul></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">function</span> | <span class="param-type">undefined</span></div>
 								</div>
 							</div>
 			
@@ -418,25 +632,38 @@
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🛰️ Запускает отслеживание изменений в DOM-узле.</p>
 			<p>Обёртка над <code>MutationObserver.observe()</code>, использующая параметры и целевой узел,
 			заданные в конструкторе, либо переопределяемые вручную при вызове.</p>
-			<p>────────────────</p>
-			<p>📝 <strong>Что можно отслеживать:</strong></p>
+			<hr>
+			<h3>📋 Что делает:</h3>
+			<ul>
+			<li>Если параметры <code>target</code> и/или <code>options</code> не переданы, используются значения из конструктора.</li>
+			<li>Если не указан ни один из обязательных параметров (<code>childList</code>, <code>attributes</code>, <code>characterData</code>), будет выброшено исключение.</li>
+			<li>Повторный вызов <code>observe()</code> без предварительного <code>disconnect()</code> не приведёт к повторному запуску наблюдения.</li>
+			</ul>
+			<hr>
+			<h3>📝 Что можно отслеживать:</h3>
 			<ul>
 			<li>➕➖ добавление/удаление дочерних элементов (<code>childList</code>)</li>
 			<li>🏷️ изменения атрибутов (<code>attributes</code>)</li>
 			<li>📝✏️ изменения текстового содержимого (<code>characterData</code>)</li>
 			<li>🌳 изменения во вложенных узлах (<code>subtree</code>)</li>
 			</ul>
-			<p>────────────────</p>
-			<p>⚠️ <strong>Важно:</strong></p>
+			<hr>
+			<h3>⚠️ Важно:</h3>
+			<ul>
+			<li>
 			<p>По спецификации <code>MutationObserver</code>, обязательно должна быть указана хотя бы одна из опций:</p>
 			<ul>
 			<li><code>childList</code></li>
 			<li><code>attributes</code></li>
 			<li><code>characterData</code></li>
 			</ul>
+			</li>
+			<li>
 			<p>Иначе будет выброшено исключение: <code>&quot;An invalid or illegal string was specified&quot;</code></p>
-			<p>────────────────</p>
-			<h3>✅ Пример</h3>
+			</li>
+			</ul>
+			<hr>
+			<h3>✅ Пример:</h3>
 			<pre class="prettyprint source lang-js"><code>
 			const observer = new Observer((mutations) => {
 			    for (const mutation of mutations) {
@@ -446,15 +673,15 @@
 			    attributes: true,
 			    attributeOldValue: true,
 			    subtree: true
-			},
-			document.getElementById('app'));
+			}, document.getElementById('app'));
 			
 			observer.observe();
 			
 			// или переопределить target и options вручную:
 			observer.observe(document.querySelector('#header'), { childList: true });
 			
-			</code></pre></div>
+			</code></pre>
+			<hr></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -472,7 +699,7 @@
 							<td><span class="param-type">Node</span> | <span class="param-type">undefined</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
-									<p>DOM-узел, за которым будет вестись наблюдение.</p>
+									<p>DOM-узел, за которым будет вестись наблюдение. Если не указан — используется target из конструктора.</p>
 							</td>
 						</tr>
 						<tr>
@@ -480,7 +707,7 @@
 							<td><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span> | <span class="param-type">MutationObserverInit</span> | <span class="param-type">undefined</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
-									<p>Объект параметров наблюдения.</p>
+									<p>Объект параметров наблюдения. Если не указан — используется options из конструктора.</p>
 							</td>
 						</tr>
 					</tbody>
@@ -499,6 +726,12 @@
 								<label class="col-sm-3 control-label exceptions-type"><span class="param-type">TypeError</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static exceptions-description"><p>Если <code>target</code> не является допустимым DOM-узлом.</p></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label exceptions-type"><span class="param-type">TypeError</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static exceptions-description"><p>Если не заданы параметры наблюдения.</p></div>
 								</div>
 							</div>
 							<div class="form-group">
@@ -544,23 +777,211 @@
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🔌 Отключает наблюдение за всеми ранее отслеживаемыми DOM-узлами.</p>
-			<p>Обёртка над стандартным методом <code>MutationObserver.disconnect()</code>.</p>
-			<p>Прекращает получение уведомлений обо всех изменениях, за которыми следил данный <a href="Observer.html">Observer</a>.</p>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🔌 Останавливает наблюдение за всеми ранее отслеживаемыми DOM-узлами.</p>
 			<hr>
-			<h3>🧹 Когда использовать:</h3>
+			<h3>📋 Что делает:</h3>
 			<ul>
-			<li>Когда наблюдение больше не требуется.</li>
-			<li>Чтобы освободить ресурсы и предотвратить утечки памяти.</li>
+			<li>Прекращает получение уведомлений обо всех изменениях, за которыми следил данный <a href="Observer.html">Observer</a>.</li>
+			<li>Сбрасывает флаг isObserving в <code>false</code>.</li>
+			<li>Если был активен таймер автоотключения (<code>autoDisconnect</code>), отменяет его через cancelAutoDisconnect и завершает промис autoDisconnect.</li>
+			<li>Безопасно вызывать несколько раз подряд — повторные вызовы не приводят к ошибкам.</li>
 			</ul>
 			<hr>
-			<h3>✅ Пример:</h3>
+			<h3>🧑‍💻 Пример использования:</h3>
 			<pre class="prettyprint source lang-js"><code>
 			const observer = new Observer(callback, { childList: true }, document.body);
 			observer.observe();
 			
-			// Через некоторое время...
+			// ...позже
 			observer.disconnect(); // Отключение отслеживания
+			
+			</code></pre>
+			<hr>
+			<h3>📝 Когда использовать:</h3>
+			<ul>
+			<li>Когда наблюдение больше не требуется.</li>
+			<li>Чтобы освободить ресурсы и предотвратить утечки памяти.</li>
+			<li>Перед повторным запуском наблюдения с другими параметрами.</li>
+			</ul>
+			<hr>
+			<h3>⚠️ Особенности:</h3>
+			<ul>
+			<li>Если был запущен autoDisconnect, таймер будет отменён и промис autoDisconnect завершится.</li>
+			<li>После вызова disconnect можно снова запускать observe или autoDisconnect.</li>
+			</ul></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">void</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="Observer.mjs.html">Observer.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="autoDisconnect" class="function public"><span class="name">autoDisconnect</span><span class="signature-params">( <span class="signature-param">ms</span> [,&nbsp;<span class="signature-param">onDisconnect</span>&nbsp;]&nbsp;)</span><span class="signature-type"> &rarr;&nbsp;{Promise.&lt;void>}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>⏳ Автоматически отключает наблюдение через заданное количество миллисекунд.</p>
+			<hr>
+			<h3>📋 Что делает:</h3>
+			<ul>
+			<li>Запускает таймер, по истечении которого вызывается disconnect() и наблюдение прекращается.</li>
+			<li>Если наблюдение уже неактивно (<code>isObserving: false</code>), метод ничего не делает и возвращает сразу резолвящийся Promise.</li>
+			<li>Если autoDisconnect уже был вызван и таймер ещё не сработал, повторные вызовы возвращают новый Promise, который резолвится одновременно с первым.</li>
+			<li>После отключения (или ручного вызова disconnect) возможность автоотключения восстанавливается.</li>
+			</ul>
+			<hr>
+			<h3>⚠️ Особенности:</h3>
+			<ul>
+			<li>Если <code>ms &lt;= 0</code>, выбрасывается ошибка.</li>
+			<li>Отключение происходит асинхронно через <code>setTimeout</code>.</li>
+			<li>Безопасно вызывать несколько раз подряд — отключение произойдёт только один раз, все промисы резолвятся.</li>
+			<li>Возвращает Promise, который резолвится после отключения (или сразу, если наблюдение неактивно).</li>
+			<li>Можно передать необязательный колбэк <code>onDisconnect</code>, который будет вызван после отключения.</li>
+			</ul>
+			<hr>
+			<h3>🧑‍💻 Пример использования:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer(callback, { childList: true }, document.body);
+			observer.observe();
+			await observer.autoDisconnect(5000, () => {
+			    console.log('Наблюдение отключено!');
+			});
+			
+			</code></pre>
+			<hr></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>ms</code></td>
+							<td><span class="param-type">number</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									<p>Время в миллисекундах до автоматического отключения.</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>onDisconnect</code></td>
+							<td><span class="param-type">function</span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+							<td class="last">
+									<p>Необязательный колбэк, вызываемый после отключения.</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Promise.&lt;void></span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Промис, который резолвится после отключения (или сразу, если наблюдение неактивно).</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-danger"><h5>Throws</h5>		<form class="form-horizontal exceptions">
+							<div class="form-group">
+								<label class="col-sm-3 control-label exceptions-type"><span class="param-type">Error</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static exceptions-description"><p>Если время меньше или равно нулю.</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="Observer.mjs.html">Observer.mjs</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id="cancelAutoDisconnect" class="function public"><span class="name">cancelAutoDisconnect</span><span class="signature-params">()</span><span class="signature-type"> &rarr;&nbsp;{void}</span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>⏹️ Отменяет запланированное автоматическое отключение наблюдения.</p>
+			<hr>
+			<h3>📋 Что делает:</h3>
+			<ul>
+			<li>Если был запущен таймер через autoDisconnect, отменяет его с помощью <code>clearTimeout</code>.</li>
+			<li>Завершает все промисы, возвращённые autoDisconnect, вызвав их resolve.</li>
+			<li>Сбрасывает внутренние флаги блокировки, позволяя снова вызвать autoDisconnect.</li>
+			<li>Если таймер не был установлен, метод ничего не делает.</li>
+			</ul>
+			<hr>
+			<h3>🧑‍💻 Пример использования:</h3>
+			<pre class="prettyprint source lang-js"><code>
+			const observer = new Observer(callback, { childList: true }, document.body);
+			observer.observe();
+			observer.autoDisconnect(5000);
+			// ...решили отменить автоотключение:
+			observer.cancelAutoDisconnect();
 			
 			</code></pre>
 			<hr></div>
