@@ -178,18 +178,6 @@ class Observer extends MutationObserver {
     protected readonly _callback: MutationCallback;
 
     /**
-     * 🔒 Внутренний флаг блокировки для autoDisconnect.
-     *
-     * Используется для предотвращения повторного запуска автоматического отключения:
-     * если autoDisconnect() уже был вызван и таймер ещё не сработал, повторные вызовы игнорируются.
-     * После срабатывания таймера и вызова disconnect() флаг сбрасывается.
-     *
-     * @type {boolean}
-     * @protected
-     */
-    protected _autoDisconnectLock: boolean = false;
-
-    /**
      * ⏲️ `_autoDisconnectTimer` — идентификатор активного таймера автоотключения.
      *
      * ---
@@ -252,7 +240,7 @@ class Observer extends MutationObserver {
      *
      * - Если параметры `target` и/или `options` не переданы, используются значения из конструктора.
      * - Если не указан ни один из обязательных параметров (`childList`, `attributes`, `characterData`), будет выброшено исключение.
-     * - Повторный вызов `observe()` без предварительного `disconnect()` не приведёт к повторному запуску наблюдения.
+     * - Устанавливает флаг {@link isObserving} в `true`.
      *
      * ---
      *
@@ -300,8 +288,8 @@ class Observer extends MutationObserver {
      *
      * ---
      *
-     * @param {Node|undefined} [target] - DOM-узел, за которым будет вестись наблюдение. Если не указан — используется target из конструктора.
-     * @param {ObserverOptions|MutationObserverInit|undefined} [options] - Объект параметров наблюдения. Если не указан — используется options из конструктора.
+     * @param {Node} [target] - DOM-узел, за которым будет вестись наблюдение. Если не указан — используется target из конструктора.
+     * @param {ObserverOptions|MutationObserverInit} [options] - Объект параметров наблюдения. Если не указан — используется options из конструктора.
      * @throws {TypeError} Если `target` не является допустимым DOM-узлом.
      * @throws {TypeError} Если не заданы параметры наблюдения.
      * @throws {SyntaxError} Если не указана ни одна из обязательных опций (`childList`, `attributes`, `characterData`).
@@ -311,26 +299,18 @@ class Observer extends MutationObserver {
         target?: Node,
         options?: ObserverOptions | MutationObserverInit,
     ): void {
-        if (!target) {
+        if (typeof target === 'undefined') {
             target = this._target;
         }
 
-        if (!target) {
-            throw new TypeError('Не указан DOM-узел для запуска наблюдения.');
-        }
-
-        if (!options) {
+        if (typeof options === 'undefined') {
             options = this._options;
         }
 
-        if (!options) {
-            throw new TypeError('Не заданы параметры наблюдения.');
-        }
+        // @ts-ignore
+        super.observe(target, options);
 
-        if (!this.isObserving) {
-            super.observe(target, options);
-            this.isObserving = true;
-        }
+        this.isObserving = true;
     }
 
     /**
@@ -378,7 +358,7 @@ class Observer extends MutationObserver {
      */
     disconnect(): void {
         if (this.isObserving) {
-            if (this._autoDisconnectLock) {
+            if (this._autoDisconnectTimer) {
                 this.cancelAutoDisconnect();
             }
 
@@ -438,25 +418,21 @@ class Observer extends MutationObserver {
             );
         }
 
-        if (!this.isObserving || this._autoDisconnectLock) {
+        if (!this.isObserving || this._autoDisconnectTimer) {
             return Promise.resolve();
         }
-
-        this._autoDisconnectLock = true;
 
         return new Promise((resolve) => {
             this._autoDisconnectPromiseResolve = resolve;
 
             this._autoDisconnectTimer = setTimeout(() => {
-                if (this._autoDisconnectLock) {
-                    this.disconnect();
+                this.disconnect();
 
-                    if (onDisconnect) {
-                        onDisconnect();
-                    }
-
-                    resolve();
+                if (onDisconnect) {
+                    onDisconnect();
                 }
+
+                resolve();
             }, ms);
         });
     }
@@ -502,7 +478,6 @@ class Observer extends MutationObserver {
             }
 
             this._autoDisconnectTimer = undefined;
-            this._autoDisconnectLock = false;
         }
     }
 

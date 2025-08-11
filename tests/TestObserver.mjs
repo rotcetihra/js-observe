@@ -33,10 +33,30 @@ class TestObserver {
         options,
         target = '#root',
         dom = '<div id="root"><p id="child">child</p>root</div>',
+        notObserve = false,
     ) {
+        if (options === undefined) {
+            notObserve = true;
+        }
+
+        if (typeof options === 'boolean') {
+            notObserve = options;
+            options = undefined;
+        }
+
+        if (typeof target === 'boolean') {
+            notObserve = target;
+            target = '#root';
+        }
+
+        if (typeof dom === 'boolean') {
+            notObserve = dom;
+            dom = '<div id="root"><p id="child">child</p>root</div>';
+        }
+
         const test = new TestObserver(options, target, dom);
 
-        await test.setup();
+        await test.setup(notObserve);
 
         return test;
     }
@@ -45,15 +65,35 @@ class TestObserver {
         options,
         target = '#root',
         dom = '<div id="root"><p id="child">child</p>root</div>',
+        notObserve = false,
     ) {
+        if (options === undefined) {
+            notObserve = true;
+        }
+
+        if (typeof options === 'boolean') {
+            notObserve = options;
+            options = undefined;
+        }
+
+        if (typeof target === 'boolean') {
+            notObserve = target;
+            target = '#root';
+        }
+
+        if (typeof dom === 'boolean') {
+            notObserve = dom;
+            dom = '<div id="root"><p id="child">child</p>root</div>';
+        }
+
         const test = new TestObserver(options, target, dom);
 
-        await test.setupObserver();
+        await test.setupObserver(notObserve);
 
         return test;
     }
 
-    async setup() {
+    async setup(notObserve = false) {
         document.body.innerHTML = this.dom;
 
         await this.awaitMutation();
@@ -66,13 +106,17 @@ class TestObserver {
             this.target(),
         );
 
-        this.observer.observe();
+        if (!notObserve) {
+            this.observer.observe();
+        }
 
         this.nativeCallback = jest.fn();
 
         this.native = new MutationObserver(this.nativeCallback);
 
-        this.native.observe(this.target(), this.options);
+        if (!notObserve) {
+            this.native.observe(this.target(), this.options);
+        }
     }
 
     teardown() {
@@ -84,7 +128,7 @@ class TestObserver {
         this.observer.disconnect();
     }
 
-    async setupObserver() {
+    async setupObserver(notObserve = false) {
         document.body.innerHTML = this.dom;
 
         await this.awaitMutation();
@@ -97,7 +141,9 @@ class TestObserver {
             this.target(),
         );
 
-        this.observer.observe();
+        if (!notObserve) {
+            this.observer.observe();
+        }
     }
 
     teardownObserver() {
@@ -135,14 +181,22 @@ class TestObserver {
         expect(this.observerCallback).toHaveBeenCalled();
         expect(this.nativeCallback).toHaveBeenCalled();
 
-        expect(this.observerCallback.mock.calls[0][0][0]).toMatchObject(object);
-        expect(this.nativeCallback.mock.calls[0][0][0]).toMatchObject(object);
+        for (const p in object) {
+            const v = object[p];
+
+            expect(this.observerCallback.mock.calls[0][0][0][p]).toBe(v);
+            expect(this.nativeCallback.mock.calls[0][0][0][p]).toBe(v);
+        }
     }
 
     expectToMatchObject(object) {
         expect(this.observerCallback).toHaveBeenCalled();
 
-        expect(this.observerCallback.mock.calls[0][0][0]).toMatchObject(object);
+        for (const p in object) {
+            const v = object[p];
+
+            expect(this.observerCallback.mock.calls[0][0][0][p]).toBe(v);
+        }
     }
 
     expectBothNotToHaveBeenCalled() {
@@ -152,6 +206,15 @@ class TestObserver {
 
     expectNotToHaveBeenCalled() {
         expect(this.observerCallback).not.toHaveBeenCalled();
+    }
+
+    callbackMockClear() {
+        this.observerCallback.mockClear();
+        this.nativeCallback.mockClear();
+    }
+
+    callbackObserverMockClear() {
+        this.observerCallback.mockClear();
     }
 }
 

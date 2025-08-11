@@ -1094,15 +1094,6 @@ window.lunrData = {
           "readonly&gt",
           "void"
         ],
-        "Observer.html#_autoDisconnectLock": [
-          "_autodisconnectlock",
-          "autodisconnect",
-          "boolean",
-          "disconnect",
-          "lt;protected&gt",
-          "member",
-          "observer#_autodisconnectlock"
-        ],
         "Observer.html#_autoDisconnectTimer": [
           "_autodisconnecttim",
           "autodisconnect",
@@ -1131,13 +1122,13 @@ window.lunrData = {
           "childlist",
           "console.log(mut",
           "const",
-          "disconnect",
           "document.getelementbyid('app",
           "dom",
           "function",
           "gt",
           "illeg",
           "invalid",
+          "isobserv",
           "mutat",
           "mutationobserv",
           "mutationobserver.observ",
@@ -1271,7 +1262,7 @@ window.lunrData = {
           "useoldvalu"
         ]
       },
-      "length": 56
+      "length": 55
     },
     "tokenStore": {
       "root": {
@@ -2667,17 +2658,9 @@ window.lunrData = {
                                 "ref": "Observer.html#isObserving",
                                 "tf": 4.3478260869565215
                               },
-                              "Observer.html#_autoDisconnectLock": {
-                                "ref": "Observer.html#_autoDisconnectLock",
-                                "tf": 16.666666666666664
-                              },
                               "Observer.html#_autoDisconnectPromiseResolve": {
                                 "ref": "Observer.html#_autoDisconnectPromiseResolve",
                                 "tf": 16.666666666666664
-                              },
-                              "Observer.html#observe": {
-                                "ref": "Observer.html#observe",
-                                "tf": 1.1627906976744187
                               },
                               "Observer.html#disconnect": {
                                 "ref": "Observer.html#disconnect",
@@ -3020,6 +3003,10 @@ window.lunrData = {
                             "ref": "Observer.html#isObserving",
                             "tf": 702.1739130434783
                           },
+                          "Observer.html#observe": {
+                            "ref": "Observer.html#observe",
+                            "tf": 1.1627906976744187
+                          },
                           "Observer.html#disconnect": {
                             "ref": "Observer.html#disconnect",
                             "tf": 2.380952380952381
@@ -3244,7 +3231,7 @@ window.lunrData = {
                       },
                       "Observer.html#observe": {
                         "ref": "Observer.html#observe",
-                        "tf": 677.3255813953489
+                        "tf": 676.1627906976744
                       },
                       "Observer.html#disconnect": {
                         "ref": "Observer.html#disconnect",
@@ -5845,23 +5832,6 @@ window.lunrData = {
                                                       "docs": {},
                                                       "t": {
                                                         "docs": {},
-                                                        "l": {
-                                                          "docs": {},
-                                                          "o": {
-                                                            "docs": {},
-                                                            "c": {
-                                                              "docs": {},
-                                                              "k": {
-                                                                "docs": {
-                                                                  "Observer.html#_autoDisconnectLock": {
-                                                                    "ref": "Observer.html#_autoDisconnectLock",
-                                                                    "tf": 1150
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        },
                                                         "t": {
                                                           "docs": {},
                                                           "i": {
@@ -8526,10 +8496,6 @@ window.lunrData = {
                                           "ref": "ObserverBuilder.html#_target",
                                           "tf": 33.33333333333333
                                         },
-                                        "Observer.html#_autoDisconnectLock": {
-                                          "ref": "Observer.html#_autoDisconnectLock",
-                                          "tf": 33.33333333333333
-                                        },
                                         "Observer.html#_autoDisconnectTimer": {
                                           "ref": "Observer.html#_autoDisconnectTimer",
                                           "tf": 33.33333333333333
@@ -9428,10 +9394,6 @@ window.lunrData = {
                         "Observer.html#isObserving": {
                           "ref": "Observer.html#isObserving",
                           "tf": 50
-                        },
-                        "Observer.html#_autoDisconnectLock": {
-                          "ref": "Observer.html#_autoDisconnectLock",
-                          "tf": 33.33333333333333
                         }
                       }
                     }
@@ -10686,10 +10648,6 @@ window.lunrData = {
                         "ref": "Observer.html#_callback",
                         "tf": 110
                       },
-                      "Observer.html#_autoDisconnectLock": {
-                        "ref": "Observer.html#_autoDisconnectLock",
-                        "tf": 110
-                      },
                       "Observer.html#_autoDisconnectTimer": {
                         "ref": "Observer.html#_autoDisconnectTimer",
                         "tf": 110
@@ -11796,23 +11754,6 @@ window.lunrData = {
                                     "docs": {},
                                     "t": {
                                       "docs": {},
-                                      "l": {
-                                        "docs": {},
-                                        "o": {
-                                          "docs": {},
-                                          "c": {
-                                            "docs": {},
-                                            "k": {
-                                              "docs": {
-                                                "Observer.html#_autoDisconnectLock": {
-                                                  "ref": "Observer.html#_autoDisconnectLock",
-                                                  "tf": 683.3333333333334
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      },
                                       "t": {
                                         "docs": {},
                                         "i": {
@@ -12037,7 +11978,7 @@ window.lunrData = {
                   },
                   "Observer.html#observe": {
                     "ref": "Observer.html#observe",
-                    "tf": 4.651162790697675
+                    "tf": 5.813953488372093
                   },
                   "Observer.html#disconnect": {
                     "ref": "Observer.html#disconnect",
@@ -13448,10 +13389,6 @@ window.lunrData = {
                                         "ref": "Observer.html",
                                         "tf": 0.819672131147541
                                       },
-                                      "Observer.html#_autoDisconnectLock": {
-                                        "ref": "Observer.html#_autoDisconnectLock",
-                                        "tf": 33.33333333333333
-                                      },
                                       "Observer.html#_autoDisconnectTimer": {
                                         "ref": "Observer.html#_autoDisconnectTimer",
                                         "tf": 8.333333333333332
@@ -13572,12 +13509,11 @@ window.lunrData = {
           }
         }
       },
-      "length": 1119
+      "length": 1112
     },
     "corpusTokens": [
       "0",
       "1",
-      "_autodisconnectlock",
       "_autodisconnectpromiseresolv",
       "_autodisconnecttim",
       "_callback",
@@ -13743,7 +13679,6 @@ window.lunrData = {
       "obs.disconnect",
       "obs.observ",
       "observ",
-      "observer#_autodisconnectlock",
       "observer#_autodisconnectpromiseresolv",
       "observer#_autodisconnecttim",
       "observer#_callback",
@@ -14367,16 +14302,6 @@ window.lunrData = {
       "summary": "",
       "description": "📞 Callback-функция, вызываемая при каждом изменении DOM. Передаётся в конструктор и используется как основной обработчик мутаций. Сигнатура: (mutations: MutationRecord[], observer: MutationObserver) =&gt; void Пример: const observer = new Observer((mutations) =&gt; { mutations.forEach(m =&gt; console.log(m)); });"
     },
-    "Observer.html#_autoDisconnectLock": {
-      "id": "Observer.html#_autoDisconnectLock",
-      "kind": "member",
-      "title": "&lt;protected&gt; _autoDisconnectLock :boolean",
-      "longname": "Observer#_autoDisconnectLock",
-      "name": "_autoDisconnectLock",
-      "tags": "Observer#_autoDisconnectLock _autoDisconnectLock",
-      "summary": "",
-      "description": "🔒 Внутренний флаг блокировки для autoDisconnect. Используется для предотвращения повторного запуска автоматического отключения: если autoDisconnect() уже был вызван и таймер ещё не сработал, повторные вызовы игнорируются. После срабатывания таймера и вызова disconnect() флаг сбрасывается."
-    },
     "Observer.html#_autoDisconnectTimer": {
       "id": "Observer.html#_autoDisconnectTimer",
       "kind": "member",
@@ -14405,7 +14330,7 @@ window.lunrData = {
       "name": "observe",
       "tags": "Observer#observe observe",
       "summary": "",
-      "description": "🛰️ Запускает отслеживание изменений в DOM-узле. Обёртка над MutationObserver.observe(), использующая параметры и целевой узел, заданные в конструкторе, либо переопределяемые вручную при вызове. 📋 Что делает: Если параметры target и/или options не переданы, используются значения из конструктора. Если не указан ни один из обязательных параметров (childList, attributes, characterData), будет выброшено исключение. Повторный вызов observe() без предварительного disconnect() не приведёт к повторному запуску наблюдения. 📝 Что можно отслеживать: ➕➖ добавление/удаление дочерних элементов (childList) 🏷️ изменения атрибутов (attributes) 📝✏️ изменения текстового содержимого (characterData) 🌳 изменения во вложенных узлах (subtree) ⚠️ Важно: По спецификации MutationObserver, обязательно должна быть указана хотя бы одна из опций: childList attributes characterData Иначе будет выброшено исключение: \"An invalid or illegal string was specified\" ✅ Пример: const observer = new Observer((mutations) =&gt; { for (const mutation of mutations) { console.log(mutation); } }, { attributes: true, attributeOldValue: true, subtree: true }, document.getElementById('app')); observer.observe(); // или переопределить target и options вручную: observer.observe(document.querySelector('#header'), { childList: true });"
+      "description": "🛰️ Запускает отслеживание изменений в DOM-узле. Обёртка над MutationObserver.observe(), использующая параметры и целевой узел, заданные в конструкторе, либо переопределяемые вручную при вызове. 📋 Что делает: Если параметры target и/или options не переданы, используются значения из конструктора. Если не указан ни один из обязательных параметров (childList, attributes, characterData), будет выброшено исключение. Устанавливает флаг isObserving в true. 📝 Что можно отслеживать: ➕➖ добавление/удаление дочерних элементов (childList) 🏷️ изменения атрибутов (attributes) 📝✏️ изменения текстового содержимого (characterData) 🌳 изменения во вложенных узлах (subtree) ⚠️ Важно: По спецификации MutationObserver, обязательно должна быть указана хотя бы одна из опций: childList attributes characterData Иначе будет выброшено исключение: \"An invalid or illegal string was specified\" ✅ Пример: const observer = new Observer((mutations) =&gt; { for (const mutation of mutations) { console.log(mutation); } }, { attributes: true, attributeOldValue: true, subtree: true }, document.getElementById('app')); observer.observe(); // или переопределить target и options вручную: observer.observe(document.querySelector('#header'), { childList: true });"
     },
     "Observer.html#disconnect": {
       "id": "Observer.html#disconnect",

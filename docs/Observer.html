@@ -472,53 +472,6 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title member protected collapsible-symbol">
-			<h4 id="_autoDisconnectLock" class="member protected"><span class="signature-attribs">&lt;protected> </span><span class="name">_autoDisconnectLock</span><span class="signature-type"> :boolean</span></h4>
-		</dt>
-<dd class="symbol-details member protected  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>🔒 Внутренний флаг блокировки для autoDisconnect.</p>
-			<p>Используется для предотвращения повторного запуска автоматического отключения:
-			если autoDisconnect() уже был вызван и таймер ещё не сработал, повторные вызовы игнорируются.
-			После срабатывания таймера и вызова disconnect() флаг сбрасывается.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-							<!-- type -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Type</label>
-								<div class="col-sm-9">
-									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="Observer.mjs.html">Observer.mjs</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member protected collapsible-symbol">
 			<h4 id="_autoDisconnectTimer" class="member protected"><span class="signature-attribs">&lt;protected> </span><span class="name">_autoDisconnectTimer</span><span class="signature-type"> :NodeJS.Timeout|number</span></h4>
 		</dt>
 <dd class="symbol-details member protected  collapsible-symbol">
@@ -637,7 +590,7 @@
 			<ul>
 			<li>Если параметры <code>target</code> и/или <code>options</code> не переданы, используются значения из конструктора.</li>
 			<li>Если не указан ни один из обязательных параметров (<code>childList</code>, <code>attributes</code>, <code>characterData</code>), будет выброшено исключение.</li>
-			<li>Повторный вызов <code>observe()</code> без предварительного <code>disconnect()</code> не приведёт к повторному запуску наблюдения.</li>
+			<li>Устанавливает флаг isObserving в <code>true</code>.</li>
 			</ul>
 			<hr>
 			<h3>📝 Что можно отслеживать:</h3>
@@ -696,7 +649,7 @@
 					<tbody>
 						<tr>
 								<td><code>target</code></td>
-							<td><span class="param-type">Node</span> | <span class="param-type">undefined</span></td>
+							<td><span class="param-type">Node</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
 									<p>DOM-узел, за которым будет вестись наблюдение. Если не указан — используется target из конструктора.</p>
@@ -704,7 +657,7 @@
 						</tr>
 						<tr>
 								<td><code>options</code></td>
-							<td><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span> | <span class="param-type">MutationObserverInit</span> | <span class="param-type">undefined</span></td>
+							<td><span class="param-type"><a href="ObserverOptions.html">ObserverOptions</a></span> | <span class="param-type">MutationObserverInit</span></td>
 								<td class="attributes">&lt;optional&gt;<br/></td>
 							<td class="last">
 									<p>Объект параметров наблюдения. Если не указан — используется options из конструктора.</p>
