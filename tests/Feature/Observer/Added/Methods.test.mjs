@@ -4,7 +4,11 @@ import Test from '/tests/TestObserver.mjs';
 import Observer from '/dist/Observer.mjs';
 
 describe('Observer', () => {
-    describe('конструктор', () => {
+    describe('constructor()', () => {
+        test('можно вызывать без параметров.', () => {
+            expect(() => new Observer()).not.toThrow();
+        });
+
         test('сохраняет callback, options и target', () => {
             const cb = () => {};
             const options = { childList: true };
@@ -38,19 +42,6 @@ describe('Observer', () => {
 
             expect(obs._options).toBeUndefined();
             expect(obs._target).toBe(target);
-        });
-
-        test('выбрасывает ошибку, если callback не является функцией', () => {
-            expect(() => new Observer()).toThrow();
-            expect(() => new Observer(null)).toThrow(
-                "Failed to construct 'MutationObserver': parameter 1 is not a function",
-            );
-            expect(() => new Observer(123)).toThrow(
-                "Failed to construct 'MutationObserver': parameter 1 is not a function",
-            );
-            expect(() => new Observer({})).toThrow(
-                "Failed to construct 'MutationObserver': parameter 1 is not a function",
-            );
         });
 
         test('корректно принимает только функцию в качестве callback', () => {

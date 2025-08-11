@@ -67,7 +67,7 @@ import ObserverOptions from './ObserverOptions.mjs';
  *
  * @class
  */
-declare class Observer extends MutationObserver {
+declare class Observer {
     /**
      * 🟢 `isObserving` — флаг, указывающий, активно ли в данный момент наблюдение за DOM-узлом.
      *
@@ -101,6 +101,7 @@ declare class Observer extends MutationObserver {
      * @type {boolean}
      */
     isObserving: boolean;
+    protected _native?: MutationObserver;
     /**
      * ⚙️ Конфигурация для {@link Observer}.
      *
@@ -168,10 +169,10 @@ declare class Observer extends MutationObserver {
      * ---
      *
      * @readonly
-     * @type {MutationCallback}
+     * @type {MutationCallback | undefined}
      * @protected
      */
-    protected readonly _callback: MutationCallback;
+    protected readonly _callback?: MutationCallback;
     /**
      * ⏲️ `_autoDisconnectTimer` — идентификатор активного таймера автоотключения.
      *
@@ -209,7 +210,7 @@ declare class Observer extends MutationObserver {
      * @param {ObserverOptions | MutationObserverInit | undefined} options
      * @param {Node | undefined} target
      */
-    constructor(callback: MutationCallback, options?: ObserverOptions | MutationObserverInit, target?: Node);
+    constructor(callback?: MutationCallback, options?: ObserverOptions | MutationObserverInit, target?: Node);
     /**
      * 🛰️ Запускает отслеживание изменений в DOM-узле.
      *
@@ -277,7 +278,7 @@ declare class Observer extends MutationObserver {
      * @throws {SyntaxError} Если не указана ни одна из обязательных опций (`childList`, `attributes`, `characterData`).
      * @returns {void}
      */
-    observe(target?: Node, options?: ObserverOptions | MutationObserverInit): void;
+    observe(target?: Node, options?: ObserverOptions | MutationObserverInit, callback?: MutationCallback): void;
     /**
      * 🔌 Останавливает наблюдение за всеми ранее отслеживаемыми DOM-узлами.
      *

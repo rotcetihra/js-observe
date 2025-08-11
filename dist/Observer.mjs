@@ -66,7 +66,7 @@ import ObserverBuilder from './ObserverBuilder.mjs';
  *
  * @class
  */
-class Observer extends MutationObserver {
+class Observer {
     /**
      * 🟢 `isObserving` — флаг, указывающий, активно ли в данный момент наблюдение за DOM-узлом.
      *
@@ -100,6 +100,7 @@ class Observer extends MutationObserver {
      * @type {boolean}
      */
     isObserving = false;
+    _native;
     /**
      * ⚙️ Конфигурация для {@link Observer}.
      *
@@ -167,7 +168,7 @@ class Observer extends MutationObserver {
      * ---
      *
      * @readonly
-     * @type {MutationCallback}
+     * @type {MutationCallback | undefined}
      * @protected
      */
     _callback;
@@ -209,7 +210,6 @@ class Observer extends MutationObserver {
      * @param {Node | undefined} target
      */
     constructor(callback, options, target) {
-        super(callback);
         this._callback = callback;
         this._options = options;
         this._target = target;
@@ -281,15 +281,20 @@ class Observer extends MutationObserver {
      * @throws {SyntaxError} Если не указана ни одна из обязательных опций (`childList`, `attributes`, `characterData`).
      * @returns {void}
      */
-    observe(target, options) {
+    observe(target, options, callback) {
         if (typeof target === 'undefined') {
             target = this._target;
         }
         if (typeof options === 'undefined') {
             options = this._options;
         }
+        if (typeof callback === 'undefined') {
+            callback = this._callback;
+        }
         // @ts-ignore
-        super.observe(target, options);
+        this._native = new MutationObserver(callback);
+        // @ts-ignore
+        this._native.observe(target, options);
         this.isObserving = true;
     }
     /**
@@ -340,7 +345,8 @@ class Observer extends MutationObserver {
             if (this._autoDisconnectTimer) {
                 this.cancelAutoDisconnect();
             }
-            super.disconnect();
+            // @ts-ignore
+            this._native.disconnect();
             this.isObserving = false;
         }
     }
@@ -488,7 +494,11 @@ class Observer extends MutationObserver {
      * @returns {MutationRecord[]}
      */
     takeRecords() {
-        return super.takeRecords();
+        if (this.isObserving) {
+            // @ts-ignore
+            return this._native.takeRecords();
+        }
+        return [];
     }
     /**
      * 🆕 `Observer.new()` — удобный способ создания {@link Observer} с помощью билдера {@link ObserverBuilder}.
